@@ -1,0 +1,45 @@
+#Vuex Modules
+modules:
+  user:
+    #Vuex Modules Definition
+    state:
+      profile: null
+    actions:
+      - fechUser: "/api/userProfile"
+    
+    #Component Binding
+    binds:
+      component:
+        - UserProfile.vue
+        - Dashboard.vue
+
+  cart:
+    state:
+      items: []
+    mutations:
+      - addItem: "state.items.push(payload)"
+    actions:
+      - getItems: "/api/getItems"
+      - getItemDetails: "/api/getItemDetails"
+    binds:
+      component:
+        - Dashboard.vue
+
+#Vue Component
+component:
+  UserProfile.vue:
+    #External Data
+    external_data:
+      - alias: userProfile
+        source: user/profile
+      - alias: loadUser
+        source: user/fetchUser
+
+  CartList.vue:
+    external_data:
+      - alias: items
+        source: cart/getItems
+      - alias: itemDetails
+        source: cart/getItemDetails
+      - alias: addItem
+        source: cart/addItem
