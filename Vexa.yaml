@@ -2,6 +2,7 @@
 modules:
   user:
     #Vuex Modules Definition
+    namespaced: true
     state:
       profile: null
     actions:
@@ -14,6 +15,7 @@ modules:
         - Dashboard.vue
 
   cart:
+    namespaced: true
     state:
       items: []
     mutations:
