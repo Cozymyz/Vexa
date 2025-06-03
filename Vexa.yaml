@@ -31,17 +31,19 @@ modules:
 component:
   UserProfile.vue:
     #External Data
-    external_data:
-      - alias: userProfile
-        source: user/profile
-      - alias: loadUser
-        source: user/fetchUser
+    requires:
+      - modules: user
+        fileds: [userProfile, id]
+        load: onAppStart
+      - modules: cart
+        fileds: [cartList]
+        load: onRouteEnter
 
   CartList.vue:
-    external_data:
-      - alias: items
-        source: cart/getItems
-      - alias: itemDetails
-        source: cart/getItemDetails
-      - alias: addItem
-        source: cart/addItem
+    requires:
+      - modules: good
+        fileds: [goodId, price]
+        load: onRouteEnter
+      - modules: comments
+        fileds: [commentsList]
+        load: onRouteEnter
