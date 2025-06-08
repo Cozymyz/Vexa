@@ -6,6 +6,9 @@ import org.Vexa.model.MenuItemExample;
 import org.apache.ibatis.annotations.Param;
 
 public interface MenuItemMapper {
+
+    List<MenuItem> selectByGroupId(int groupId);
+
     long countByExample(MenuItemExample example);
 
     int deleteByExample(MenuItemExample example);
