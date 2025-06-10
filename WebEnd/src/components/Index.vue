@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-06-08 23:12:56
- * @LastEditTime: 2025-06-10 22:40:06
+ * @LastEditTime: 2025-06-10 23:39:56
  * @Description: 
 -->
 <template>
@@ -57,8 +57,7 @@
 					:is="menuGroupComponent"
 					v-if="drawer"
 					v-model:visible="drawer"
-					:menu-groups="menuGroups"
-					@refresh="fetchMenuGroups"
+					:ref="menuGroupComponentRef"
 				/>
 			</el-main>
 		</el-container>
@@ -66,41 +65,24 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineAsyncComponent, watch } from 'vue'
-import { test } from '../api/axios'
-
-interface MenuGroup {
-  groupId: number
-  groupName: string
-  displayOrder: number
-}
+import { ref, defineAsyncComponent } from 'vue'
 
 const drawer = ref(false)
 const menuGroupComponent = ref(null)
-const menuGroups = ref<MenuGroup[]>([])
+const menuGroupComponentRef = ref(null)
 
-const openDrawer = () => {
+const openDrawer = async () => {
   drawer.value = true
   if (!menuGroupComponent.value) {
     menuGroupComponent.value = defineAsyncComponent(() => 
       import('@/components/MenuGroup.vue')
     )
   }
-  fetchMenuGroups()
-}
-
-const fetchMenuGroups = async () => {
-	menuGroups.value = []
-	const response = await test()
-	menuGroups.value = response.data.allMenuGroupList
-	console.log( menuGroups.value)
-}
-
-watch(drawer, (newVal) => {
-  if (!newVal) {
-    SideDrawerComponent.value = null
+  await nextTick()
+  if (menuGroupComponentRef.value?.fetchMenuGroups) {
+    menuGroupComponentRef.value.fetchMenuGroups()
   }
-})
+}
 </script>
 
 <style>
