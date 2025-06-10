@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-06-08 23:12:56
- * @LastEditTime: 2025-06-09 00:38:54
+ * @LastEditTime: 2025-06-10 22:40:06
  * @Description: 
 -->
 <template>
@@ -30,7 +30,7 @@
 			<el-main>
 				<!-- 路由占位符 -->
 				<router-view></router-view>
-				<el-drawer
+				<!-- <el-drawer
 					v-model="drawer"
 					title="Menu"
 					direction="ltr"
@@ -49,30 +49,43 @@
 						>
 						 	<span>{{ group.groupName }}</span>
 						</el-menu-item>
-					
-						<!-- <el-menu-item index="1">1</el-menu-item> -->
 					</el-menu>
-				</el-drawer>
+				</el-drawer> -->
+				
+				<!-- Dynamically loading components -->
+				<component
+					:is="menuGroupComponent"
+					v-if="drawer"
+					v-model:visible="drawer"
+					:menu-groups="menuGroups"
+					@refresh="fetchMenuGroups"
+				/>
 			</el-main>
 		</el-container>
 	</div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, defineAsyncComponent, watch } from 'vue'
 import { test } from '../api/axios'
 
 interface MenuGroup {
-  groupId: number;
-  groupName: string;
-  displayOrder: number;
+  groupId: number
+  groupName: string
+  displayOrder: number
 }
 
 const drawer = ref(false)
+const menuGroupComponent = ref(null)
 const menuGroups = ref<MenuGroup[]>([])
 
 const openDrawer = () => {
   drawer.value = true
+  if (!menuGroupComponent.value) {
+    menuGroupComponent.value = defineAsyncComponent(() => 
+      import('@/components/MenuGroup.vue')
+    )
+  }
   fetchMenuGroups()
 }
 
@@ -83,6 +96,11 @@ const fetchMenuGroups = async () => {
 	console.log( menuGroups.value)
 }
 
+watch(drawer, (newVal) => {
+  if (!newVal) {
+    SideDrawerComponent.value = null
+  }
+})
 </script>
 
 <style>
