@@ -1,9 +1,9 @@
 # Vexa
-Vue External Expressions Architecture
+Vue External Expressions Architect
 
 V -- Vue
 ex -- External Data/Expression
-a -- Architecture
+a -- Architect
 
 Methods for Expressing External Data in Vue Components and Strategies for Dividing Vuex Modules
 
