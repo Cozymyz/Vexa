@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-06-10 20:03:19
- * @LastEditTime: 2025-06-11 00:41:49
+ * @LastEditTime: 2025-06-11 16:32:22
  * @Description: 
 -->
 <template>
@@ -63,10 +63,7 @@ const props = defineProps({
     }
 })
 
-// 创建一个可写的内部状态
 const internalVisible = ref(props.visible)
-
-// 当 prop 变化时，同步到内部状态
 watch(() => props.visible, (newVal) => {
     internalVisible.value = newVal
 })
@@ -78,10 +75,10 @@ onMounted(() =>{
     }
 })
 
-// 创建等待模块加载完成的函数
+// wait for module mounted
 const waitForModule = (moduleName: string, timeout = 2000) => {
   return new Promise<void>((resolve, reject) => {
-    const checkInterval = 50 // 每50ms检查一次
+    const checkInterval = 50 // check ever 50ms
     let elapsed = 0
     
     const interval = setInterval(() => {
