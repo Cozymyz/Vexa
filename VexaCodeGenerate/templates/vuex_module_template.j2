@@ -1,0 +1,32 @@
+// Automatically generated Vuex modules - {{ module.name }}
+// Generation time: {{ now }}
+
+import api from '@/api'
+
+export default {
+  namespaced: true,
+
+  state: () => ({
+    {{ module.name | state_attribute_name }}: [],
+    {{ module.fields }}
+  }),
+
+  mutations: {
+    SET_{{ module.name | upper_underscore }}(state, payload) {
+      state.{{ module.name | state_attribute_name }} = payload
+    },
+  },
+
+  actions: {
+    async fetch{{ module.name | singular }}({ commit }) {
+      try {
+        const response = await api.()
+        commit('SET_{{ module.name | upper_underscore }}', response.data)
+        return response.data
+      } catch (error) {
+        console.error('load {{ module.name }} failed:', error)
+        throw error
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-06-10 20:03:19
- * @LastEditTime: 2025-06-11 16:32:22
+ * @LastEditTime: 2025-06-17 21:04:59
  * @Description: 
 -->
 <template>
@@ -83,6 +83,7 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
     
     const interval = setInterval(() => {
       if (store.hasModule(moduleName)) {
+        console.log('already have: ', moduleName)
         clearInterval(interval)
         resolve()
       } else {

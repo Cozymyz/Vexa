@@ -1,0 +1,73 @@
+// Automatically generated Vuex modules - {{ module.name }}
+// Generation time: {{ now }}
+
+<template>
+
+</template>
+
+<script lang="ts">
+export default {
+  vuexModule: {
+    name: '{{ module.name }}',
+    extent: '{{ module.extent }}'
+  }
+}
+</script>
+
+<script setup lang="ts">
+import { onMounted } from 'vue'
+import { useStore } from 'vuex'
+
+interface {{ module.name }} {
+  {{ module.fields }}
+}
+
+const vuexModule = {
+  name: '{{ module.name }}',
+  extent: '{{ module.extent }}'
+}
+
+const store = useStore()
+
+onMounted(() =>{
+    fetch{{ module.name | singular }}()
+})
+
+// wait for module mounted
+const waitForModule = (moduleName: string, timeout = 2000) => {
+  return new Promise<void>((resolve, reject) => {
+    const checkInterval = 50 // check ever 50ms
+    let elapsed = 0
+
+    const interval = setInterval(() => {
+      if (store.hasModule(moduleName)) {
+        console.log('already have: ', moduleName)
+        clearInterval(interval)
+        resolve()
+      } else {
+        elapsed += checkInterval
+        if (elapsed >= timeout) {
+          clearInterval(interval)
+          reject(new Error(`Waiting for module timeout: ${moduleName}`))
+        }
+      }
+    }, checkInterval)
+  })
+}
+
+// fetch
+const fetch{{ module.name | singular }} = async () => {
+  const moduleName = vuexModule.name
+  try {
+    // Wait for the module to load
+    await waitForModule(moduleName)
+
+    // Now that the module is loaded, it is safe to call dispatch
+    await store.dispatch(`${moduleName}/fetch{{ module.name | singular }}`)
+
+  } catch (error) {
+    console.error(`Waiting or loading failed: ${error.message}`)
+    throw error
+  }
+}
+</script>
