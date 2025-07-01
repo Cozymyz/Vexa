@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-06-08 23:12:56
- * @LastEditTime: 2025-06-24 20:49:58
+ * @LastEditTime: 2025-07-01 17:20:39
  * @Description: 
 -->
 <template>
@@ -23,6 +23,7 @@
 						<el-icon color="#fff"><Menu /></el-icon>
 						<span @click="openDrawer">ALL</span>
 					</el-menu-item>
+					<el-menu-item index="/test">test</el-menu-item>
 					<el-menu-item index="/admin">Help Center</el-menu-item>
 				</el-menu>
 			</el-aside>

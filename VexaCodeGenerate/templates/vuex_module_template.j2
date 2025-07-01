@@ -1,5 +1,6 @@
-// Automatically generated Vuex modules - {{ module.name }}
+// Automatically generated Vuex module - {{ module.name }}
 // Generation time: {{ now }}
+// {{ module.name | state_attribute_name }}:{{ module.fields }}
 
 import api from '@/api'
 
@@ -8,7 +9,6 @@ export default {
 
   state: () => ({
     {{ module.name | state_attribute_name }}: [],
-    {{ module.fields }}
   }),
 
   mutations: {

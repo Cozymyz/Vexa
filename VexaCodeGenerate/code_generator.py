@@ -56,13 +56,17 @@ def generate_vuex_modules(yaml_file, output_dir):
     with open(yaml_file, 'r') as f:
         config = yaml.safe_load(f)
 
-    env = Environment(loader=FileSystemLoader('.'))
+    env = Environment(loader=FileSystemLoader('templates'))
     env.filters['state_attribute_name'] = state_attribute_name
     env.filters['singular'] = singular
     env.filters['upper_underscore'] = upper_underscore
 
     # Rendering Templates
-    template = env.get_template('templates/vuex_module_template.j2')
+    template = env.get_template('vuex_module_template.j2')
+
+    if 'components' not in config:
+        print("⚠️ Warning: There is no 'components' section in the YAML configuration")
+        return
 
     # Processing all components
     for component_name, component_config in config['components'].items():
@@ -86,22 +90,59 @@ def generate_vue_components(yaml_file, output_dir):
     with open(yaml_file, 'r') as f:
         config = yaml.safe_load(f)
 
-    env = Environment(loader=FileSystemLoader('.'))
-    env.filters['state_attribute_name'] = state_attribute_name
-    env.filters['singular'] = singular
-    env.filters['upper_underscore'] = upper_underscore
+    env = Environment(loader=FileSystemLoader('templates'))
+    env.filters['singularize'] = inflection.singularize
+    env.filters['pluralize'] = inflection.pluralize
+    env.filters['camelize'] = inflection.camelize
+
+    # Rendering Templates
+    template = env.get_template('vue_component_template.j2')
+
+    if 'components' not in config:
+        print("⚠️ Warning: There is no 'components' section in the YAML configuration")
+        return
 
     for component_name, component_config in config['components'].items():
-        print(f"Processing components: {component_name}, generating vue component")
+
+        # Make sure your component file name ends with '.vue'
+        if not component_name.endswith('.vue'):
+            component_name += '.vue'
+
+        # Skip empty configuration
+        if not component_config:
+            print(f"⚠️ Skip empty configuration: {component_name}")
+            continue
+
+        print(f"Processing components: {component_name}.vue, generating vue component")
+
+        # Extract module configuration
+        modules = []
+
+        # Handling different types of module configurations
+        if 'modules' in component_config:
+            # Multiple modules case
+            modules = component_config['modules']
+        elif 'module' in component_config:
+            # Single module case
+            modules = [component_config['module']]
+        else:
+            print(f"⚠️ Warning: No module definition found for {component_name}")
+            continue
+
+        # 预处理模块名称
+        for module in modules:
+            module['singular'] = inflection.singularize(module['name'])
+            module['plural'] = inflection.pluralize(module['singular'])
+            module['fetch_action'] = 'fetch' + module['plural']
+
         # Preparing the context
         context = {
-            'module': component_config['module'],
-            'fields': component_config.get('fields', {}),
+            'component_name': os.path.splitext(component_name)[0],
+            'modules': modules,
+            'has_multiple_modules': len(modules) > 1,
             'now': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
 
-        # Rendering Templates
-        template = env.get_template('vue_component_template.j2')
         rendered = template.render(context)
 
         output_file = f"{output_dir}/{component_name}"
@@ -115,7 +156,8 @@ if __name__ == "__main__":
 
     yaml_file = "config/Vexa.yaml"
 
-    output_dir = "output"
+    output_dir_modules = "output/modules"
+    output_dir_components = "output/components"
 
-    generate_vuex_modules(yaml_file, output_dir)
-    generate_vue_components(yaml_file, output_dir)
+    generate_vuex_modules(yaml_file, output_dir_modules)
+    generate_vue_components(yaml_file, output_dir_components)

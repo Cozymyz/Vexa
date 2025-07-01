@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-06-10 20:03:19
- * @LastEditTime: 2025-06-17 21:04:59
+ * @LastEditTime: 2025-07-01 17:19:56
  * @Description: 
 -->
 <template>
@@ -34,7 +34,7 @@
 export default {
   vuexModule: {
     name: 'MenuGroup',
-    extent: 'session'
+    extent: 'component'
   }
 }
 </script>
@@ -51,7 +51,7 @@ interface MenuGroup {
 
 const vuexModule = {
   name: 'MenuGroup',
-  extent: 'session'
+  extent: 'component'
 }
 
 const emit = defineEmits(['update:visible', 'refresh'])

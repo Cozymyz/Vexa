@@ -1,6 +1,6 @@
-// Automatically generated Vue component - {{ component_name }}.vue
-// Generation time: {{ now }}
-// modules: {{ modules }}
+// Automatically generated Vue component - UserProfile.vue
+// Generation time: 2025-07-01 16:05:23
+// modules: [{'name': 'User', 'extent': 'local', 'fields': {'userId': 'number', 'username': 'string', 'email': 'string'}, 'singular': 'User', 'plural': 'Users', 'fetch_action': 'fetchUsers'}]
 
 <template>
 <!-- Add component UI code here -->
@@ -10,38 +10,48 @@
 // Module configuration (exposed to vuexLazyLoad plugin)
 export default {
   vuexModule: [
-    {% for module in modules %}
+    
     {
-        name: '{{ module.name }}',
-        extent: '{{ module.extent }}'
-    }{% if not loop.last %},{% endif %}
-    {% endfor %}
+        name: 'User',
+        extent: 'local'
+    }
+    
   ]
 }
 </script>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, getCurrentInstance } from 'vue'
 import { useStore } from 'vuex'
 
 // Defining Interface
-{% for module in modules %}
-interface {{ module.name }} {
-    {% for field_name, field_type in module.fields.items() %}
-    {{ field_name }}: {{ field_type }}{% if not loop.last %}, {% endif %}
-    {% endfor %}
+
+interface User {
+    
+    userId: number, 
+    
+    username: string, 
+    
+    email: string
+    
 }
-{% endfor %}
+
 
 // Module configuration (defined in setup)
 const vuexModules = [
-    {% for module in modules %}
+    
     {
-        name: '{{ module.name }}',
-        extent: '{{ module.extent }}'
-    }{% if not loop.last %},{% endif %}
-    {% endfor %}
+        name: 'User',
+        extent: 'local'
+    }
+    
 ]
+
+// Mount module configuration to component instance type (for global plugin access)
+const instance = getCurrentInstance();
+if (instance && instance.type) {
+  instance.type.vuexModule = vuexModules;
+}
 
 const store = useStore()
 
@@ -67,18 +77,18 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 }
 
 // Create fetch functions for each module
-{% for module in modules %}
-const {{ fetch_action }} = async () => {
-    const moduleName = '{{ module.name }}'
+
+const  = async () => {
+    const moduleName = 'User'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/{{ fetch_action }}`)
+        await store.dispatch(`${moduleName}/`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error
     }
 }
-{% endfor %}
+
 
 // Load all module data on mount
 onMounted(() => {
@@ -89,9 +99,9 @@ onMounted(() => {
 const fetchAllModules = async () => {
     try {
         await Promise.all([
-            {% for module in modules %}
-            {{ module.fetch_action }}(){% if not loop.last %},{% endif %}
-            {% endfor %}
+            
+            fetchUsers()
+            
         ])
         console.log('All modules data loaded successfully')
     } catch (error) {

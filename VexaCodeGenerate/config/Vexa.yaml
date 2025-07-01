@@ -1,24 +1,24 @@
 components:
   MenuGroup.vue:
     modules:
-        - name: 'MenuGroup'
-          extent: 'session'
-          fields:
-            groupId: number
-            groupName: string
-            displayOrder: number
-        - name: 'Test'
-          extent: 'session'
-          fields:
-            groupId: number
-            groupName: string
-            displayOrder: number
+      - name: 'MenuGroup'
+        extent: 'session'
+        fields:
+          groupId: number
+          groupName: string
+          displayOrder: number
+      - name: 'Test'
+        extent: 'session'
+        fields:
+          testId: number
+          testName: string
+          displayOrder: number
 
   UserProfile.vue:
     module:
       name: 'User'
       extent: 'local'
-    fields:
-      userId: number
-      username: string
-      email: string
+      fields:
+        userId: number
+        username: string
+        email: string
