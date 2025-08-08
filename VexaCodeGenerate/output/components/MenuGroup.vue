@@ -1,5 +1,5 @@
 // Automatically generated Vue component - MenuGroup.vue
-// Generation time: 2025-07-01 16:05:23
+// Generation time: 2025-08-08 23:36:47
 // modules: [{'name': 'MenuGroup', 'extent': 'session', 'fields': {'groupId': 'number', 'groupName': 'string', 'displayOrder': 'number'}, 'singular': 'MenuGroup', 'plural': 'MenuGroups', 'fetch_action': 'fetchMenuGroups'}, {'name': 'Test', 'extent': 'session', 'fields': {'testId': 'number', 'testName': 'string', 'displayOrder': 'number'}, 'singular': 'Test', 'plural': 'Tests', 'fetch_action': 'fetchTests'}]
 
 <template>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { onMounted, getCurrentInstance } from 'vue'
+import { onMounted } from 'vue'
 import { useStore } from 'vuex'
 
 // Defining Interface
@@ -67,12 +67,6 @@ const vuexModules = [
     
 ]
 
-// Mount module configuration to component instance type (for global plugin access)
-const instance = getCurrentInstance();
-if (instance && instance.type) {
-  instance.type.vuexModule = vuexModules;
-}
-
 const store = useStore()
 
 // Generic function to wait for a module to load
@@ -98,22 +92,22 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 
 // Create fetch functions for each module
 
-const  = async () => {
+const fetchMenuGroups = async () => {
     const moduleName = 'MenuGroup'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/`)
+        await store.dispatch(`${moduleName}/fetchMenuGroups`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error
     }
 }
 
-const  = async () => {
+const fetchTests = async () => {
     const moduleName = 'Test'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/`)
+        await store.dispatch(`${moduleName}/fetchTests`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error

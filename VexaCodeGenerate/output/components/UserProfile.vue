@@ -1,5 +1,5 @@
 // Automatically generated Vue component - UserProfile.vue
-// Generation time: 2025-07-01 16:05:23
+// Generation time: 2025-08-08 23:36:47
 // modules: [{'name': 'User', 'extent': 'local', 'fields': {'userId': 'number', 'username': 'string', 'email': 'string'}, 'singular': 'User', 'plural': 'Users', 'fetch_action': 'fetchUsers'}]
 
 <template>
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { onMounted, getCurrentInstance } from 'vue'
+import { onMounted } from 'vue'
 import { useStore } from 'vuex'
 
 // Defining Interface
@@ -46,12 +46,6 @@ const vuexModules = [
     }
     
 ]
-
-// Mount module configuration to component instance type (for global plugin access)
-const instance = getCurrentInstance();
-if (instance && instance.type) {
-  instance.type.vuexModule = vuexModules;
-}
 
 const store = useStore()
 
@@ -78,11 +72,11 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 
 // Create fetch functions for each module
 
-const  = async () => {
+const fetchUsers = async () => {
     const moduleName = 'User'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/`)
+        await store.dispatch(`${moduleName}/fetchUsers`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error

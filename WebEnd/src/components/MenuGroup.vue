@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-06-10 20:03:19
- * @LastEditTime: 2025-07-01 17:19:56
+ * @LastEditTime: 2025-08-08 23:33:11
  * @Description: 
 -->
 <template>
@@ -43,11 +43,11 @@ export default {
 import { ref, watch, onMounted, computed } from 'vue'
 import { useStore } from 'vuex'
 
-interface MenuGroup {
-  groupId: number
-  groupName: string
-  displayOrder: number
-}
+// interface MenuGroup {
+//   groupId: number
+//   groupName: string
+//   displayOrder: number
+// }
 
 const vuexModule = {
   name: 'MenuGroup',

@@ -1,5 +1,5 @@
 // Automatically generated Vuex module - User
-// Generation time: 2025-07-01 16:05:23
+// Generation time: 2025-08-08 23:36:47
 // userList:{'userId': 'number', 'username': 'string', 'email': 'string'}
 
 import api from '@/api'

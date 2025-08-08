@@ -42,7 +42,7 @@ def generate_module(template, module_config, output_dir):
 
     # Generate output file name
     module_name = module_config['name']
-    output_file = f"{output_dir}/{module_name}Module.js"
+    output_file = f"{output_dir}/{module_name}.js"
 
     # Writing file
     with open(output_file, 'w') as f:

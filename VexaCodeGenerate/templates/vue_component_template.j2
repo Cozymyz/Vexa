@@ -68,11 +68,11 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 
 // Create fetch functions for each module
 {% for module in modules %}
-const {{ fetch_action }} = async () => {
+const {{ module.fetch_action }} = async () => {
     const moduleName = '{{ module.name }}'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/{{ fetch_action }}`)
+        await store.dispatch(`${moduleName}/{{ module.fetch_action }}`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error

@@ -1,5 +1,5 @@
 // Automatically generated Vuex module - Test
-// Generation time: 2025-07-01 16:05:23
+// Generation time: 2025-08-08 23:36:47
 // testList:{'testId': 'number', 'testName': 'string', 'displayOrder': 'number'}
 
 import api from '@/api'
