@@ -1,7 +1,7 @@
 /*
  * @Author: Meiyizhi
- * @Date: 2025-10-22 23:50:26
- * @LastEditTime: 2025-10-23 00:04:56
+ * @Date: 2025-06-10 21:59:26
+ * @LastEditTime: 2025-10-23 00:12:22
  * @Description: 
  */
 import { test } from '@/api/axios'
@@ -18,7 +18,7 @@ export default {
     }
   },
   actions: {
-    async fetchMenuGroups({ commit }) {
+    async fetchVuexModule4({ commit }) {
       this.loading = true
       try {
         const response = await test()

@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
- * @Date: 2025-06-10 20:03:19
- * @LastEditTime: 2025-10-22 23:43:24
+ * @Date: 2025-10-22 23:36:46
+ * @LastEditTime: 2025-10-23 00:26:01
  * @Description: 
 -->
 <template>
@@ -28,15 +28,22 @@
             </el-menu-item>
         </el-menu>
         <span>vuex 1</span>
+        <span>vuex 2</span>
     </el-drawer>
 </template>
 
 <script lang="ts">
 export default {
-  vuexModule: {
-    name: 'MenuGroup',
-    extent: 'component'
-  }
+  vuexModule: [
+    {
+      name: 'VuexModule1',
+      extent: 'session'
+    },
+    {
+      name: 'VuexModule2',
+      extent: 'component'
+    }
+  ]
 }
 </script>
 
@@ -44,16 +51,28 @@ export default {
 import { ref, watch, onMounted, computed } from 'vue'
 import { useStore } from 'vuex'
 
-interface MenuGroup {
+interface VuexModule1 {
   groupId: number
   groupName: string
   displayOrder: number
 }
 
-const vuexModule = {
-  name: 'MenuGroup',
-  extent: 'component'
+interface VuexModule2 {
+  groupId: number
+  groupName: string
+  displayOrder: number
 }
+
+const vuexModule = [
+  {
+    name: 'VuexModule1',
+    extent: 'session'
+  },
+  {
+    name: 'VuexModule2',
+    extent: 'component'
+  }
+]
 
 const emit = defineEmits(['update:visible', 'refresh'])
 const store = useStore()
@@ -72,7 +91,8 @@ watch(() => props.visible, (newVal) => {
 onMounted(() =>{
     if (internalVisible.value) {
         console.log('组件挂载时可见，开始加载数据')
-        fetchMenuGroups()
+        fetchVuexModule1()
+        fetchVuexModule2()
     }
 })
 
@@ -98,9 +118,9 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
   })
 }
 
-// 修改后的 fetchMenuGroups 函数
-const fetchMenuGroups = async () => {
-  const moduleName = vuexModule.name
+// 修改后的 fetchVuexModule1 函数
+const fetchVuexModule1 = async () => {
+  const moduleName = "VuexModule1"
   console.log(`准备加载模块: ${moduleName}`)
   
   try {
@@ -109,8 +129,27 @@ const fetchMenuGroups = async () => {
     console.log(`模块 ${moduleName} 已加载，开始分发 action`)
     
     // 现在模块已加载，可以安全调用 dispatch
-    await store.dispatch(`${moduleName}/fetchMenuGroups`)
-    console.log(`action 分发成功: ${moduleName}/fetchMenuGroups`)
+    await store.dispatch(`${moduleName}/fetchVuexModule1`)
+    console.log(`action 分发成功: ${moduleName}/fetchVuexModule1`)
+    
+  } catch (error) {
+    console.error(`等待或加载失败: ${error.message}`)
+    throw error
+  }
+}
+
+const fetchVuexModule2 = async () => {
+  const moduleName = "VuexModule2"
+  console.log(`准备加载模块: ${moduleName}`)
+  
+  try {
+    // 等待模块加载完成
+    await waitForModule(moduleName)
+    console.log(`模块 ${moduleName} 已加载，开始分发 action`)
+    
+    // 现在模块已加载，可以安全调用 dispatch
+    await store.dispatch(`${moduleName}/fetchVuexModule2`)
+    console.log(`action 分发成功: ${moduleName}/fetchVuexModule2`)
     
   } catch (error) {
     console.error(`等待或加载失败: ${error.message}`)
@@ -120,7 +159,7 @@ const fetchMenuGroups = async () => {
 
 // 计算属性获取菜单组数据
 const menuGroups = computed((): MenuGroup[] => {
-  const moduleName = vuexModule.name
+  const moduleName = "VuexModule1"
   console.log(`[计算属性] 获取菜单组数据, 模块: ${moduleName}`)
   
   // 检查模块是否存在

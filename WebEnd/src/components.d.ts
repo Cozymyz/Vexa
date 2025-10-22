@@ -8,13 +8,17 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    copy: typeof import('./components/VueComponent3 copy.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
+    ElCol: typeof import('element-plus/es')['ElCol']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElDrawer: typeof import('element-plus/es')['ElDrawer']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElMain: typeof import('element-plus/es')['ElMain']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElRow: typeof import('element-plus/es')['ElRow']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     Index: typeof import('./components/Index.vue')['default']
@@ -22,5 +26,9 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SideDrawer: typeof import('./components/SideDrawer.vue')['default']
+    VueComponent1: typeof import('./components/VueComponent1.vue')['default']
+    VueComponent2: typeof import('./components/VueComponent2.vue')['default']
+    VueComponent3: typeof import('./components/VueComponent3.vue')['default']
+    VueComponent4: typeof import('./components/VueComponent4.vue')['default']
   }
 }

@@ -1,64 +1,66 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-06-08 23:12:56
- * @LastEditTime: 2025-07-01 17:20:39
+ * @LastEditTime: 2025-10-23 01:34:43
  * @Description: 
 -->
 <template>
 	<div class="app-container">
 		<el-container>
-			<!-- 侧边栏 -->
-			<el-aside style="width: 100%;">
-				<!-- <div class="toggle-button" @click="toggleCollapse">|||</div> -->
-				<!-- 侧边栏菜单区域 -->
-				<el-menu
-					background-color="#2d3a4b"
-					text-color="#fff"
-					active-text-color="#409EFF"
-					unique-opened
- 					router
-					mode="horizontal"
-				>
-					<el-menu-item>
-						<el-icon color="#fff"><Menu /></el-icon>
-						<span @click="openDrawer">ALL</span>
-					</el-menu-item>
-					<el-menu-item index="/test">test</el-menu-item>
-					<el-menu-item index="/admin">Help Center</el-menu-item>
-				</el-menu>
-			</el-aside>
 			<!-- 右侧内容主体 -->
 			<el-main>
 				<!-- 路由占位符 -->
 				<router-view></router-view>
-				<!-- <el-drawer
-					v-model="drawer"
-					title="Menu"
-					direction="ltr"
-					:with-header="false"
-				>
-					<el-menu
-						text-color="#000"
-						active-text-color="#409EFF"
-						unique-opened
-						router
-					>
-						<el-menu-item
-							v-for="group in menuGroups" 
-							:key="group.groupId"
-          					:index="group.groupId.toString()"
-						>
-						 	<span>{{ group.groupName }}</span>
-						</el-menu-item>
-					</el-menu>
-				</el-drawer> -->
-				
+
+				<el-header>Vexa Demo</el-header>
+
+				<el-row :gutter="30">
+					<el-col :span="6" index="/test">
+						<div class="vuecomponent grid-content ep-bg-purple" @click="openDrawer1">
+							<span>Vue Component 1</span>
+						</div>
+					</el-col>
+					<el-col :span="6">
+						<div class="vuecomponent grid-content ep-bg-purple" @click="openDrawer2">
+							<span style="margin: auto;">Vue Component 2</span>
+						</div>
+					</el-col>
+					<el-col :span="6">
+						<div class="vuecomponent grid-content ep-bg-purple" @click="openDrawer3">
+							<span style="margin: auto;">Vue Component 3</span>
+						</div>
+					</el-col>
+					<el-col :span="6">
+						<div class="vuecomponent grid-content ep-bg-purple" @click="openDrawer4">
+							<span style="margin: auto;">Vue Component 4</span>
+						</div>
+					</el-col>
+				</el-row>
+
 				<!-- Dynamically loading components -->
 				<component
-					:is="menuGroupComponent"
-					v-if="drawer"
-					v-model:visible="drawer"
-					:ref="menuGroupComponentRef"
+					:is="vueComponent1"
+					v-if="drawer1"
+					v-model:visible="drawer1"
+					:ref="vueComponent1"
+				/>
+				<component
+					:is="vueComponent2"
+					v-if="drawer2"
+					v-model:visible="drawer2"
+					:ref="vueComponent2"
+				/>
+				<component
+					:is="vueComponent3"
+					v-if="drawer3"
+					v-model:visible="drawer3"
+					:ref="vueComponent3"
+				/>
+				<component
+					:is="vueComponent4"
+					v-if="drawer4"
+					v-model:visible="drawer4"
+					:ref="vueComponent4"
 				/>
 			</el-main>
 		</el-container>
@@ -68,22 +70,54 @@
 <script setup lang="ts">
 import { ref, defineAsyncComponent } from 'vue'
 
-const drawer = ref(false)
-const menuGroupComponent = ref(null)
-const menuGroupComponentRef = ref(null)
+const drawer1 = ref(false)
+const vueComponent1 = ref(null)
 
-const openDrawer = async () => {
-  drawer.value = true
-  if (!menuGroupComponent.value) {
-    menuGroupComponent.value = defineAsyncComponent(() => 
-      import('@/components/MenuGroup.vue')
+const drawer2 = ref(false)
+const vueComponent2 = ref(null)
+
+const drawer3 = ref(false)
+const vueComponent3 = ref(null)
+
+const drawer4 = ref(false)
+const vueComponent4 = ref(null)
+
+const openDrawer1 = async () => {
+  drawer1.value = true
+  if (!vueComponent1.value) {
+    vueComponent1.value = defineAsyncComponent(() => 
+      import('@/components/VueComponent1.vue')
     )
   }
-  await nextTick()
-  if (menuGroupComponentRef.value?.fetchMenuGroups) {
-    menuGroupComponentRef.value.fetchMenuGroups()
+}
+
+const openDrawer2 = async () => {
+  drawer2.value = true
+  if (!vueComponent2.value) {
+    vueComponent2.value = defineAsyncComponent(() => 
+      import('@/components/VueComponent2.vue')
+    )
   }
 }
+
+const openDrawer3 = async () => {
+  drawer3.value = true
+  if (!vueComponent3.value) {
+    vueComponent3.value = defineAsyncComponent(() => 
+      import('@/components/VueComponent3.vue')
+    )
+  }
+}
+
+const openDrawer4 = async () => {
+  drawer4.value = true
+  if (!vueComponent4.value) {
+    vueComponent4.value = defineAsyncComponent(() => 
+      import('@/components/vueComponent4.vue')
+    )
+  }
+}
+
 </script>
 
 <style>
@@ -91,11 +125,48 @@ const openDrawer = async () => {
 		padding: 0 20px 0 20px;
 		height: 100%;
 	}
+	.el-header{
+		height: 12%;
+		background-color: #2d3a4b;
+		font-size: x-large;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	.app-container{
 		height: 100%;
 		overflow: hidden;
 	}
 	.el-container{
 		height: 100%;
+	}
+	.el-row {
+		height: 35%;
+		margin-top: 10%;
+	}
+	.el-row:last-child {
+		margin-bottom: 0;
+	}
+	.el-col {
+		border-radius: 4px;
+	}
+
+	.grid-content {
+		border-radius: 4px;
+		min-height: 36px;
+	}
+
+	.vuecomponent {
+		height: 100%;
+		margin: auto;
+		box-shadow: var(--el-box-shadow-dark);
+	}
+
+	.vuecomponent>span {
+		height: 50%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
 	}
 </style>

@@ -1,7 +1,7 @@
 /*
  * @Author: Meiyizhi
  * @Date: 2025-06-08 22:52:23
- * @LastEditTime: 2025-06-08 23:16:54
+ * @LastEditTime: 2025-10-22 23:23:27
  * @Description: 
  */
 import {
@@ -10,6 +10,7 @@ import {
 } from "vue-router"
 
 import index from '../components/Index.vue'
+import MenuGroup from "../components/MenuGroup.vue"
 
 const router = createRouter({
     history: createWebHistory(),
@@ -18,6 +19,10 @@ const router = createRouter({
             path: '/',
             component: index,
         },
+        {
+            path: '/test',
+            component: MenuGroup,
+        }
         // {
         //     path: "/:pathMatch(.*)*",
         //     component: notFound
