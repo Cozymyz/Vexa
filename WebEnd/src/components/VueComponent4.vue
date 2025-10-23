@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-10-22 23:36:46
- * @LastEditTime: 2025-10-23 01:07:54
+ * @LastEditTime: 2025-10-23 16:35:30
  * @Description: 
 -->
 <template>
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ref, watch, onMounted, computed } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
 interface VuexModule1 {
@@ -111,16 +111,6 @@ const props = defineProps({
 const internalVisible = ref(props.visible)
 watch(() => props.visible, (newVal) => {
     internalVisible.value = newVal
-})
-
-onMounted(() =>{
-    if (internalVisible.value) {
-        console.log('组件挂载时可见，开始加载数据')
-        fetchVuexModule1()
-        fetchVuexModule2()
-        fetchVuexModule3()
-        fetchVuexModule4()
-    }
 })
 
 // wait for module mounted
@@ -222,29 +212,33 @@ const fetchVuexModule4 = async () => {
   }
 }
 
-// 计算属性获取菜单组数据
-const menuGroups = computed((): MenuGroup[] => {
-  const moduleName = "VuexModule1"
-  console.log(`[计算属性] 获取菜单组数据, 模块: ${moduleName}`)
-  
-  // 检查模块是否存在
-  if (!store.hasModule(moduleName)) {
-    console.log(`[计算属性] 模块 ${moduleName} 未注册`)
-    return []
-  }
-  
-  // 获取菜单组数据
-  const moduleState = store.state[moduleName]
-  
-  // 检查是否有 menuGroups 属性
-  if (!moduleState || !moduleState.menuGroups) {
-    console.log(`[计算属性] 模块状态中没有 menuGroups 数据`)
-    return []
-  }
-  
-  console.log(`[计算属性] 获取到 ${moduleState.menuGroups.length} 个菜单组`)
-  return moduleState.menuGroups
+// Load all module data on mount
+onMounted(() => {
+  if (internalVisible.value) {
+        console.log('组件挂载时可见，开始加载数据')
+        fetchAllModules()
+    }
 })
+
+// Get all module data in parallel
+const fetchAllModules = async () => {
+    try {
+        await Promise.all([
+            
+            fetchVuexModule1(),
+            
+            fetchVuexModule2(),
+
+            fetchVuexModule3(),
+
+            fetchVuexModule4()
+            
+        ])
+        console.log('All modules data loaded successfully')
+    } catch (error) {
+        console.error('Error loading one or more modules:', error)
+    }
+}
 
 // 处理抽屉状态变化
 const handleDrawerChange = (newValue: boolean) => {

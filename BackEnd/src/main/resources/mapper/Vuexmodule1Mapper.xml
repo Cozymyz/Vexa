@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.Vexa.mapper.MenuItemMapper">
-  <resultMap id="BaseResultMap" type="org.Vexa.model.MenuItem">
-    <id column="item_id" jdbcType="INTEGER" property="itemId" />
-    <result column="group_id" jdbcType="INTEGER" property="groupId" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="display_order" jdbcType="INTEGER" property="displayOrder" />
+<mapper namespace="org.Vexa.mapper.Vuexmodule1Mapper">
+  <resultMap id="BaseResultMap" type="org.Vexa.model.Vuexmodule1">
+    <id column="User_Id" jdbcType="INTEGER" property="userId" />
+    <result column="User_Name" jdbcType="VARCHAR" property="userName" />
+    <result column="User_Password" jdbcType="VARCHAR" property="userPassword" />
+    <result column="User_Introduce" jdbcType="VARCHAR" property="userIntroduce" />
   </resultMap>
-  <select id="selectByGroupId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from menu_item
-    where group_id = #{groupId,jdbcType=INTEGER}
-  </select>
+    <select id="allUser" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from vuexmodule1
+    </select>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -72,15 +71,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    item_id, group_id, name, display_order
+    User_Id, User_Name, User_Password, User_Introduce
   </sql>
-  <select id="selectByExample" parameterType="org.Vexa.model.MenuItemExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="org.Vexa.model.Vuexmodule1Example" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from menu_item
+    from vuexmodule1
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -91,76 +90,76 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from menu_item
-    where item_id = #{itemId,jdbcType=INTEGER}
+    from vuexmodule1
+    where User_Id = #{userId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from menu_item
-    where item_id = #{itemId,jdbcType=INTEGER}
+    delete from vuexmodule1
+    where User_Id = #{userId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="org.Vexa.model.MenuItemExample">
-    delete from menu_item
+  <delete id="deleteByExample" parameterType="org.Vexa.model.Vuexmodule1Example">
+    delete from vuexmodule1
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="org.Vexa.model.MenuItem">
-    insert into menu_item (item_id, group_id, name, 
-      display_order)
-    values (#{itemId,jdbcType=INTEGER}, #{groupId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
-      #{displayOrder,jdbcType=INTEGER})
+  <insert id="insert" parameterType="org.Vexa.model.Vuexmodule1">
+    insert into vuexmodule1 (User_Id, User_Name, User_Password, 
+      User_Introduce)
+    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR}, 
+      #{userIntroduce,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="org.Vexa.model.MenuItem">
-    insert into menu_item
+  <insert id="insertSelective" parameterType="org.Vexa.model.Vuexmodule1">
+    insert into vuexmodule1
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="itemId != null">
-        item_id,
+      <if test="userId != null">
+        User_Id,
       </if>
-      <if test="groupId != null">
-        group_id,
+      <if test="userName != null">
+        User_Name,
       </if>
-      <if test="name != null">
-        name,
+      <if test="userPassword != null">
+        User_Password,
       </if>
-      <if test="displayOrder != null">
-        display_order,
+      <if test="userIntroduce != null">
+        User_Introduce,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="itemId != null">
-        #{itemId,jdbcType=INTEGER},
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
       </if>
-      <if test="groupId != null">
-        #{groupId,jdbcType=INTEGER},
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="name != null">
-        #{name,jdbcType=VARCHAR},
+      <if test="userPassword != null">
+        #{userPassword,jdbcType=VARCHAR},
       </if>
-      <if test="displayOrder != null">
-        #{displayOrder,jdbcType=INTEGER},
+      <if test="userIntroduce != null">
+        #{userIntroduce,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="org.Vexa.model.MenuItemExample" resultType="java.lang.Long">
-    select count(*) from menu_item
+  <select id="countByExample" parameterType="org.Vexa.model.Vuexmodule1Example" resultType="java.lang.Long">
+    select count(*) from vuexmodule1
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update menu_item
+    update vuexmodule1
     <set>
-      <if test="record.itemId != null">
-        item_id = #{record.itemId,jdbcType=INTEGER},
+      <if test="record.userId != null">
+        User_Id = #{record.userId,jdbcType=INTEGER},
       </if>
-      <if test="record.groupId != null">
-        group_id = #{record.groupId,jdbcType=INTEGER},
+      <if test="record.userName != null">
+        User_Name = #{record.userName,jdbcType=VARCHAR},
       </if>
-      <if test="record.name != null">
-        name = #{record.name,jdbcType=VARCHAR},
+      <if test="record.userPassword != null">
+        User_Password = #{record.userPassword,jdbcType=VARCHAR},
       </if>
-      <if test="record.displayOrder != null">
-        display_order = #{record.displayOrder,jdbcType=INTEGER},
+      <if test="record.userIntroduce != null">
+        User_Introduce = #{record.userIntroduce,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -168,35 +167,35 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update menu_item
-    set item_id = #{record.itemId,jdbcType=INTEGER},
-      group_id = #{record.groupId,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR},
-      display_order = #{record.displayOrder,jdbcType=INTEGER}
+    update vuexmodule1
+    set User_Id = #{record.userId,jdbcType=INTEGER},
+      User_Name = #{record.userName,jdbcType=VARCHAR},
+      User_Password = #{record.userPassword,jdbcType=VARCHAR},
+      User_Introduce = #{record.userIntroduce,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="org.Vexa.model.MenuItem">
-    update menu_item
+  <update id="updateByPrimaryKeySelective" parameterType="org.Vexa.model.Vuexmodule1">
+    update vuexmodule1
     <set>
-      <if test="groupId != null">
-        group_id = #{groupId,jdbcType=INTEGER},
+      <if test="userName != null">
+        User_Name = #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="name != null">
-        name = #{name,jdbcType=VARCHAR},
+      <if test="userPassword != null">
+        User_Password = #{userPassword,jdbcType=VARCHAR},
       </if>
-      <if test="displayOrder != null">
-        display_order = #{displayOrder,jdbcType=INTEGER},
+      <if test="userIntroduce != null">
+        User_Introduce = #{userIntroduce,jdbcType=VARCHAR},
       </if>
     </set>
-    where item_id = #{itemId,jdbcType=INTEGER}
+    where User_Id = #{userId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="org.Vexa.model.MenuItem">
-    update menu_item
-    set group_id = #{groupId,jdbcType=INTEGER},
-      name = #{name,jdbcType=VARCHAR},
-      display_order = #{displayOrder,jdbcType=INTEGER}
-    where item_id = #{itemId,jdbcType=INTEGER}
+  <update id="updateByPrimaryKey" parameterType="org.Vexa.model.Vuexmodule1">
+    update vuexmodule1
+    set User_Name = #{userName,jdbcType=VARCHAR},
+      User_Password = #{userPassword,jdbcType=VARCHAR},
+      User_Introduce = #{userIntroduce,jdbcType=VARCHAR}
+    where User_Id = #{userId,jdbcType=INTEGER}
   </update>
 </mapper>

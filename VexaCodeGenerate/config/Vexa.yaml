@@ -1,24 +1,102 @@
 components:
-  MenuGroup.vue:
-    modules:
-      - name: 'MenuGroup'
-        extent: 'session'
-        fields:
-          groupId: number
-          groupName: string
-          displayOrder: number
-      - name: 'Test'
-        extent: 'session'
-        fields:
-          testId: number
-          testName: string
-          displayOrder: number
-
-  UserProfile.vue:
+  VueComponent1.vue:
     module:
-      name: 'User'
-      extent: 'local'
+      name: 'VuexModule1'
+      extent: 'session'
       fields:
         userId: number
-        username: string
-        email: string
+        userName: string
+        userPassword: string
+        userIntroduce: string
+  VueComponent2.vue:
+      modules:
+        - name: 'VuexModule1'
+          extent: 'session'
+          fields:
+            userId: number
+            userName: string
+            userPassword: string
+            userIntroduce: string
+        - name: 'VuexModule2'
+          extent: 'component'
+          fields:
+            userId: number
+            userName: string
+            userPassword: string
+            userIntroduce: string
+  VueComponent3.vue:
+      modules:
+        - name: 'VuexModule1'
+          extent: 'session'
+          fields:
+            userId: number
+            userName: string
+            userPassword: string
+            userIntroduce: string
+        - name: 'VuexModule3'
+          extent: 'component'
+          fields:
+            userId: number
+            userName: string
+            userPassword: string
+            userIntroduce: string
+  VueComponent4.vue:
+      modules:
+        - name: 'VuexModule1'
+          extent: 'session'
+          fields:
+            userId: number
+            userName: string
+            userPassword: string
+            userIntroduce: string
+        - name: 'VuexModule2'
+          extent: 'component'
+          fields:
+            userId: number
+            userName: string
+            userPassword: string
+            userIntroduce: string
+        - name: 'VuexModule3'
+          extent: 'component'
+          fields:
+            userId: number
+            userName: string
+            userPassword: string
+            userIntroduce: string
+        - name: 'VuexModule4'
+          extent: 'component'
+          fields:
+            userId: number
+            userName: string
+            userPassword: string
+            userIntroduce: string
+
+#  MenuGroup.vue:
+#    modules:
+#      - name: 'MenuGroup'
+#        extent: 'session'
+#        fields:
+#          groupId: number
+#          groupName: string
+#          displayOrder: number
+#      - name: 'Test'
+#        extent: 'session'
+#        fields:
+#          testId: number
+#          testName: string
+#          displayOrder: number
+#      - name: 'Test'
+#        extent: 'session'
+#        fields:
+#          testId: number
+#          testName: string
+#          displayOrder: number
+#
+#  UserProfile.vue:
+#    module:
+#      name: 'User'
+#      extent: 'local'
+#      fields:
+#        userId: number
+#        username: string
+#        email: string
