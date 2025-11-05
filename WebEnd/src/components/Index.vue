@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-06-08 23:12:56
- * @LastEditTime: 2025-10-23 01:34:43
+ * @LastEditTime: 2025-11-05 22:13:39
  * @Description: 
 -->
 <template>
@@ -17,50 +17,50 @@
 				<el-row :gutter="30">
 					<el-col :span="6" index="/test">
 						<div class="vuecomponent grid-content ep-bg-purple" @click="openDrawer1">
-							<span>Vue Component 1</span>
+							<span>Preferences View</span>
 						</div>
 					</el-col>
 					<el-col :span="6">
 						<div class="vuecomponent grid-content ep-bg-purple" @click="openDrawer2">
-							<span style="margin: auto;">Vue Component 2</span>
+							<span style="margin: auto;">Shops</span>
 						</div>
 					</el-col>
 					<el-col :span="6">
 						<div class="vuecomponent grid-content ep-bg-purple" @click="openDrawer3">
-							<span style="margin: auto;">Vue Component 3</span>
+							<span style="margin: auto;">Genres</span>
 						</div>
 					</el-col>
 					<el-col :span="6">
 						<div class="vuecomponent grid-content ep-bg-purple" @click="openDrawer4">
-							<span style="margin: auto;">Vue Component 4</span>
+							<span style="margin: auto;">Shops Near By</span>
 						</div>
 					</el-col>
 				</el-row>
 
 				<!-- Dynamically loading components -->
 				<component
-					:is="vueComponent1"
+					:is="PreferencesView"
 					v-if="drawer1"
 					v-model:visible="drawer1"
-					:ref="vueComponent1"
+					:ref="PreferencesView"
 				/>
 				<component
-					:is="vueComponent2"
+					:is="Shops"
 					v-if="drawer2"
 					v-model:visible="drawer2"
-					:ref="vueComponent2"
+					:ref="Shops"
 				/>
 				<component
-					:is="vueComponent3"
+					:is="Genres"
 					v-if="drawer3"
 					v-model:visible="drawer3"
-					:ref="vueComponent3"
+					:ref="Genres"
 				/>
 				<component
-					:is="vueComponent4"
+					:is="ShopsNearBy"
 					v-if="drawer4"
 					v-model:visible="drawer4"
-					:ref="vueComponent4"
+					:ref="ShopsNearBy"
 				/>
 			</el-main>
 		</el-container>
@@ -71,49 +71,49 @@
 import { ref, defineAsyncComponent } from 'vue'
 
 const drawer1 = ref(false)
-const vueComponent1 = ref(null)
+const PreferencesView = ref(null)
 
 const drawer2 = ref(false)
-const vueComponent2 = ref(null)
+const Shops = ref(null)
 
 const drawer3 = ref(false)
-const vueComponent3 = ref(null)
+const Genres = ref(null)
 
 const drawer4 = ref(false)
-const vueComponent4 = ref(null)
+const ShopsNearBy = ref(null)
 
 const openDrawer1 = async () => {
   drawer1.value = true
-  if (!vueComponent1.value) {
-    vueComponent1.value = defineAsyncComponent(() => 
-      import('@/components/VueComponent1.vue')
+  if (!PreferencesView.value) {
+    PreferencesView.value = defineAsyncComponent(() => 
+      import('@/components/PreferencesView.vue')
     )
   }
 }
 
 const openDrawer2 = async () => {
   drawer2.value = true
-  if (!vueComponent2.value) {
-    vueComponent2.value = defineAsyncComponent(() => 
-      import('@/components/VueComponent2.vue')
+  if (!Shops.value) {
+    Shops.value = defineAsyncComponent(() => 
+      import('@/components/Shops.vue')
     )
   }
 }
 
 const openDrawer3 = async () => {
   drawer3.value = true
-  if (!vueComponent3.value) {
-    vueComponent3.value = defineAsyncComponent(() => 
-      import('@/components/VueComponent3.vue')
+  if (!Genres.value) {
+    Genres.value = defineAsyncComponent(() => 
+      import('@/components/Genres.vue')
     )
   }
 }
 
 const openDrawer4 = async () => {
   drawer4.value = true
-  if (!vueComponent4.value) {
-    vueComponent4.value = defineAsyncComponent(() => 
-      import('@/components/vueComponent4.vue')
+  if (!ShopsNearBy.value) {
+    ShopsNearBy.value = defineAsyncComponent(() => 
+      import('@/components/ShopsNearBy.vue')
     )
   }
 }

@@ -1,6 +1,6 @@
-// Automatically generated Vue component - VueComponent3.vue
-// Generation time: 2025-10-23 16:44:37
-// modules: [{'name': 'VuexModule1', 'extent': 'session', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'singular': 'VuexModule1', 'plural': 'VuexModule1s', 'fetch_action': 'fetchVuexModule1s'}, {'name': 'VuexModule3', 'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'singular': 'VuexModule3', 'plural': 'VuexModule3s', 'fetch_action': 'fetchVuexModule3s'}]
+// Automatically generated Vue component - Genres.vue
+// Generation time: 2025-11-05 21:36:01
+// modules: [{'extent': 'session', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting'}, {'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'ShopList', 'singular': 'ShopList', 'fetch_action': 'fetchShopList'}, {'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'GenreList', 'singular': 'GenreList', 'fetch_action': 'fetchGenreList'}]
 
 <template>
 <!-- Add component UI code here -->
@@ -12,12 +12,17 @@ export default {
   vuexModule: [
     
     {
-        name: 'VuexModule1',
+        name: 'GeneralSettings',
         extent: 'session'
     },
     
     {
-        name: 'VuexModule3',
+        name: 'ShopList',
+        extent: 'component'
+    },
+    
+    {
+        name: 'GenreList',
         extent: 'component'
     }
     
@@ -31,7 +36,7 @@ import { useStore } from 'vuex'
 
 // Defining Interface
 
-interface VuexModule1 {
+interface GeneralSettings {
     
     userId: number, 
     
@@ -43,7 +48,19 @@ interface VuexModule1 {
     
 }
 
-interface VuexModule3 {
+interface ShopList {
+    
+    userId: number, 
+    
+    userName: string, 
+    
+    userPassword: string, 
+    
+    userIntroduce: string
+    
+}
+
+interface GenreList {
     
     userId: number, 
     
@@ -60,12 +77,17 @@ interface VuexModule3 {
 const vuexModules = [
     
     {
-        name: 'VuexModule1',
+        name: 'GeneralSettings',
         extent: 'session'
     },
     
     {
-        name: 'VuexModule3',
+        name: 'ShopList',
+        extent: 'component'
+    },
+    
+    {
+        name: 'GenreList',
         extent: 'component'
     }
     
@@ -96,22 +118,33 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 
 // Create fetch functions for each module
 
-const fetchVuexModule1s = async () => {
-    const moduleName = 'VuexModule1'
+const fetchGeneralSetting = async () => {
+    const moduleName = 'GeneralSettings'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/fetchVuexModule1s`)
+        await store.dispatch(`${moduleName}/fetchGeneralSetting`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error
     }
 }
 
-const fetchVuexModule3s = async () => {
-    const moduleName = 'VuexModule3'
+const fetchShopList = async () => {
+    const moduleName = 'ShopList'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/fetchVuexModule3s`)
+        await store.dispatch(`${moduleName}/fetchShopList`)
+    } catch (error) {
+        console.error(`Error loading module ${moduleName}: ${error.message}`)
+        throw error
+    }
+}
+
+const fetchGenreList = async () => {
+    const moduleName = 'GenreList'
+    try {
+        await waitForModule(moduleName)
+        await store.dispatch(`${moduleName}/fetchGenreList`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error
@@ -129,9 +162,11 @@ const fetchAllModules = async () => {
     try {
         await Promise.all([
             
-            fetchVuexModule1s(),
+            fetchGeneralSetting(),
             
-            fetchVuexModule3s()
+            fetchShopList(),
+            
+            fetchGenreList()
             
         ])
         console.log('All modules data loaded successfully')

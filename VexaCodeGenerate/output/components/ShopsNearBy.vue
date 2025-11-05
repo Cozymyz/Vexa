@@ -1,6 +1,6 @@
-// Automatically generated Vue component - VueComponent4.vue
-// Generation time: 2025-10-23 16:44:37
-// modules: [{'name': 'VuexModule1', 'extent': 'session', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'singular': 'VuexModule1', 'plural': 'VuexModule1s', 'fetch_action': 'fetchVuexModule1s'}, {'name': 'VuexModule2', 'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'singular': 'VuexModule2', 'plural': 'VuexModule2s', 'fetch_action': 'fetchVuexModule2s'}, {'name': 'VuexModule3', 'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'singular': 'VuexModule3', 'plural': 'VuexModule3s', 'fetch_action': 'fetchVuexModule3s'}, {'name': 'VuexModule4', 'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'singular': 'VuexModule4', 'plural': 'VuexModule4s', 'fetch_action': 'fetchVuexModule4s'}]
+// Automatically generated Vue component - ShopsNearBy.vue
+// Generation time: 2025-11-05 21:36:01
+// modules: [{'extent': 'session', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting'}, {'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'ShopList', 'singular': 'ShopList', 'fetch_action': 'fetchShopList'}, {'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'GenreList', 'singular': 'GenreList', 'fetch_action': 'fetchGenreList'}, {'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'UserLocation', 'singular': 'UserLocation', 'fetch_action': 'fetchUserLocation'}]
 
 <template>
 <!-- Add component UI code here -->
@@ -12,22 +12,22 @@ export default {
   vuexModule: [
     
     {
-        name: 'VuexModule1',
+        name: 'GeneralSettings',
         extent: 'session'
     },
     
     {
-        name: 'VuexModule2',
+        name: 'ShopList',
         extent: 'component'
     },
     
     {
-        name: 'VuexModule3',
+        name: 'GenreList',
         extent: 'component'
     },
     
     {
-        name: 'VuexModule4',
+        name: 'UserLocation',
         extent: 'component'
     }
     
@@ -41,7 +41,7 @@ import { useStore } from 'vuex'
 
 // Defining Interface
 
-interface VuexModule1 {
+interface GeneralSettings {
     
     userId: number, 
     
@@ -53,7 +53,7 @@ interface VuexModule1 {
     
 }
 
-interface VuexModule2 {
+interface ShopList {
     
     userId: number, 
     
@@ -65,7 +65,7 @@ interface VuexModule2 {
     
 }
 
-interface VuexModule3 {
+interface GenreList {
     
     userId: number, 
     
@@ -77,7 +77,7 @@ interface VuexModule3 {
     
 }
 
-interface VuexModule4 {
+interface UserLocation {
     
     userId: number, 
     
@@ -94,22 +94,22 @@ interface VuexModule4 {
 const vuexModules = [
     
     {
-        name: 'VuexModule1',
+        name: 'GeneralSettings',
         extent: 'session'
     },
     
     {
-        name: 'VuexModule2',
+        name: 'ShopList',
         extent: 'component'
     },
     
     {
-        name: 'VuexModule3',
+        name: 'GenreList',
         extent: 'component'
     },
     
     {
-        name: 'VuexModule4',
+        name: 'UserLocation',
         extent: 'component'
     }
     
@@ -140,44 +140,44 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 
 // Create fetch functions for each module
 
-const fetchVuexModule1s = async () => {
-    const moduleName = 'VuexModule1'
+const fetchGeneralSetting = async () => {
+    const moduleName = 'GeneralSettings'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/fetchVuexModule1s`)
+        await store.dispatch(`${moduleName}/fetchGeneralSetting`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error
     }
 }
 
-const fetchVuexModule2s = async () => {
-    const moduleName = 'VuexModule2'
+const fetchShopList = async () => {
+    const moduleName = 'ShopList'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/fetchVuexModule2s`)
+        await store.dispatch(`${moduleName}/fetchShopList`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error
     }
 }
 
-const fetchVuexModule3s = async () => {
-    const moduleName = 'VuexModule3'
+const fetchGenreList = async () => {
+    const moduleName = 'GenreList'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/fetchVuexModule3s`)
+        await store.dispatch(`${moduleName}/fetchGenreList`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error
     }
 }
 
-const fetchVuexModule4s = async () => {
-    const moduleName = 'VuexModule4'
+const fetchUserLocation = async () => {
+    const moduleName = 'UserLocation'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/fetchVuexModule4s`)
+        await store.dispatch(`${moduleName}/fetchUserLocation`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error
@@ -195,13 +195,13 @@ const fetchAllModules = async () => {
     try {
         await Promise.all([
             
-            fetchVuexModule1s(),
+            fetchGeneralSetting(),
             
-            fetchVuexModule2s(),
+            fetchShopList(),
             
-            fetchVuexModule3s(),
+            fetchGenreList(),
             
-            fetchVuexModule4s()
+            fetchUserLocation()
             
         ])
         console.log('All modules data loaded successfully')

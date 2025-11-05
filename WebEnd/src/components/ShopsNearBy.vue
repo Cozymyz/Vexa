@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-10-22 23:36:46
- * @LastEditTime: 2025-10-23 16:35:30
+ * @LastEditTime: 2025-11-05 21:54:00
  * @Description: 
 -->
 <template>
@@ -33,19 +33,22 @@
 export default {
   vuexModule: [
     {
-      name: 'VuexModule1',
+      name: 'GeneralSettings',
       extent: 'session'
     },
+    
     {
-      name: 'VuexModule2',
+      name: 'ShopList',
       extent: 'component'
     },
+
     {
-      name: 'VuexModule3',
+      name: 'GenreList',
       extent: 'component'
     },
+
     {
-      name: 'VuexModule4',
+      name: 'UserLocation',
       extent: 'component'
     }
   ]
@@ -56,45 +59,64 @@ export default {
 import { ref, watch, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
-interface VuexModule1 {
-  groupId: number
-  groupName: string
-  displayOrder: number
+interface GeneralSettings {
+  userId: number
+  userName: string
+  userPassword: string
+  userIntroduce: string
 }
 
-interface VuexModule2 {
-  groupId: number
-  groupName: string
-  displayOrder: number
+interface ShopList {
+    
+    userId: number, 
+    
+    userName: string, 
+    
+    userPassword: string, 
+    
+    userIntroduce: string
+    
 }
 
-interface VuexModule3 {
-  groupId: number
-  groupName: string
-  displayOrder: number
+interface GenreList {
+    
+    userId: number, 
+    
+    userName: string, 
+    
+    userPassword: string, 
+    
+    userIntroduce: string
+    
 }
 
-interface VuexModule4 {
-  groupId: number
-  groupName: string
-  displayOrder: number
+interface UserLocation {
+    
+    userId: number, 
+    
+    userName: string, 
+    
+    userPassword: string, 
+    
+    userIntroduce: string
+    
 }
 
 const vuexModule = [
   {
-    name: 'VuexModule1',
+    name: 'GeneralSettings',
     extent: 'session'
   },
   {
-    name: 'VuexModule2',
+    name: 'ShopList',
     extent: 'component'
   },
   {
-    name: 'VuexModule3',
+    name: 'GenreList',
     extent: 'component'
   },
   {
-    name: 'VuexModule4',
+    name: 'UserLocation',
     extent: 'component'
   }
 ]
@@ -135,9 +157,9 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
   })
 }
 
-// 修改后的 fetchVuexModule1 函数
-const fetchVuexModule1 = async () => {
-  const moduleName = "VuexModule1"
+// 修改后的 fetchGeneralSetting 函数
+const fetchGeneralSetting = async () => {
+  const moduleName = "GeneralSettings"
   console.log(`准备加载模块: ${moduleName}`)
   
   try {
@@ -146,8 +168,8 @@ const fetchVuexModule1 = async () => {
     console.log(`模块 ${moduleName} 已加载，开始分发 action`)
     
     // 现在模块已加载，可以安全调用 dispatch
-    await store.dispatch(`${moduleName}/fetchVuexModule1`)
-    console.log(`action 分发成功: ${moduleName}/fetchVuexModule1`)
+    await store.dispatch(`${moduleName}/fetchGeneralSetting`)
+    console.log(`action 分发成功: ${moduleName}/fetchGeneralSetting`)
     
   } catch (error) {
     console.error(`等待或加载失败: ${error.message}`)
@@ -155,8 +177,9 @@ const fetchVuexModule1 = async () => {
   }
 }
 
-const fetchVuexModule2 = async () => {
-  const moduleName = "VuexModule2"
+// 修改后的 fetchShopList 函数
+const fetchShopList = async () => {
+  const moduleName = "ShopList"
   console.log(`准备加载模块: ${moduleName}`)
   
   try {
@@ -165,8 +188,8 @@ const fetchVuexModule2 = async () => {
     console.log(`模块 ${moduleName} 已加载，开始分发 action`)
     
     // 现在模块已加载，可以安全调用 dispatch
-    await store.dispatch(`${moduleName}/fetchVuexModule2`)
-    console.log(`action 分发成功: ${moduleName}/fetchVuexModule2`)
+    await store.dispatch(`${moduleName}/fetchShopList`)
+    console.log(`action 分发成功: ${moduleName}/fetchShopList`)
     
   } catch (error) {
     console.error(`等待或加载失败: ${error.message}`)
@@ -174,8 +197,9 @@ const fetchVuexModule2 = async () => {
   }
 }
 
-const fetchVuexModule3 = async () => {
-  const moduleName = "VuexModule3"
+// 修改后的 fetchGenreList 函数
+const fetchGenreList = async () => {
+  const moduleName = "GenreList"
   console.log(`准备加载模块: ${moduleName}`)
   
   try {
@@ -184,8 +208,8 @@ const fetchVuexModule3 = async () => {
     console.log(`模块 ${moduleName} 已加载，开始分发 action`)
     
     // 现在模块已加载，可以安全调用 dispatch
-    await store.dispatch(`${moduleName}/fetchVuexModule3`)
-    console.log(`action 分发成功: ${moduleName}/fetchVuexModule3`)
+    await store.dispatch(`${moduleName}/fetchGenreList`)
+    console.log(`action 分发成功: ${moduleName}/fetchGenreList`)
     
   } catch (error) {
     console.error(`等待或加载失败: ${error.message}`)
@@ -193,8 +217,9 @@ const fetchVuexModule3 = async () => {
   }
 }
 
-const fetchVuexModule4 = async () => {
-  const moduleName = "VuexModule4"
+// 修改后的 fetchUserLocation 函数
+const fetchUserLocation = async () => {
+  const moduleName = "UserLocation"
   console.log(`准备加载模块: ${moduleName}`)
   
   try {
@@ -203,8 +228,8 @@ const fetchVuexModule4 = async () => {
     console.log(`模块 ${moduleName} 已加载，开始分发 action`)
     
     // 现在模块已加载，可以安全调用 dispatch
-    await store.dispatch(`${moduleName}/fetchVuexModule4`)
-    console.log(`action 分发成功: ${moduleName}/fetchVuexModule4`)
+    await store.dispatch(`${moduleName}/fetchUserLocation`)
+    console.log(`action 分发成功: ${moduleName}/fetchUserLocation`)
     
   } catch (error) {
     console.error(`等待或加载失败: ${error.message}`)
@@ -225,13 +250,13 @@ const fetchAllModules = async () => {
     try {
         await Promise.all([
             
-            fetchVuexModule1(),
+            fetchGeneralSetting(),
             
-            fetchVuexModule2(),
+            fetchShopList(),
 
-            fetchVuexModule3(),
-
-            fetchVuexModule4()
+            fetchGenreList(),
+            
+            fetchUserLocation()
             
         ])
         console.log('All modules data loaded successfully')

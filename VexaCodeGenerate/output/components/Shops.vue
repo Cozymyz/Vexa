@@ -1,6 +1,6 @@
-// Automatically generated Vue component - UserProfile.vue
-// Generation time: 2025-08-08 23:36:47
-// modules: [{'name': 'User', 'extent': 'local', 'fields': {'userId': 'number', 'username': 'string', 'email': 'string'}, 'singular': 'User', 'plural': 'Users', 'fetch_action': 'fetchUsers'}]
+// Automatically generated Vue component - Shops.vue
+// Generation time: 2025-11-05 21:36:01
+// modules: [{'extent': 'session', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting'}, {'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'ShopList', 'singular': 'ShopList', 'fetch_action': 'fetchShopList'}]
 
 <template>
 <!-- Add component UI code here -->
@@ -12,8 +12,13 @@ export default {
   vuexModule: [
     
     {
-        name: 'User',
-        extent: 'local'
+        name: 'GeneralSettings',
+        extent: 'session'
+    },
+    
+    {
+        name: 'ShopList',
+        extent: 'component'
     }
     
   ]
@@ -26,13 +31,27 @@ import { useStore } from 'vuex'
 
 // Defining Interface
 
-interface User {
+interface GeneralSettings {
     
     userId: number, 
     
-    username: string, 
+    userName: string, 
     
-    email: string
+    userPassword: string, 
+    
+    userIntroduce: string
+    
+}
+
+interface ShopList {
+    
+    userId: number, 
+    
+    userName: string, 
+    
+    userPassword: string, 
+    
+    userIntroduce: string
     
 }
 
@@ -41,8 +60,13 @@ interface User {
 const vuexModules = [
     
     {
-        name: 'User',
-        extent: 'local'
+        name: 'GeneralSettings',
+        extent: 'session'
+    },
+    
+    {
+        name: 'ShopList',
+        extent: 'component'
     }
     
 ]
@@ -72,11 +96,22 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 
 // Create fetch functions for each module
 
-const fetchUsers = async () => {
-    const moduleName = 'User'
+const fetchGeneralSetting = async () => {
+    const moduleName = 'GeneralSettings'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/fetchUsers`)
+        await store.dispatch(`${moduleName}/fetchGeneralSetting`)
+    } catch (error) {
+        console.error(`Error loading module ${moduleName}: ${error.message}`)
+        throw error
+    }
+}
+
+const fetchShopList = async () => {
+    const moduleName = 'ShopList'
+    try {
+        await waitForModule(moduleName)
+        await store.dispatch(`${moduleName}/fetchShopList`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error
@@ -94,7 +129,9 @@ const fetchAllModules = async () => {
     try {
         await Promise.all([
             
-            fetchUsers()
+            fetchGeneralSetting(),
+            
+            fetchShopList()
             
         ])
         console.log('All modules data loaded successfully')

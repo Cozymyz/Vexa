@@ -30,6 +30,7 @@ def upper_underscore(s):
     # s = re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', s)
     return inflection.underscore(s).upper()
 
+
 def generate_module(template, module_config, output_dir):
     # Preparing the context
     context = {
@@ -50,6 +51,7 @@ def generate_module(template, module_config, output_dir):
 
     print(f"✅ Successfully generated {module_name} module: {output_file}")
 
+
 def generate_vuex_modules(yaml_file, output_dir):
     os.makedirs(output_dir, exist_ok=True)
 
@@ -64,24 +66,17 @@ def generate_vuex_modules(yaml_file, output_dir):
     # Rendering Templates
     template = env.get_template('vuex_module_template.j2')
 
-    if 'components' not in config:
-        print("⚠️ Warning: There is no 'components' section in the YAML configuration")
+    if 'modules' not in config:
+        print("⚠️ Warning: There is no 'modules' section in the YAML configuration")
         return
 
-    # Processing all components
-    for component_name, component_config in config['components'].items():
-        print(f"Processing components: {component_name}, generating vuex module")
+    # Processing all modules from the top-level modules section
+    for module_name, module_config in config['modules'].items():
+        print(f"Processing module: {module_name}, generating vuex module")
 
-        # Check if there are multiple module definitions in the component configuration
-        if 'modules' in component_config:
-            # Processing multiple modules
-            for modules_config in component_config['modules']:
-                generate_module(template, modules_config, output_dir)
-        elif 'module' in component_config:
-            # Processing single module
-            generate_module(template, component_config['module'], output_dir)
-        else:
-            print(f"⚠️ Warning: No module definition found for {component_name}")
+        # Add the module name to the config
+        module_config['name'] = module_name
+        generate_module(template, module_config, output_dir)
 
 
 def generate_vue_components(yaml_file, output_dir):
@@ -102,8 +97,11 @@ def generate_vue_components(yaml_file, output_dir):
         print("⚠️ Warning: There is no 'components' section in the YAML configuration")
         return
 
-    for component_name, component_config in config['components'].items():
+    if 'modules' not in config:
+        print("⚠️ Warning: There is no 'modules' section in the YAML configuration")
+        return
 
+    for component_name, component_config in config['components'].items():
         # Make sure your component file name ends with '.vue'
         if not component_name.endswith('.vue'):
             component_name += '.vue'
@@ -113,27 +111,37 @@ def generate_vue_components(yaml_file, output_dir):
             print(f"⚠️ Skip empty configuration: {component_name}")
             continue
 
-        print(f"Processing components: {component_name}.vue, generating vue component")
+        print(f"Processing component: {component_name}, generating vue component")
 
-        # Extract module configuration
+        # Extract module configurations from component configuration
         modules = []
 
-        # Handling different types of module configurations
+        # Handling modules list in component configuration
         if 'modules' in component_config:
-            # Multiple modules case
-            modules = component_config['modules']
-        elif 'module' in component_config:
-            # Single module case
-            modules = [component_config['module']]
+            # 每个模块配置是一个字典，包含name字段
+            for module_item in component_config['modules']:
+                module_name = module_item['name']
+
+                if module_name in config['modules']:
+                    # 获取顶层模块配置
+                    full_module_config = config['modules'][module_name].copy()
+                    full_module_config['name'] = module_name
+
+                    # 预处理模块名称
+                    full_module_config['singular'] = inflection.singularize(module_name)
+                    # full_module_config['plural'] = inflection.pluralize(full_module_config['singular'])
+                    full_module_config['fetch_action'] = 'fetch' + full_module_config['singular']
+
+                    modules.append(full_module_config)
+                else:
+                    print(f"⚠️ Warning: Module '{module_name}' not found in top-level modules section")
         else:
-            print(f"⚠️ Warning: No module definition found for {component_name}")
+            print(f"⚠️ Warning: No modules found for {component_name}")
             continue
 
-        # 预处理模块名称
-        for module in modules:
-            module['singular'] = inflection.singularize(module['name'])
-            module['plural'] = inflection.pluralize(module['singular'])
-            module['fetch_action'] = 'fetch' + module['plural']
+        if not modules:
+            print(f"⚠️ Warning: No valid modules found for {component_name}")
+            continue
 
         # Preparing the context
         context = {
@@ -150,7 +158,7 @@ def generate_vue_components(yaml_file, output_dir):
         with open(output_file, 'w') as f:
             f.write(rendered)
 
-        print(f"✅ Successfully generated {component_name} components: {output_file}")
+        print(f"✅ Successfully generated {component_name} component: {output_file}")
 
 if __name__ == "__main__":
 

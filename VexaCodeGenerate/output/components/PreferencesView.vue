@@ -1,6 +1,6 @@
-// Automatically generated Vue component - VueComponent2.vue
-// Generation time: 2025-10-23 16:44:37
-// modules: [{'name': 'VuexModule1', 'extent': 'session', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'singular': 'VuexModule1', 'plural': 'VuexModule1s', 'fetch_action': 'fetchVuexModule1s'}, {'name': 'VuexModule2', 'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'singular': 'VuexModule2', 'plural': 'VuexModule2s', 'fetch_action': 'fetchVuexModule2s'}]
+// Automatically generated Vue component - PreferencesView.vue
+// Generation time: 2025-11-05 21:36:01
+// modules: [{'extent': 'session', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting'}]
 
 <template>
 <!-- Add component UI code here -->
@@ -12,13 +12,8 @@ export default {
   vuexModule: [
     
     {
-        name: 'VuexModule1',
+        name: 'GeneralSettings',
         extent: 'session'
-    },
-    
-    {
-        name: 'VuexModule2',
-        extent: 'component'
     }
     
   ]
@@ -31,19 +26,7 @@ import { useStore } from 'vuex'
 
 // Defining Interface
 
-interface VuexModule1 {
-    
-    userId: number, 
-    
-    userName: string, 
-    
-    userPassword: string, 
-    
-    userIntroduce: string
-    
-}
-
-interface VuexModule2 {
+interface GeneralSettings {
     
     userId: number, 
     
@@ -60,13 +43,8 @@ interface VuexModule2 {
 const vuexModules = [
     
     {
-        name: 'VuexModule1',
+        name: 'GeneralSettings',
         extent: 'session'
-    },
-    
-    {
-        name: 'VuexModule2',
-        extent: 'component'
     }
     
 ]
@@ -96,22 +74,11 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 
 // Create fetch functions for each module
 
-const fetchVuexModule1s = async () => {
-    const moduleName = 'VuexModule1'
+const fetchGeneralSetting = async () => {
+    const moduleName = 'GeneralSettings'
     try {
         await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/fetchVuexModule1s`)
-    } catch (error) {
-        console.error(`Error loading module ${moduleName}: ${error.message}`)
-        throw error
-    }
-}
-
-const fetchVuexModule2s = async () => {
-    const moduleName = 'VuexModule2'
-    try {
-        await waitForModule(moduleName)
-        await store.dispatch(`${moduleName}/fetchVuexModule2s`)
+        await store.dispatch(`${moduleName}/fetchGeneralSetting`)
     } catch (error) {
         console.error(`Error loading module ${moduleName}: ${error.message}`)
         throw error
@@ -129,9 +96,7 @@ const fetchAllModules = async () => {
     try {
         await Promise.all([
             
-            fetchVuexModule1s(),
-            
-            fetchVuexModule2s()
+            fetchGeneralSetting()
             
         ])
         console.log('All modules data loaded successfully')

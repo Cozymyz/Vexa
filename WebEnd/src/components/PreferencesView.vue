@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-10-22 23:36:46
- * @LastEditTime: 2025-10-23 16:41:38
+ * @LastEditTime: 2025-11-05 22:09:42
  * @Description: 
 -->
 <template>
@@ -31,10 +31,12 @@
 
 <script lang="ts">
 export default {
-  vuexModule: {
-    name: 'VuexModule1',
-    extent: 'session'
-  }
+  vuexModule: [
+    {
+        name: 'GeneralSettings',
+        extent: 'session'
+    }
+  ]
 }
 </script>
 
@@ -42,7 +44,7 @@ export default {
 import { ref, watch, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
-interface VuexModule1 {
+interface GeneralSettings {
   userId: number
   userName: string
   userPassword: string
@@ -51,7 +53,7 @@ interface VuexModule1 {
 
 const vuexModule = [
   {
-    name: 'VuexModule1',
+    name: 'GeneralSettings',
     extent: 'session'
   }
 ]
@@ -92,9 +94,9 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
   })
 }
 
-// 修改后的 fetchVuexModule1 函数
-const fetchVuexModule1 = async () => {
-  const moduleName = "VuexModule1"
+// 修改后的 fetchGeneralSetting 函数
+const fetchGeneralSetting = async () => {
+  const moduleName = "GeneralSettings"
   console.log(`准备加载模块: ${moduleName}`)
   
   try {
@@ -103,8 +105,8 @@ const fetchVuexModule1 = async () => {
     console.log(`模块 ${moduleName} 已加载，开始分发 action`)
     
     // 现在模块已加载，可以安全调用 dispatch
-    await store.dispatch(`${moduleName}/fetchVuexModule1`)
-    console.log(`action 分发成功: ${moduleName}/fetchVuexModule1`)
+    await store.dispatch(`${moduleName}/fetchGeneralSetting`)
+    console.log(`action 分发成功: ${moduleName}/fetchGeneralSetting`)
     
   } catch (error) {
     console.error(`等待或加载失败: ${error.message}`)
@@ -125,7 +127,7 @@ const fetchAllModules = async () => {
     try {
         await Promise.all([
             
-            fetchVuexModule1()
+            fetchGeneralSetting()
             
         ])
         console.log('All modules data loaded successfully')

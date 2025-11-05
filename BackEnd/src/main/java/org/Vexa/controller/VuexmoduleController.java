@@ -32,25 +32,25 @@ public class VuexmoduleController {
     @PostMapping("/1")
     public Msg vuexmodule1List() {
         List<Vuexmodule1> vuexmodule1List = vuexmodule1Service.vuexmodule1List();
-        return Msg.success().add("vuexmodule1List", vuexmodule1List);
+        return Msg.success().add("generalSettings", vuexmodule1List);
     }
 
     @PostMapping("/2")
     public Msg vuexmodule2List() {
         List<Vuexmodule2> vuexmodule2List = vuexmodule2Service.vuexmodule2List();
-        return Msg.success().add("vuexmodule2List", vuexmodule2List);
+        return Msg.success().add("shopLists", vuexmodule2List);
     }
 
     @PostMapping("/3")
     public Msg vuexmodule3List() {
         List<Vuexmodule3> vuexmodule3List = vuexmodule3Service.vuexmodule3List();
-        return Msg.success().add("vuexmodule3List", vuexmodule3List);
+        return Msg.success().add("genreLists", vuexmodule3List);
     }
 
     @PostMapping("/4")
     public Msg vuexmodule4List() {
         List<Vuexmodule4> vuexmodule4List = vuexmodule4Service.vuexmodule4List();
-        return Msg.success().add("vuexmodule4List", vuexmodule4List);
+        return Msg.success().add("userLocations", vuexmodule4List);
     }
 
 }

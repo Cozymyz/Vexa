@@ -1,75 +1,52 @@
 components:
-  VueComponent1.vue:
-    module:
-      name: 'VuexModule1'
-      extent: 'session'
-      fields:
-        userId: number
-        userName: string
-        userPassword: string
-        userIntroduce: string
-  VueComponent2.vue:
-      modules:
-        - name: 'VuexModule1'
-          extent: 'session'
-          fields:
-            userId: number
-            userName: string
-            userPassword: string
-            userIntroduce: string
-        - name: 'VuexModule2'
-          extent: 'component'
-          fields:
-            userId: number
-            userName: string
-            userPassword: string
-            userIntroduce: string
-  VueComponent3.vue:
-      modules:
-        - name: 'VuexModule1'
-          extent: 'session'
-          fields:
-            userId: number
-            userName: string
-            userPassword: string
-            userIntroduce: string
-        - name: 'VuexModule3'
-          extent: 'component'
-          fields:
-            userId: number
-            userName: string
-            userPassword: string
-            userIntroduce: string
-  VueComponent4.vue:
-      modules:
-        - name: 'VuexModule1'
-          extent: 'session'
-          fields:
-            userId: number
-            userName: string
-            userPassword: string
-            userIntroduce: string
-        - name: 'VuexModule2'
-          extent: 'component'
-          fields:
-            userId: number
-            userName: string
-            userPassword: string
-            userIntroduce: string
-        - name: 'VuexModule3'
-          extent: 'component'
-          fields:
-            userId: number
-            userName: string
-            userPassword: string
-            userIntroduce: string
-        - name: 'VuexModule4'
-          extent: 'component'
-          fields:
-            userId: number
-            userName: string
-            userPassword: string
-            userIntroduce: string
+  PreferencesView.vue:
+    modules:
+      - name: 'GeneralSettings'
+  Shops.vue:
+    modules:
+      - name: 'GeneralSettings'
+      - name: 'ShopList'
+  Genres.vue:
+    modules:
+      - name: 'GeneralSettings'
+      - name: 'ShopList'
+      - name: 'GenreList'
+  ShopsNearBy.vue:
+    modules:
+      - name: 'GeneralSettings'
+      - name: 'ShopList'
+      - name: 'GenreList'
+      - name: 'UserLocation'
+
+modules:
+  GeneralSettings:
+    extent: 'session'
+    fields:
+      userId: number
+      userName: string
+      userPassword: string
+      userIntroduce: string
+  ShopList:
+    extent: 'component'
+    fields:
+      userId: number
+      userName: string
+      userPassword: string
+      userIntroduce: string
+  GenreList:
+    extent: 'component'
+    fields:
+      userId: number
+      userName: string
+      userPassword: string
+      userIntroduce: string
+  UserLocation:
+    extent: 'component'
+    fields:
+      userId: number
+      userName: string
+      userPassword: string
+      userIntroduce: string
 
 #  MenuGroup.vue:
 #    modules:
