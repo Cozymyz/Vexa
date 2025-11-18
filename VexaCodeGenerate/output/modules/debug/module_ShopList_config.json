@@ -1,0 +1,21 @@
+{
+  "module_config": {
+    "extent": "component",
+    "fields": {
+      "shopId": "number",
+      "shopName": "string",
+      "shopIntroduce": "string"
+    },
+    "name": "ShopList"
+  },
+  "fields": {
+    "shopId": "number",
+    "shopName": "string",
+    "shopIntroduce": "string"
+  },
+  "filters_applied": {
+    "state_attribute_name": "shopLists",
+    "singular": "ShopList",
+    "upper_underscore": "SHOP_LIST"
+  }
+}

@@ -1,7 +1,7 @@
 /*
  * @Author: Meiyizhi
  * @Date: 2025-06-10 20:47:25
- * @LastEditTime: 2025-07-01 17:23:35
+ * @LastEditTime: 2025-11-19 00:10:16
  * @Description: 
  */
 function vuexLazyLoad(app) {
@@ -62,6 +62,7 @@ function vuexLazyLoad(app) {
           this.$store.registerModule(moduleName, module.default)
           
           // Setting module lifecycle
+          console.log(`Setting module lifecycle: ${moduleName}，${extent}`)
           this.$_setupModuleLifecycle(moduleName, extent)
           
           console.log(`The module was successfully loaded and registered: ${moduleName}`)

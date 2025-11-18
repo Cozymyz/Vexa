@@ -1,0 +1,19 @@
+{
+  "component_name": "ShopsNearBy.vue",
+  "raw_component_config": {
+    "modules": [
+      {
+        "name": "GeneralSettings"
+      },
+      {
+        "name": "ShopList"
+      },
+      {
+        "name": "GenreList"
+      },
+      {
+        "name": "UserLocation"
+      }
+    ]
+  }
+}

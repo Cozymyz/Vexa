@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-10-22 23:36:46
- * @LastEditTime: 2025-11-05 22:10:49
+ * @LastEditTime: 2025-11-17 22:56:05
  * @Description: 
 -->
 <template>
@@ -50,21 +50,32 @@ import { ref, watch, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
 interface GeneralSettings {
-  userId: number
-  userName: string
-  userPassword: string
-  userIntroduce: string
+    
+    settingId: number, 
+    
+    settingName: string, 
+    
+    settingIntroduce: string
+    
+}
+
+interface ShopList {
+    
+    shopId: number, 
+    
+    shopName: string, 
+    
+    shopIntroduce: string
+    
 }
 
 interface GenreList {
     
-    userId: number, 
+    genreId: number, 
     
-    userName: string, 
+    genreName: string, 
     
-    userPassword: string, 
-    
-    userIntroduce: string
+    genreIntroduce: string
     
 }
 
@@ -72,6 +83,11 @@ const vuexModule = [
   {
     name: 'GeneralSettings',
     extent: 'session'
+  },
+
+  {
+      name: 'ShopList',
+      extent: 'component'
   },
 
   {
@@ -137,6 +153,26 @@ const fetchGeneralSetting = async () => {
 }
 
 // 修改后的 fetchShopList 函数
+const fetchShopList = async () => {
+  const moduleName = "ShopList"
+  console.log(`准备加载模块: ${moduleName}`)
+  
+  try {
+    // 等待模块加载完成
+    await waitForModule(moduleName)
+    console.log(`模块 ${moduleName} 已加载，开始分发 action`)
+    
+    // 现在模块已加载，可以安全调用 dispatch
+    await store.dispatch(`${moduleName}/fetchShopList`)
+    console.log(`action 分发成功: ${moduleName}/fetchShopList`)
+    
+  } catch (error) {
+    console.error(`等待或加载失败: ${error.message}`)
+    throw error
+  }
+}
+
+// 修改后的 fetchGenreList 函数
 const fetchGenreList = async () => {
   const moduleName = "GenreList"
   console.log(`准备加载模块: ${moduleName}`)

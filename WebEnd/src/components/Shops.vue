@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-10-22 23:36:46
- * @LastEditTime: 2025-11-05 21:45:27
+ * @LastEditTime: 2025-11-17 22:54:15
  * @Description: 
 -->
 <template>
@@ -50,21 +50,22 @@ import { ref, watch, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
 interface GeneralSettings {
-  userId: number
-  userName: string
-  userPassword: string
-  userIntroduce: string
+    
+    settingId: number, 
+    
+    settingName: string, 
+    
+    settingIntroduce: string
+    
 }
 
 interface ShopList {
     
-    userId: number, 
+    shopId: number, 
     
-    userName: string, 
+    shopName: string, 
     
-    userPassword: string, 
-    
-    userIntroduce: string
+    shopIntroduce: string
     
 }
 

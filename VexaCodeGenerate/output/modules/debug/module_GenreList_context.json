@@ -1,0 +1,17 @@
+{
+  "module": {
+    "extent": "component",
+    "fields": {
+      "genreId": "number",
+      "genreName": "string",
+      "genreIntroduce": "string"
+    },
+    "name": "GenreList"
+  },
+  "fields": {
+    "genreId": "number",
+    "genreName": "string",
+    "genreIntroduce": "string"
+  },
+  "now": "2025-11-18 21:55:47"
+}

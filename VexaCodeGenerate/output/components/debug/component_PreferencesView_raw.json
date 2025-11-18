@@ -1,0 +1,10 @@
+{
+  "component_name": "PreferencesView.vue",
+  "raw_component_config": {
+    "modules": [
+      {
+        "name": "GeneralSettings"
+      }
+    ]
+  }
+}

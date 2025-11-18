@@ -22,58 +22,24 @@ modules:
   GeneralSettings:
     extent: 'session'
     fields:
-      userId: number
-      userName: string
-      userPassword: string
-      userIntroduce: string
+      settingId: number
+      settingName: string
+      settingIntroduce: string
   ShopList:
     extent: 'component'
     fields:
-      userId: number
-      userName: string
-      userPassword: string
-      userIntroduce: string
+      shopId: number
+      shopName: string
+      shopIntroduce: string
   GenreList:
     extent: 'component'
     fields:
-      userId: number
-      userName: string
-      userPassword: string
-      userIntroduce: string
+      genreId: number
+      genreName: string
+      genreIntroduce: string
   UserLocation:
     extent: 'component'
     fields:
-      userId: number
-      userName: string
-      userPassword: string
-      userIntroduce: string
-
-#  MenuGroup.vue:
-#    modules:
-#      - name: 'MenuGroup'
-#        extent: 'session'
-#        fields:
-#          groupId: number
-#          groupName: string
-#          displayOrder: number
-#      - name: 'Test'
-#        extent: 'session'
-#        fields:
-#          testId: number
-#          testName: string
-#          displayOrder: number
-#      - name: 'Test'
-#        extent: 'session'
-#        fields:
-#          testId: number
-#          testName: string
-#          displayOrder: number
-#
-#  UserProfile.vue:
-#    module:
-#      name: 'User'
-#      extent: 'local'
-#      fields:
-#        userId: number
-#        username: string
-#        email: string
+      userlocationId: number
+      userlocationName: string
+      userlocationIntroduce: string

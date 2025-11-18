@@ -1,6 +1,6 @@
 // Automatically generated Vue component - ShopsNearBy.vue
-// Generation time: 2025-11-05 21:36:01
-// modules: [{'extent': 'session', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting'}, {'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'ShopList', 'singular': 'ShopList', 'fetch_action': 'fetchShopList'}, {'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'GenreList', 'singular': 'GenreList', 'fetch_action': 'fetchGenreList'}, {'extent': 'component', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'UserLocation', 'singular': 'UserLocation', 'fetch_action': 'fetchUserLocation'}]
+// Generation time: 2025-11-18 21:55:47
+// modules: [{'extent': 'session', 'fields': {'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting'}, {'extent': 'component', 'fields': {'shopId': 'number', 'shopName': 'string', 'shopIntroduce': 'string'}, 'name': 'ShopList', 'singular': 'ShopList', 'fetch_action': 'fetchShopList'}, {'extent': 'component', 'fields': {'genreId': 'number', 'genreName': 'string', 'genreIntroduce': 'string'}, 'name': 'GenreList', 'singular': 'GenreList', 'fetch_action': 'fetchGenreList'}, {'extent': 'component', 'fields': {'userlocationId': 'number', 'userlocationName': 'string', 'userlocationIntroduce': 'string'}, 'name': 'UserLocation', 'singular': 'UserLocation', 'fetch_action': 'fetchUserLocation'}]
 
 <template>
 <!-- Add component UI code here -->
@@ -43,49 +43,41 @@ import { useStore } from 'vuex'
 
 interface GeneralSettings {
     
-    userId: number, 
+    settingId: number, 
     
-    userName: string, 
+    settingName: string, 
     
-    userPassword: string, 
-    
-    userIntroduce: string
+    settingIntroduce: string
     
 }
 
 interface ShopList {
     
-    userId: number, 
+    shopId: number, 
     
-    userName: string, 
+    shopName: string, 
     
-    userPassword: string, 
-    
-    userIntroduce: string
+    shopIntroduce: string
     
 }
 
 interface GenreList {
     
-    userId: number, 
+    genreId: number, 
     
-    userName: string, 
+    genreName: string, 
     
-    userPassword: string, 
-    
-    userIntroduce: string
+    genreIntroduce: string
     
 }
 
 interface UserLocation {
     
-    userId: number, 
+    userlocationId: number, 
     
-    userName: string, 
+    userlocationName: string, 
     
-    userPassword: string, 
-    
-    userIntroduce: string
+    userlocationIntroduce: string
     
 }
 

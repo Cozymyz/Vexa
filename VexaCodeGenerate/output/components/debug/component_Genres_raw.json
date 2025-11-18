@@ -1,0 +1,16 @@
+{
+  "component_name": "Genres.vue",
+  "raw_component_config": {
+    "modules": [
+      {
+        "name": "GeneralSettings"
+      },
+      {
+        "name": "ShopList"
+      },
+      {
+        "name": "GenreList"
+      }
+    ]
+  }
+}

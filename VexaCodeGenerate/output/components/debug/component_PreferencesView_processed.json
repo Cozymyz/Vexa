@@ -1,0 +1,17 @@
+{
+  "component_name": "PreferencesView.vue",
+  "processed_modules": [
+    {
+      "extent": "session",
+      "fields": {
+        "settingId": "number",
+        "settingName": "string",
+        "settingIntroduce": "string"
+      },
+      "name": "GeneralSettings",
+      "singular": "GeneralSetting",
+      "fetch_action": "fetchGeneralSetting"
+    }
+  ],
+  "modules_count": 1
+}

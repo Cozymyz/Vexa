@@ -1,0 +1,17 @@
+{
+  "module": {
+    "extent": "session",
+    "fields": {
+      "settingId": "number",
+      "settingName": "string",
+      "settingIntroduce": "string"
+    },
+    "name": "GeneralSettings"
+  },
+  "fields": {
+    "settingId": "number",
+    "settingName": "string",
+    "settingIntroduce": "string"
+  },
+  "now": "2025-11-18 21:55:47"
+}

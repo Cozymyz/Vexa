@@ -1,0 +1,84 @@
+{
+  "components": {
+    "PreferencesView.vue": {
+      "modules": [
+        {
+          "name": "GeneralSettings"
+        }
+      ]
+    },
+    "Shops.vue": {
+      "modules": [
+        {
+          "name": "GeneralSettings"
+        },
+        {
+          "name": "ShopList"
+        }
+      ]
+    },
+    "Genres.vue": {
+      "modules": [
+        {
+          "name": "GeneralSettings"
+        },
+        {
+          "name": "ShopList"
+        },
+        {
+          "name": "GenreList"
+        }
+      ]
+    },
+    "ShopsNearBy.vue": {
+      "modules": [
+        {
+          "name": "GeneralSettings"
+        },
+        {
+          "name": "ShopList"
+        },
+        {
+          "name": "GenreList"
+        },
+        {
+          "name": "UserLocation"
+        }
+      ]
+    }
+  },
+  "modules": {
+    "GeneralSettings": {
+      "extent": "session",
+      "fields": {
+        "settingId": "number",
+        "settingName": "string",
+        "settingIntroduce": "string"
+      }
+    },
+    "ShopList": {
+      "extent": "component",
+      "fields": {
+        "shopId": "number",
+        "shopName": "string",
+        "shopIntroduce": "string"
+      }
+    },
+    "GenreList": {
+      "extent": "component",
+      "fields": {
+        "genreId": "number",
+        "genreName": "string",
+        "genreIntroduce": "string"
+      }
+    },
+    "UserLocation": {
+      "extent": "component",
+      "fields": {
+        "userlocationId": "number",
+        "userlocationName": "string",
+        "userlocationIntroduce": "string"
+      }
+    }
+  }
+}

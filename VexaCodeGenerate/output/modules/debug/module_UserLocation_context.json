@@ -1,0 +1,17 @@
+{
+  "module": {
+    "extent": "component",
+    "fields": {
+      "userlocationId": "number",
+      "userlocationName": "string",
+      "userlocationIntroduce": "string"
+    },
+    "name": "UserLocation"
+  },
+  "fields": {
+    "userlocationId": "number",
+    "userlocationName": "string",
+    "userlocationIntroduce": "string"
+  },
+  "now": "2025-11-18 21:55:47"
+}

@@ -1,0 +1,21 @@
+{
+  "module_config": {
+    "extent": "session",
+    "fields": {
+      "settingId": "number",
+      "settingName": "string",
+      "settingIntroduce": "string"
+    },
+    "name": "GeneralSettings"
+  },
+  "fields": {
+    "settingId": "number",
+    "settingName": "string",
+    "settingIntroduce": "string"
+  },
+  "filters_applied": {
+    "state_attribute_name": "generalSettings",
+    "singular": "GeneralSetting",
+    "upper_underscore": "GENERAL_SETTINGS"
+  }
+}

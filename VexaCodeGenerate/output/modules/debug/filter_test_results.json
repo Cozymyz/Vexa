@@ -1,0 +1,22 @@
+{
+  "GeneralSettings": {
+    "state_attribute_name": "generalSettings",
+    "singular": "GeneralSetting",
+    "upper_underscore": "GENERAL_SETTINGS"
+  },
+  "ShopList": {
+    "state_attribute_name": "shopLists",
+    "singular": "ShopList",
+    "upper_underscore": "SHOP_LIST"
+  },
+  "GenreList": {
+    "state_attribute_name": "genreLists",
+    "singular": "GenreList",
+    "upper_underscore": "GENRE_LIST"
+  },
+  "UserLocation": {
+    "state_attribute_name": "userLocations",
+    "singular": "UserLocation",
+    "upper_underscore": "USER_LOCATION"
+  }
+}

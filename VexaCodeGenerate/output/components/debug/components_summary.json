@@ -1,0 +1,15 @@
+{
+  "component_names": [
+    "PreferencesView.vue",
+    "Shops.vue",
+    "Genres.vue",
+    "ShopsNearBy.vue"
+  ],
+  "components_count": 4,
+  "modules_available": [
+    "GeneralSettings",
+    "ShopList",
+    "GenreList",
+    "UserLocation"
+  ]
+}

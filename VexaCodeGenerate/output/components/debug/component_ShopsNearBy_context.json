@@ -1,0 +1,51 @@
+{
+  "component_name": "ShopsNearBy",
+  "modules": [
+    {
+      "extent": "session",
+      "fields": {
+        "settingId": "number",
+        "settingName": "string",
+        "settingIntroduce": "string"
+      },
+      "name": "GeneralSettings",
+      "singular": "GeneralSetting",
+      "fetch_action": "fetchGeneralSetting"
+    },
+    {
+      "extent": "component",
+      "fields": {
+        "shopId": "number",
+        "shopName": "string",
+        "shopIntroduce": "string"
+      },
+      "name": "ShopList",
+      "singular": "ShopList",
+      "fetch_action": "fetchShopList"
+    },
+    {
+      "extent": "component",
+      "fields": {
+        "genreId": "number",
+        "genreName": "string",
+        "genreIntroduce": "string"
+      },
+      "name": "GenreList",
+      "singular": "GenreList",
+      "fetch_action": "fetchGenreList"
+    },
+    {
+      "extent": "component",
+      "fields": {
+        "userlocationId": "number",
+        "userlocationName": "string",
+        "userlocationIntroduce": "string"
+      },
+      "name": "UserLocation",
+      "singular": "UserLocation",
+      "fetch_action": "fetchUserLocation"
+    }
+  ],
+  "has_multiple_modules": true,
+  "now": "2025-11-18 21:55:47"
+}

@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-10-22 23:36:46
- * @LastEditTime: 2025-11-05 21:54:00
+ * @LastEditTime: 2025-11-17 22:56:58
  * @Description: 
 -->
 <template>
@@ -60,45 +60,42 @@ import { ref, watch, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
 interface GeneralSettings {
-  userId: number
-  userName: string
-  userPassword: string
-  userIntroduce: string
+    
+    settingId: number, 
+    
+    settingName: string, 
+    
+    settingIntroduce: string
+    
 }
 
 interface ShopList {
     
-    userId: number, 
+    shopId: number, 
     
-    userName: string, 
+    shopName: string, 
     
-    userPassword: string, 
-    
-    userIntroduce: string
+    shopIntroduce: string
     
 }
 
 interface GenreList {
     
-    userId: number, 
+    genreId: number, 
     
-    userName: string, 
+    genreName: string, 
     
-    userPassword: string, 
-    
-    userIntroduce: string
+    genreIntroduce: string
     
 }
 
 interface UserLocation {
     
-    userId: number, 
+    userlocationId: number, 
     
-    userName: string, 
+    userlocationName: string, 
     
-    userPassword: string, 
-    
-    userIntroduce: string
+    userlocationIntroduce: string
     
 }
 

@@ -1,0 +1,21 @@
+{
+  "module_config": {
+    "extent": "component",
+    "fields": {
+      "genreId": "number",
+      "genreName": "string",
+      "genreIntroduce": "string"
+    },
+    "name": "GenreList"
+  },
+  "fields": {
+    "genreId": "number",
+    "genreName": "string",
+    "genreIntroduce": "string"
+  },
+  "filters_applied": {
+    "state_attribute_name": "genreLists",
+    "singular": "GenreList",
+    "upper_underscore": "GENRE_LIST"
+  }
+}

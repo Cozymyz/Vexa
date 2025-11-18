@@ -1,0 +1,17 @@
+{
+  "module": {
+    "extent": "component",
+    "fields": {
+      "shopId": "number",
+      "shopName": "string",
+      "shopIntroduce": "string"
+    },
+    "name": "ShopList"
+  },
+  "fields": {
+    "shopId": "number",
+    "shopName": "string",
+    "shopIntroduce": "string"
+  },
+  "now": "2025-11-18 21:55:47"
+}

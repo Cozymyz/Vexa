@@ -1,13 +1,7 @@
 package org.Vexa.controller;
 
-import org.Vexa.model.Vuexmodule1;
-import org.Vexa.model.Vuexmodule2;
-import org.Vexa.model.Vuexmodule3;
-import org.Vexa.model.Vuexmodule4;
-import org.Vexa.service.Vuexmodule1Service;
-import org.Vexa.service.Vuexmodule2Service;
-import org.Vexa.service.Vuexmodule3Service;
-import org.Vexa.service.Vuexmodule4Service;
+import org.Vexa.model.*;
+import org.Vexa.service.*;
 import org.Vexa.utils.Msg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,36 +15,36 @@ import java.util.List;
 public class VuexmoduleController {
 
     @Autowired
-    private Vuexmodule1Service vuexmodule1Service;
+    private GeneralSettingService generalSettingService;
     @Autowired
-    private Vuexmodule2Service vuexmodule2Service;
+    private ShopService shopService;
     @Autowired
-    private Vuexmodule3Service vuexmodule3Service;
+    private GenreService genreService;
     @Autowired
-    private Vuexmodule4Service vuexmodule4Service;
+    private UserLocationService userLocationService;
 
     @PostMapping("/1")
-    public Msg vuexmodule1List() {
-        List<Vuexmodule1> vuexmodule1List = vuexmodule1Service.vuexmodule1List();
-        return Msg.success().add("generalSettings", vuexmodule1List);
+    public Msg generalSettings() {
+        List<Generalsetting> generalSettings = generalSettingService.generalSettings();
+        return Msg.success().add("generalSettings", generalSettings);
     }
 
     @PostMapping("/2")
-    public Msg vuexmodule2List() {
-        List<Vuexmodule2> vuexmodule2List = vuexmodule2Service.vuexmodule2List();
-        return Msg.success().add("shopLists", vuexmodule2List);
+    public Msg shopLists() {
+        List<Shop> shopLists = shopService.shopList();
+        return Msg.success().add("shopLists", shopLists);
     }
 
     @PostMapping("/3")
-    public Msg vuexmodule3List() {
-        List<Vuexmodule3> vuexmodule3List = vuexmodule3Service.vuexmodule3List();
-        return Msg.success().add("genreLists", vuexmodule3List);
+    public Msg genreLists() {
+        List<Genre> genreLists = genreService.genreList();
+        return Msg.success().add("genreLists", genreLists);
     }
 
     @PostMapping("/4")
-    public Msg vuexmodule4List() {
-        List<Vuexmodule4> vuexmodule4List = vuexmodule4Service.vuexmodule4List();
-        return Msg.success().add("userLocations", vuexmodule4List);
+    public Msg userLocations() {
+        List<Userlocation> userLocations = userLocationService.userlocations();
+        return Msg.success().add("userLocations", userLocations);
     }
 
 }

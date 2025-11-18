@@ -1,0 +1,18 @@
+{
+  "component_name": "PreferencesView",
+  "modules": [
+    {
+      "extent": "session",
+      "fields": {
+        "settingId": "number",
+        "settingName": "string",
+        "settingIntroduce": "string"
+      },
+      "name": "GeneralSettings",
+      "singular": "GeneralSetting",
+      "fetch_action": "fetchGeneralSetting"
+    }
+  ],
+  "has_multiple_modules": false,
+  "now": "2025-11-18 21:55:47"
+}

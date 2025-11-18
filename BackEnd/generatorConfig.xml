@@ -49,10 +49,10 @@
         <!--table schema="" tableName="address"></table-->
 
 
-        <table schema="" tableName="vuexmodule1"></table>
-        <table schema="" tableName="vuexmodule2"></table>
-        <table schema="" tableName="vuexmodule3"></table>
-        <table schema="" tableName="vuexmodule4"></table>
+        <table schema="" tableName="generalsetting"></table>
+        <table schema="" tableName="shop"></table>
+        <table schema="" tableName="genre"></table>
+        <table schema="" tableName="userlocation"></table>
         <!--        <table schema="" tableName="small_class_info"></table>-->
 
 

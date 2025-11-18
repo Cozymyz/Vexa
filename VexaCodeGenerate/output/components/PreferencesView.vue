@@ -1,6 +1,6 @@
 // Automatically generated Vue component - PreferencesView.vue
-// Generation time: 2025-11-05 21:36:01
-// modules: [{'extent': 'session', 'fields': {'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting'}]
+// Generation time: 2025-11-18 21:55:47
+// modules: [{'extent': 'session', 'fields': {'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting'}]
 
 <template>
 <!-- Add component UI code here -->
@@ -28,13 +28,11 @@ import { useStore } from 'vuex'
 
 interface GeneralSettings {
     
-    userId: number, 
+    settingId: number, 
     
-    userName: string, 
+    settingName: string, 
     
-    userPassword: string, 
-    
-    userIntroduce: string
+    settingIntroduce: string
     
 }
 

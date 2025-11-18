@@ -1,0 +1,13 @@
+{
+  "component_name": "Shops.vue",
+  "raw_component_config": {
+    "modules": [
+      {
+        "name": "GeneralSettings"
+      },
+      {
+        "name": "ShopList"
+      }
+    ]
+  }
+}

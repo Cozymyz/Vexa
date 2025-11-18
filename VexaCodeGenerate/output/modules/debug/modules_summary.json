@@ -1,0 +1,9 @@
+{
+  "module_names": [
+    "GeneralSettings",
+    "ShopList",
+    "GenreList",
+    "UserLocation"
+  ],
+  "modules_count": 4
+}

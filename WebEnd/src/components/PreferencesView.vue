@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-10-22 23:36:46
- * @LastEditTime: 2025-11-05 22:09:42
+ * @LastEditTime: 2025-11-19 00:30:42
  * @Description: 
 -->
 <template>
@@ -45,10 +45,13 @@ import { ref, watch, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
 interface GeneralSettings {
-  userId: number
-  userName: string
-  userPassword: string
-  userIntroduce: string
+    
+    settingId: number, 
+    
+    settingName: string, 
+    
+    settingIntroduce: string
+    
 }
 
 const vuexModule = [
@@ -95,9 +98,20 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 }
 
 // 修改后的 fetchGeneralSetting 函数
-const fetchGeneralSetting = async () => {
+const fetchGeneralSetting = async (skipIfExists = true) => {
   const moduleName = "GeneralSettings"
   console.log(`准备加载模块: ${moduleName}`)
+  
+  // 检查模块是否已存在
+  if (store.hasModule(moduleName)) {
+    console.log(`模块 ${moduleName} 已存在`)
+    
+    if (skipIfExists) {
+      return { success: true, skipped: true, reason: '模块已存在' }
+    } else {
+      console.log(`模块已存在，但仍然分发 action（强制刷新）`)
+    }
+  }
   
   try {
     // 等待模块加载完成

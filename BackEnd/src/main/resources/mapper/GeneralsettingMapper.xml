@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.Vexa.mapper.Vuexmodule4Mapper">
-  <resultMap id="BaseResultMap" type="org.Vexa.model.Vuexmodule4">
-    <id column="User_Id" jdbcType="INTEGER" property="userId" />
-    <result column="User_Name" jdbcType="VARCHAR" property="userName" />
-    <result column="User_Password" jdbcType="VARCHAR" property="userPassword" />
-    <result column="User_Introduce" jdbcType="VARCHAR" property="userIntroduce" />
+<mapper namespace="org.Vexa.mapper.GeneralsettingMapper">
+  <resultMap id="BaseResultMap" type="org.Vexa.model.Generalsetting">
+    <id column="Setting_Id" jdbcType="INTEGER" property="settingId" />
+    <result column="Setting_Name" jdbcType="VARCHAR" property="settingName" />
+    <result column="Setting_Introduce" jdbcType="VARCHAR" property="settingIntroduce" />
   </resultMap>
-    <select id="allUser" resultMap="BaseResultMap">
+    <select id="allGeneralSettings" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List" />
-        from vuexmodule4
+        from generalsetting
     </select>
   <sql id="Example_Where_Clause">
     <where>
@@ -71,15 +70,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    User_Id, User_Name, User_Password, User_Introduce
+    Setting_Id, Setting_Name, Setting_Introduce
   </sql>
-  <select id="selectByExample" parameterType="org.Vexa.model.Vuexmodule4Example" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="org.Vexa.model.GeneralsettingExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from vuexmodule4
+    from generalsetting
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -90,76 +89,67 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from vuexmodule4
-    where User_Id = #{userId,jdbcType=INTEGER}
+    from generalsetting
+    where Setting_Id = #{settingId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from vuexmodule4
-    where User_Id = #{userId,jdbcType=INTEGER}
+    delete from generalsetting
+    where Setting_Id = #{settingId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="org.Vexa.model.Vuexmodule4Example">
-    delete from vuexmodule4
+  <delete id="deleteByExample" parameterType="org.Vexa.model.GeneralsettingExample">
+    delete from generalsetting
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="org.Vexa.model.Vuexmodule4">
-    insert into vuexmodule4 (User_Id, User_Name, User_Password, 
-      User_Introduce)
-    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR}, 
-      #{userIntroduce,jdbcType=VARCHAR})
+  <insert id="insert" parameterType="org.Vexa.model.Generalsetting">
+    insert into generalsetting (Setting_Id, Setting_Name, Setting_Introduce
+      )
+    values (#{settingId,jdbcType=INTEGER}, #{settingName,jdbcType=VARCHAR}, #{settingIntroduce,jdbcType=VARCHAR}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="org.Vexa.model.Vuexmodule4">
-    insert into vuexmodule4
+  <insert id="insertSelective" parameterType="org.Vexa.model.Generalsetting">
+    insert into generalsetting
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="userId != null">
-        User_Id,
+      <if test="settingId != null">
+        Setting_Id,
       </if>
-      <if test="userName != null">
-        User_Name,
+      <if test="settingName != null">
+        Setting_Name,
       </if>
-      <if test="userPassword != null">
-        User_Password,
-      </if>
-      <if test="userIntroduce != null">
-        User_Introduce,
+      <if test="settingIntroduce != null">
+        Setting_Introduce,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="userId != null">
-        #{userId,jdbcType=INTEGER},
+      <if test="settingId != null">
+        #{settingId,jdbcType=INTEGER},
       </if>
-      <if test="userName != null">
-        #{userName,jdbcType=VARCHAR},
+      <if test="settingName != null">
+        #{settingName,jdbcType=VARCHAR},
       </if>
-      <if test="userPassword != null">
-        #{userPassword,jdbcType=VARCHAR},
-      </if>
-      <if test="userIntroduce != null">
-        #{userIntroduce,jdbcType=VARCHAR},
+      <if test="settingIntroduce != null">
+        #{settingIntroduce,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="org.Vexa.model.Vuexmodule4Example" resultType="java.lang.Long">
-    select count(*) from vuexmodule4
+  <select id="countByExample" parameterType="org.Vexa.model.GeneralsettingExample" resultType="java.lang.Long">
+    select count(*) from generalsetting
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update vuexmodule4
+    update generalsetting
     <set>
-      <if test="record.userId != null">
-        User_Id = #{record.userId,jdbcType=INTEGER},
+      <if test="record.settingId != null">
+        Setting_Id = #{record.settingId,jdbcType=INTEGER},
       </if>
-      <if test="record.userName != null">
-        User_Name = #{record.userName,jdbcType=VARCHAR},
+      <if test="record.settingName != null">
+        Setting_Name = #{record.settingName,jdbcType=VARCHAR},
       </if>
-      <if test="record.userPassword != null">
-        User_Password = #{record.userPassword,jdbcType=VARCHAR},
-      </if>
-      <if test="record.userIntroduce != null">
-        User_Introduce = #{record.userIntroduce,jdbcType=VARCHAR},
+      <if test="record.settingIntroduce != null">
+        Setting_Introduce = #{record.settingIntroduce,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -167,35 +157,30 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update vuexmodule4
-    set User_Id = #{record.userId,jdbcType=INTEGER},
-      User_Name = #{record.userName,jdbcType=VARCHAR},
-      User_Password = #{record.userPassword,jdbcType=VARCHAR},
-      User_Introduce = #{record.userIntroduce,jdbcType=VARCHAR}
+    update generalsetting
+    set Setting_Id = #{record.settingId,jdbcType=INTEGER},
+      Setting_Name = #{record.settingName,jdbcType=VARCHAR},
+      Setting_Introduce = #{record.settingIntroduce,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="org.Vexa.model.Vuexmodule4">
-    update vuexmodule4
+  <update id="updateByPrimaryKeySelective" parameterType="org.Vexa.model.Generalsetting">
+    update generalsetting
     <set>
-      <if test="userName != null">
-        User_Name = #{userName,jdbcType=VARCHAR},
+      <if test="settingName != null">
+        Setting_Name = #{settingName,jdbcType=VARCHAR},
       </if>
-      <if test="userPassword != null">
-        User_Password = #{userPassword,jdbcType=VARCHAR},
-      </if>
-      <if test="userIntroduce != null">
-        User_Introduce = #{userIntroduce,jdbcType=VARCHAR},
+      <if test="settingIntroduce != null">
+        Setting_Introduce = #{settingIntroduce,jdbcType=VARCHAR},
       </if>
     </set>
-    where User_Id = #{userId,jdbcType=INTEGER}
+    where Setting_Id = #{settingId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="org.Vexa.model.Vuexmodule4">
-    update vuexmodule4
-    set User_Name = #{userName,jdbcType=VARCHAR},
-      User_Password = #{userPassword,jdbcType=VARCHAR},
-      User_Introduce = #{userIntroduce,jdbcType=VARCHAR}
-    where User_Id = #{userId,jdbcType=INTEGER}
+  <update id="updateByPrimaryKey" parameterType="org.Vexa.model.Generalsetting">
+    update generalsetting
+    set Setting_Name = #{settingName,jdbcType=VARCHAR},
+      Setting_Introduce = #{settingIntroduce,jdbcType=VARCHAR}
+    where Setting_Id = #{settingId,jdbcType=INTEGER}
   </update>
 </mapper>

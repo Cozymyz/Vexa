@@ -1,6 +1,6 @@
 // Automatically generated Vuex module - ShopList
-// Generation time: 2025-11-05 21:36:01
-// shopLists:{'userId': 'number', 'userName': 'string', 'userPassword': 'string', 'userIntroduce': 'string'}
+// Generation time: 2025-11-18 21:55:47
+// shopLists:{'shopId': 'number', 'shopName': 'string', 'shopIntroduce': 'string'}
 
 import api from '@/api'
 

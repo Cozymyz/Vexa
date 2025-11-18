@@ -1,0 +1,29 @@
+{
+  "component_name": "Shops",
+  "modules": [
+    {
+      "extent": "session",
+      "fields": {
+        "settingId": "number",
+        "settingName": "string",
+        "settingIntroduce": "string"
+      },
+      "name": "GeneralSettings",
+      "singular": "GeneralSetting",
+      "fetch_action": "fetchGeneralSetting"
+    },
+    {
+      "extent": "component",
+      "fields": {
+        "shopId": "number",
+        "shopName": "string",
+        "shopIntroduce": "string"
+      },
+      "name": "ShopList",
+      "singular": "ShopList",
+      "fetch_action": "fetchShopList"
+    }
+  ],
+  "has_multiple_modules": true,
+  "now": "2025-11-18 21:55:47"
+}

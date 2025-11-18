@@ -1,0 +1,21 @@
+{
+  "module_config": {
+    "extent": "component",
+    "fields": {
+      "userlocationId": "number",
+      "userlocationName": "string",
+      "userlocationIntroduce": "string"
+    },
+    "name": "UserLocation"
+  },
+  "fields": {
+    "userlocationId": "number",
+    "userlocationName": "string",
+    "userlocationIntroduce": "string"
+  },
+  "filters_applied": {
+    "state_attribute_name": "userLocations",
+    "singular": "UserLocation",
+    "upper_underscore": "USER_LOCATION"
+  }
+}
