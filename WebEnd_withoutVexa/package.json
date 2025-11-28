@@ -1,0 +1,33 @@
+{
+  "name": "webend-withoutvexa",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "2.3.1",
+    "@vue/compiler-sfc": "3.5.16",
+    "axios": "^1.9.0",
+    "element-plus": "^2.11.5",
+    "js-cookie": "^3.0.5",
+    "sass": "1.89.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "unplugin-auto-import": "^19.3.0",
+    "unplugin-vue-components": "^28.7.0",
+    "@vue/tsconfig": "^0.8.1",
+    "typescript": "~5.9.3",
+    "vite": "^6.3.5",
+    "vue-tsc": "^3.1.4",
+    "vite-plugin-style-import": "^1.0.1"
+  }
+}
