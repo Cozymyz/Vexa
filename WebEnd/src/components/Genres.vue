@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-10-22 23:36:46
- * @LastEditTime: 2025-11-17 22:56:05
+ * @LastEditTime: 2025-11-19 15:36:47
  * @Description: 
 -->
 <template>
@@ -35,6 +35,11 @@ export default {
     {
       name: 'GeneralSettings',
       extent: 'session'
+    },
+
+    {
+      name: 'ShopList',
+      extent: 'component'
     },
 
     {
@@ -132,11 +137,17 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
   })
 }
 
-// 修改后的 fetchGeneralSetting 函数
-const fetchGeneralSetting = async () => {
+/// 修改后的 fetchGeneralSetting 函数
+const fetchGeneralSetting = async (skipIfExists = true) => {
   const moduleName = "GeneralSettings"
   console.log(`准备加载模块: ${moduleName}`)
-  
+  // 检查模块是否已存在
+  if (store.hasModule(moduleName)) {
+    console.log(`模块 ${moduleName} 已存在`)
+    if (skipIfExists) {
+      return { success: true, skipped: true, reason: '模块已存在' }
+    }
+  }
   try {
     // 等待模块加载完成
     await waitForModule(moduleName)
@@ -153,10 +164,16 @@ const fetchGeneralSetting = async () => {
 }
 
 // 修改后的 fetchShopList 函数
-const fetchShopList = async () => {
+const fetchShopList = async (skipIfExists = false) => {
   const moduleName = "ShopList"
   console.log(`准备加载模块: ${moduleName}`)
-  
+  // 检查模块是否已存在
+  if (store.hasModule(moduleName)) {
+    console.log(`模块 ${moduleName} 已存在`)
+    if (skipIfExists) {
+      return { success: true, skipped: true, reason: '模块已存在' }
+    }
+  }
   try {
     // 等待模块加载完成
     await waitForModule(moduleName)
@@ -173,10 +190,16 @@ const fetchShopList = async () => {
 }
 
 // 修改后的 fetchGenreList 函数
-const fetchGenreList = async () => {
+const fetchGenreList = async (skipIfExists = false) => {
   const moduleName = "GenreList"
   console.log(`准备加载模块: ${moduleName}`)
-  
+  // 检查模块是否已存在
+  if (store.hasModule(moduleName)) {
+    console.log(`模块 ${moduleName} 已存在`)
+    if (skipIfExists) {
+      return { success: true, skipped: true, reason: '模块已存在' }
+    }
+  }
   try {
     // 等待模块加载完成
     await waitForModule(moduleName)
@@ -206,6 +229,8 @@ const fetchAllModules = async () => {
         await Promise.all([
             
             fetchGeneralSetting(),
+
+            fetchShopList(),
 
             fetchGenreList()
             

@@ -132,6 +132,9 @@ def generate_vue_components(yaml_file, output_dir):
                     # full_module_config['plural'] = inflection.pluralize(full_module_config['singular'])
                     full_module_config['fetch_action'] = 'fetch' + full_module_config['singular']
 
+                    # 根据 extent 设置 skip_if_exists 标志
+                    full_module_config['skip_if_exists'] = (full_module_config.get('extent') == 'session')
+
                     modules.append(full_module_config)
                 else:
                     print(f"⚠️ Warning: Module '{module_name}' not found in top-level modules section")

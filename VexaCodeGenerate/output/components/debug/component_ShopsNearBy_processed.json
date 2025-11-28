@@ -10,7 +10,8 @@
       },
       "name": "GeneralSettings",
       "singular": "GeneralSetting",
-      "fetch_action": "fetchGeneralSetting"
+      "fetch_action": "fetchGeneralSetting",
+      "skip_if_exists": true
     },
     {
       "extent": "component",
@@ -21,7 +22,8 @@
       },
       "name": "ShopList",
       "singular": "ShopList",
-      "fetch_action": "fetchShopList"
+      "fetch_action": "fetchShopList",
+      "skip_if_exists": false
     },
     {
       "extent": "component",
@@ -32,7 +34,8 @@
       },
       "name": "GenreList",
       "singular": "GenreList",
-      "fetch_action": "fetchGenreList"
+      "fetch_action": "fetchGenreList",
+      "skip_if_exists": false
     },
     {
       "extent": "component",
@@ -43,7 +46,8 @@
       },
       "name": "UserLocation",
       "singular": "UserLocation",
-      "fetch_action": "fetchUserLocation"
+      "fetch_action": "fetchUserLocation",
+      "skip_if_exists": false
     }
   ],
   "modules_count": 4

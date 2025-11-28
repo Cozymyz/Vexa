@@ -1,7 +1,7 @@
 <!--
  * @Author: Meiyizhi
  * @Date: 2025-10-22 23:36:46
- * @LastEditTime: 2025-11-17 22:54:15
+ * @LastEditTime: 2025-11-19 15:30:29
  * @Description: 
 -->
 <template>
@@ -117,10 +117,16 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 }
 
 // 修改后的 fetchGeneralSetting 函数
-const fetchGeneralSetting = async () => {
+const fetchGeneralSetting = async (skipIfExists = true) => {
   const moduleName = "GeneralSettings"
   console.log(`准备加载模块: ${moduleName}`)
-  
+  // 检查模块是否已存在
+  if (store.hasModule(moduleName)) {
+    console.log(`模块 ${moduleName} 已存在`)
+    if (skipIfExists) {
+      return { success: true, skipped: true, reason: '模块已存在' }
+    }
+  }
   try {
     // 等待模块加载完成
     await waitForModule(moduleName)
@@ -137,10 +143,16 @@ const fetchGeneralSetting = async () => {
 }
 
 // 修改后的 fetchShopList 函数
-const fetchShopList = async () => {
+const fetchShopList = async (skipIfExists = false) => {
   const moduleName = "ShopList"
   console.log(`准备加载模块: ${moduleName}`)
-  
+  // 检查模块是否已存在
+  if (store.hasModule(moduleName)) {
+    console.log(`模块 ${moduleName} 已存在`)
+    if (skipIfExists) {
+      return { success: true, skipped: true, reason: '模块已存在' }
+    }
+  }
   try {
     // 等待模块加载完成
     await waitForModule(moduleName)

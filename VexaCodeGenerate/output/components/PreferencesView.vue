@@ -1,6 +1,6 @@
 // Automatically generated Vue component - PreferencesView.vue
-// Generation time: 2025-11-18 21:55:47
-// modules: [{'extent': 'session', 'fields': {'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting'}]
+// Generation time: 2025-11-19 15:24:52
+// modules: [{'extent': 'session', 'fields': {'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting', 'skip_if_exists': True}]
 
 <template>
 <!-- Add component UI code here -->
@@ -72,8 +72,14 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 
 // Create fetch functions for each module
 
-const fetchGeneralSetting = async () => {
+const fetchGeneralSetting = async (skipIfExists = true) => {
     const moduleName = 'GeneralSettings'
+    // Skip existing modules
+    if (store.hasModule(moduleName)) {
+        if (skipIfExists) {
+            return { success: true, skipped: true, reason: 'The module already exists' }
+        }
+    }
     try {
         await waitForModule(moduleName)
         await store.dispatch(`${moduleName}/fetchGeneralSetting`)

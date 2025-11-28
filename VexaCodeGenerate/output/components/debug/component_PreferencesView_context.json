@@ -10,9 +10,10 @@
       },
       "name": "GeneralSettings",
       "singular": "GeneralSetting",
-      "fetch_action": "fetchGeneralSetting"
+      "fetch_action": "fetchGeneralSetting",
+      "skip_if_exists": true
     }
   ],
   "has_multiple_modules": false,
-  "now": "2025-11-18 21:55:47"
+  "now": "2025-11-19 15:24:52"
 }

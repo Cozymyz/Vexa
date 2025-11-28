@@ -1,5 +1,5 @@
 // Automatically generated Vuex module - UserLocation
-// Generation time: 2025-11-18 21:55:47
+// Generation time: 2025-11-19 15:24:52
 // userLocations:{'userlocationId': 'number', 'userlocationName': 'string', 'userlocationIntroduce': 'string'}
 
 import api from '@/api'

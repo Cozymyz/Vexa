@@ -10,7 +10,8 @@
       },
       "name": "GeneralSettings",
       "singular": "GeneralSetting",
-      "fetch_action": "fetchGeneralSetting"
+      "fetch_action": "fetchGeneralSetting",
+      "skip_if_exists": true
     }
   ],
   "modules_count": 1

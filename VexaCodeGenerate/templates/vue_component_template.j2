@@ -68,8 +68,14 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 
 // Create fetch functions for each module
 {% for module in modules %}
-const {{ module.fetch_action }} = async () => {
+const {{ module.fetch_action }} = async (skipIfExists = {{ 'true' if module.skip_if_exists else 'false' }}) => {
     const moduleName = '{{ module.name }}'
+    // Skip existing modules
+    if (store.hasModule(moduleName)) {
+        if (skipIfExists) {
+            return { success: true, skipped: true, reason: 'The module already exists' }
+        }
+    }
     try {
         await waitForModule(moduleName)
         await store.dispatch(`${moduleName}/{{ module.fetch_action }}`)

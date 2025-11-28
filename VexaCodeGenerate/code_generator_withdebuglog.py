@@ -200,6 +200,9 @@ def generate_vue_components(yaml_file, output_dir):
                     full_module_config['singular'] = inflection.singularize(module_name)
                     full_module_config['fetch_action'] = 'fetch' + full_module_config['singular']
 
+                    # Set the skip_if_exists flag according to the extent
+                    full_module_config['skip_if_exists'] = (full_module_config.get('extent') == 'session')
+
                     modules.append(full_module_config)
                 else:
                     print(f"⚠️ Warning: Module '{module_name}' not found in top-level modules section")

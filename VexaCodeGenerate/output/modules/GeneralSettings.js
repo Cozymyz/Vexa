@@ -1,5 +1,5 @@
 // Automatically generated Vuex module - GeneralSettings
-// Generation time: 2025-11-18 21:55:47
+// Generation time: 2025-11-19 15:24:52
 // generalSettings:{'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}
 
 import api from '@/api'

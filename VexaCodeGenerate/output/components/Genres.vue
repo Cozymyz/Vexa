@@ -1,6 +1,6 @@
 // Automatically generated Vue component - Genres.vue
-// Generation time: 2025-11-18 21:55:47
-// modules: [{'extent': 'session', 'fields': {'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting'}, {'extent': 'component', 'fields': {'shopId': 'number', 'shopName': 'string', 'shopIntroduce': 'string'}, 'name': 'ShopList', 'singular': 'ShopList', 'fetch_action': 'fetchShopList'}, {'extent': 'component', 'fields': {'genreId': 'number', 'genreName': 'string', 'genreIntroduce': 'string'}, 'name': 'GenreList', 'singular': 'GenreList', 'fetch_action': 'fetchGenreList'}]
+// Generation time: 2025-11-19 15:24:52
+// modules: [{'extent': 'session', 'fields': {'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting', 'skip_if_exists': True}, {'extent': 'component', 'fields': {'shopId': 'number', 'shopName': 'string', 'shopIntroduce': 'string'}, 'name': 'ShopList', 'singular': 'ShopList', 'fetch_action': 'fetchShopList', 'skip_if_exists': False}, {'extent': 'component', 'fields': {'genreId': 'number', 'genreName': 'string', 'genreIntroduce': 'string'}, 'name': 'GenreList', 'singular': 'GenreList', 'fetch_action': 'fetchGenreList', 'skip_if_exists': False}]
 
 <template>
 <!-- Add component UI code here -->
@@ -112,8 +112,14 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
 
 // Create fetch functions for each module
 
-const fetchGeneralSetting = async () => {
+const fetchGeneralSetting = async (skipIfExists = true) => {
     const moduleName = 'GeneralSettings'
+    // Skip existing modules
+    if (store.hasModule(moduleName)) {
+        if (skipIfExists) {
+            return { success: true, skipped: true, reason: 'The module already exists' }
+        }
+    }
     try {
         await waitForModule(moduleName)
         await store.dispatch(`${moduleName}/fetchGeneralSetting`)
@@ -123,8 +129,14 @@ const fetchGeneralSetting = async () => {
     }
 }
 
-const fetchShopList = async () => {
+const fetchShopList = async (skipIfExists = false) => {
     const moduleName = 'ShopList'
+    // Skip existing modules
+    if (store.hasModule(moduleName)) {
+        if (skipIfExists) {
+            return { success: true, skipped: true, reason: 'The module already exists' }
+        }
+    }
     try {
         await waitForModule(moduleName)
         await store.dispatch(`${moduleName}/fetchShopList`)
@@ -134,8 +146,14 @@ const fetchShopList = async () => {
     }
 }
 
-const fetchGenreList = async () => {
+const fetchGenreList = async (skipIfExists = false) => {
     const moduleName = 'GenreList'
+    // Skip existing modules
+    if (store.hasModule(moduleName)) {
+        if (skipIfExists) {
+            return { success: true, skipped: true, reason: 'The module already exists' }
+        }
+    }
     try {
         await waitForModule(moduleName)
         await store.dispatch(`${moduleName}/fetchGenreList`)
