@@ -8,8 +8,22 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ElCol: typeof import('element-plus/es')['ElCol']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElDrawer: typeof import('element-plus/es')['ElDrawer']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElMain: typeof import('element-plus/es')['ElMain']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElRow: typeof import('element-plus/es')['ElRow']
+    Geners: typeof import('./components/Genres.vue')['default']
+    Genres: typeof import('./components/Genres.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    Index: typeof import('./components/Index.vue')['default']
+    PreferencesView: typeof import('./components/PreferencesView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Shops: typeof import('./components/Shops.vue')['default']
+    ShopsNearBy: typeof import('./components/ShopsNearBy.vue')['default']
   }
 }

@@ -1,9 +1,3 @@
-/*
- * @Author: Meiyizhi
- * @Date: 2025-06-10 21:59:26
- * @LastEditTime: 2025-12-01 00:18:37
- * @Description: 
- */
 import { GeneralSettings } from '@/api/axios'
 
 export default {
