@@ -1,0 +1,1034 @@
+{jscpd ./src/components -m weak --min-tokens 10 --min-lines 3 -r html
+  "statistics": {
+    "detectionDate": "2025-12-04T04:17:30.986Z",
+    "formats": {
+      "markup": {
+        "sources": {
+          "./src/components/ShopsNearBy.vue": {
+            "lines": 294,
+            "tokens": 1819,
+            "sources": 1,
+            "clones": 31,
+            "duplicatedLines": 779,
+            "duplicatedTokens": 4897,
+            "percentage": 264.97,
+            "percentageTokens": 269.21,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/components/Shops.vue": {
+            "lines": 200,
+            "tokens": 1273,
+            "sources": 1,
+            "clones": 5,
+            "duplicatedLines": 207,
+            "duplicatedTokens": 1297,
+            "percentage": 103.5,
+            "percentageTokens": 101.89,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/components/PreferencesView.vue": {
+            "lines": 153,
+            "tokens": 1000,
+            "sources": 1,
+            "clones": 5,
+            "duplicatedLines": 155,
+            "duplicatedTokens": 1004,
+            "percentage": 101.31,
+            "percentageTokens": 100.4,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/components/Index.vue": {
+            "lines": 165,
+            "tokens": 1087,
+            "sources": 1,
+            "clones": 5,
+            "duplicatedLines": 19,
+            "duplicatedTokens": 192,
+            "percentage": 11.52,
+            "percentageTokens": 17.66,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/components/Genres.vue": {
+            "lines": 249,
+            "tokens": 1550,
+            "sources": 1,
+            "clones": 6,
+            "duplicatedLines": 256,
+            "duplicatedTokens": 1572,
+            "percentage": 102.81,
+            "percentageTokens": 101.42,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1061,
+          "tokens": 6729,
+          "sources": 5,
+          "clones": 26,
+          "duplicatedLines": 708,
+          "duplicatedTokens": 4481,
+          "percentage": 66.73,
+          "percentageTokens": 66.59,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 1061,
+      "tokens": 6729,
+      "sources": 5,
+      "clones": 26,
+      "duplicatedLines": 708,
+      "duplicatedTokens": 4481,
+      "percentage": 66.73,
+      "percentageTokens": 66.59,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "markup",
+      "lines": 20,
+      "fragment": "[\r\n  {\r\n    name: 'GeneralSettings',\r\n    extent: 'session'\r\n  },\r\n  {\r\n    name: 'ShopList',\r\n    extent: 'component'\r\n  },\r\n  {\r\n    name: 'GenreList',\r\n    extent: 'component'\r\n  },\r\n  {\r\n    name: 'UserLocation',\r\n    extent: 'component'\r\n  }\r\n]\r\n\r\nconst",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 102,
+        "end": 121,
+        "startLoc": {
+          "line": 102,
+          "column": 2,
+          "position": 460
+        },
+        "endLoc": {
+          "line": 121,
+          "column": 6,
+          "position": 548
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 34,
+        "end": 55,
+        "startLoc": {
+          "line": 34,
+          "column": 2,
+          "position": 154
+        },
+        "endLoc": {
+          "line": 55,
+          "column": 2,
+          "position": 247
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 15,
+      "fragment": "console.log(`准备加载模块: ${moduleName}`)\r\n  // 检查模块是否已存在\r\n  if (store.hasModule(moduleName)) {\r\n    console.log(`模块 ${moduleName} 已存在`)   \r\n    if (skipIfExists) {\r\n      return { success: true, skipped: true, reason: '模块已存在' }\r\n    }\r\n  }\r\n  try {\r\n    // 等待模块加载完成\r\n    await waitForModule(moduleName)\r\n    console.log(`模块 ${moduleName} 已加载，开始分发 action`)\r\n    \r\n    // 现在模块已加载，可以安全调用 dispatch\r\n    await store.dispatch(`${moduleName}/fetchShopList`)",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 186,
+        "end": 200,
+        "startLoc": {
+          "line": 186,
+          "column": 3,
+          "position": 1048
+        },
+        "endLoc": {
+          "line": 200,
+          "column": 46,
+          "position": 1152
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 160,
+        "end": 174,
+        "startLoc": {
+          "line": 160,
+          "column": 3,
+          "position": 861
+        },
+        "endLoc": {
+          "line": 174,
+          "column": 52,
+          "position": 965
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "} catch (error) {\r\n    console.error(`等待或加载失败: ${error.message}`)\r\n    throw error\r\n  }\r\n}\r\n\r\n// 修改后的 fetchGenreList",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 203,
+        "end": 209,
+        "startLoc": {
+          "line": 203,
+          "column": 3,
+          "position": 1166
+        },
+        "endLoc": {
+          "line": 209,
+          "column": 15,
+          "position": 1200
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 177,
+        "end": 183,
+        "startLoc": {
+          "line": 177,
+          "column": 3,
+          "position": 979
+        },
+        "endLoc": {
+          "line": 183,
+          "column": 14,
+          "position": 1013
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 15,
+      "fragment": "console.log(`准备加载模块: ${moduleName}`)\r\n  // 检查模块是否已存在\r\n  if (store.hasModule(moduleName)) {\r\n    console.log(`模块 ${moduleName} 已存在`)\r\n    if (skipIfExists) {\r\n      return { success: true, skipped: true, reason: '模块已存在' }\r\n    }\r\n  }\r\n  try {\r\n    // 等待模块加载完成\r\n    await waitForModule(moduleName)\r\n    console.log(`模块 ${moduleName} 已加载，开始分发 action`)\r\n    \r\n    // 现在模块已加载，可以安全调用 dispatch\r\n    await store.dispatch(`${moduleName}/fetchGenreList`)",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 212,
+        "end": 226,
+        "startLoc": {
+          "line": 212,
+          "column": 3,
+          "position": 1235
+        },
+        "endLoc": {
+          "line": 226,
+          "column": 47,
+          "position": 1339
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 160,
+        "end": 174,
+        "startLoc": {
+          "line": 160,
+          "column": 3,
+          "position": 861
+        },
+        "endLoc": {
+          "line": 174,
+          "column": 52,
+          "position": 965
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "} catch (error) {\r\n    console.error(`等待或加载失败: ${error.message}`)\r\n    throw error\r\n  }\r\n}\r\n\r\n// 修改后的 fetchUserLocation",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 229,
+        "end": 235,
+        "startLoc": {
+          "line": 229,
+          "column": 3,
+          "position": 1353
+        },
+        "endLoc": {
+          "line": 235,
+          "column": 18,
+          "position": 1387
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 177,
+        "end": 183,
+        "startLoc": {
+          "line": 177,
+          "column": 3,
+          "position": 979
+        },
+        "endLoc": {
+          "line": 183,
+          "column": 14,
+          "position": 1013
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 15,
+      "fragment": "console.log(`准备加载模块: ${moduleName}`)\r\n  // 检查模块是否已存在\r\n  if (store.hasModule(moduleName)) {\r\n    console.log(`模块 ${moduleName} 已存在`)\r\n    if (skipIfExists) {\r\n      return { success: true, skipped: true, reason: '模块已存在' }\r\n    }\r\n  }\r\n  try {\r\n    // 等待模块加载完成\r\n    await waitForModule(moduleName)\r\n    console.log(`模块 ${moduleName} 已加载，开始分发 action`)\r\n    \r\n    // 现在模块已加载，可以安全调用 dispatch\r\n    await store.dispatch(`${moduleName}/fetchUserLocation`)",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 238,
+        "end": 252,
+        "startLoc": {
+          "line": 238,
+          "column": 3,
+          "position": 1422
+        },
+        "endLoc": {
+          "line": 252,
+          "column": 50,
+          "position": 1526
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 160,
+        "end": 174,
+        "startLoc": {
+          "line": 160,
+          "column": 3,
+          "position": 861
+        },
+        "endLoc": {
+          "line": 174,
+          "column": 52,
+          "position": 965
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "} catch (error) {\r\n    console.error(`等待或加载失败: ${error.message}`)\r\n    throw error\r\n  }\r\n}\r\n\r\n// Load",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 255,
+        "end": 261,
+        "startLoc": {
+          "line": 255,
+          "column": 3,
+          "position": 1540
+        },
+        "endLoc": {
+          "line": 261,
+          "column": 5,
+          "position": 1572
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 177,
+        "end": 183,
+        "startLoc": {
+          "line": 177,
+          "column": 3,
+          "position": 979
+        },
+        "endLoc": {
+          "line": 183,
+          "column": 5,
+          "position": 1011
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 37,
+      "fragment": "<template>\r\n    <el-drawer\r\n        :model-value=\"internalVisible\"\r\n        title=\"Menu\"\r\n        direction=\"ltr\"\r\n        :with-header=\"false\"\r\n        :before-close=\"handleBeforeClose\"\r\n        @update:model-value=\"handleDrawerChange\"\r\n    >\r\n        <el-menu\r\n            text-color=\"#000\"\r\n            active-text-color=\"#409EFF\"\r\n            unique-opened\r\n            router\r\n        >\r\n            <el-menu-item\r\n                v-for=\"module in vuexModule\" \r\n                :key=\"module.name\"\r\n            >\r\n                <span>{{ module.name }}</span>\r\n            </el-menu-item>\r\n        </el-menu>\r\n    </el-drawer>\r\n</template>\r\n\r\n<script lang=\"ts\">\r\nexport default {\r\n  vuexModule: [\r\n    {\r\n      name: 'GeneralSettings',\r\n      extent: 'session'\r\n    },\r\n    \r\n    {\r\n      name: 'ShopList',\r\n      extent: 'component'\r\n    }",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Shops.vue",
+        "start": 7,
+        "end": 43,
+        "startLoc": {
+          "line": 7,
+          "column": 1,
+          "position": 3
+        },
+        "endLoc": {
+          "line": 43,
+          "column": 2,
+          "position": 196
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 7,
+        "end": 43,
+        "startLoc": {
+          "line": 7,
+          "column": 1,
+          "position": 3
+        },
+        "endLoc": {
+          "line": 43,
+          "column": 3,
+          "position": 196
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 31,
+      "fragment": "extent: 'component'\r\n    }\r\n  ]\r\n}\r\n</script>\r\n\r\n<script setup lang=\"ts\">\r\nimport { ref, watch, onMounted } from 'vue'\r\nimport { useStore } from 'vuex'\r\n\r\ninterface GeneralSettings {\r\n    \r\n    settingId: number, \r\n    \r\n    settingName: string, \r\n    \r\n    settingIntroduce: string\r\n    \r\n}\r\n\r\ninterface ShopList {\r\n    \r\n    shopId: number, \r\n    \r\n    shopName: string, \r\n    \r\n    shopIntroduce: string\r\n    \r\n}\r\n\r\nconst",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Shops.vue",
+        "start": 42,
+        "end": 72,
+        "startLoc": {
+          "line": 42,
+          "column": 7,
+          "position": 190
+        },
+        "endLoc": {
+          "line": 72,
+          "column": 6,
+          "position": 334
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 52,
+        "end": 82,
+        "startLoc": {
+          "line": 52,
+          "column": 7,
+          "position": 234
+        },
+        "endLoc": {
+          "line": 82,
+          "column": 10,
+          "position": 378
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 16,
+      "fragment": "string\r\n    \r\n}\r\n\r\nconst vuexModule = [\r\n  {\r\n    name: 'GeneralSettings',\r\n    extent: 'session'\r\n  },\r\n  {\r\n    name: 'ShopList',\r\n    extent: 'component'\r\n  }\r\n]\r\n\r\nconst",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Shops.vue",
+        "start": 68,
+        "end": 83,
+        "startLoc": {
+          "line": 68,
+          "column": 2,
+          "position": 324
+        },
+        "endLoc": {
+          "line": 83,
+          "column": 6,
+          "position": 388
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 98,
+        "end": 45,
+        "startLoc": {
+          "line": 98,
+          "column": 2,
+          "position": 444
+        },
+        "endLoc": {
+          "line": 45,
+          "column": 2,
+          "position": 203
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 108,
+      "fragment": "extent: 'component'\r\n  }\r\n]\r\n\r\nconst emit = defineEmits(['update:visible', 'refresh'])\r\nconst store = useStore()\r\nconst props = defineProps({\r\n    visible: {\r\n        type: Boolean,\r\n        required: true\r\n    }\r\n})\r\n\r\nconst internalVisible = ref(props.visible)\r\nwatch(() => props.visible, (newVal) => {\r\n    internalVisible.value = newVal\r\n})\r\n\r\n// wait for module mounted\r\nconst waitForModule = (moduleName: string, timeout = 2000) => {\r\n  return new Promise<void>((resolve, reject) => {\r\n    const checkInterval = 50 // check ever 50ms\r\n    let elapsed = 0\r\n    \r\n    const interval = setInterval(() => {\r\n      if (store.hasModule(moduleName)) {\r\n        console.log('already have: ', moduleName)\r\n        clearInterval(interval)\r\n        resolve()\r\n      } else {\r\n        elapsed += checkInterval\r\n        if (elapsed >= timeout) {\r\n          clearInterval(interval)\r\n          reject(new Error(`等待模块超时: ${moduleName}`))\r\n        }\r\n      }\r\n    }, checkInterval)\r\n  })\r\n}\r\n\r\n// 修改后的 fetchGeneralSetting 函数\r\nconst fetchGeneralSetting = async (skipIfExists = true) => {\r\n  const moduleName = \"GeneralSettings\"\r\n  console.log(`准备加载模块: ${moduleName}`)\r\n  // 检查模块是否已存在\r\n  if (store.hasModule(moduleName)) {\r\n    console.log(`模块 ${moduleName} 已存在`)\r\n    if (skipIfExists) {\r\n      return { success: true, skipped: true, reason: '模块已存在' }\r\n    }\r\n  }\r\n  try {\r\n    // 等待模块加载完成\r\n    await waitForModule(moduleName)\r\n    console.log(`模块 ${moduleName} 已加载，开始分发 action`)\r\n    \r\n    // 现在模块已加载，可以安全调用 dispatch\r\n    await store.dispatch(`${moduleName}/fetchGeneralSetting`)\r\n    console.log(`action 分发成功: ${moduleName}/fetchGeneralSetting`)\r\n    \r\n  } catch (error) {\r\n    console.error(`等待或加载失败: ${error.message}`)\r\n    throw error\r\n  }\r\n}\r\n\r\n// 修改后的 fetchShopList 函数\r\nconst fetchShopList = async (skipIfExists = false) => {\r\n  const moduleName = \"ShopList\"\r\n  console.log(`准备加载模块: ${moduleName}`)\r\n  // 检查模块是否已存在\r\n  if (store.hasModule(moduleName)) {\r\n    console.log(`模块 ${moduleName} 已存在`)\r\n    if (skipIfExists) {\r\n      return { success: true, skipped: true, reason: '模块已存在' }\r\n    }\r\n  }\r\n  try {\r\n    // 等待模块加载完成\r\n    await waitForModule(moduleName)\r\n    console.log(`模块 ${moduleName} 已加载，开始分发 action`)\r\n    \r\n    // 现在模块已加载，可以安全调用 dispatch\r\n    await store.dispatch(`${moduleName}/fetchShopList`)\r\n    console.log(`action 分发成功: ${moduleName}/fetchShopList`)\r\n    \r\n  } catch (error) {\r\n    console.error(`等待或加载失败: ${error.message}`)\r\n    throw error\r\n  }\r\n}\r\n\r\n// Load all module data on mount\r\nonMounted(() => {\r\n  if (internalVisible.value) {\r\n        console.log('组件挂载时可见，开始加载数据')\r\n        fetchAllModules()\r\n    }\r\n})\r\n\r\n// Get all module data in parallel\r\nconst fetchAllModules = async () => {\r\n    try {\r\n        await Promise.all([\r\n            \r\n            fetchGeneralSetting(),\r\n            \r\n            fetchShopList()",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Shops.vue",
+        "start": 79,
+        "end": 186,
+        "startLoc": {
+          "line": 79,
+          "column": 5,
+          "position": 374
+        },
+        "endLoc": {
+          "line": 186,
+          "column": 16,
+          "position": 1134
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 117,
+        "end": 276,
+        "startLoc": {
+          "line": 117,
+          "column": 5,
+          "position": 534
+        },
+        "endLoc": {
+          "line": 276,
+          "column": 17,
+          "position": 1668
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 20,
+      "fragment": "])\r\n        console.log('All modules data loaded successfully')\r\n    } catch (error) {\r\n        console.error('Error loading one or more modules:', error)\r\n    }\r\n}\r\n\r\n// 处理抽屉状态变化\r\nconst handleDrawerChange = (newValue: boolean) => {\r\n    internalVisible.value = newValue\r\n    emit('update:visible', newValue)\r\n}\r\n\r\n// 关闭前的回调\r\nconst handleBeforeClose = (done: () => void) => {\r\n    done()\r\n    internalVisible.value = false\r\n    emit('update:visible', false)\r\n}\r\n</script>",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Shops.vue",
+        "start": 188,
+        "end": 207,
+        "startLoc": {
+          "line": 188,
+          "column": 9,
+          "position": 1140
+        },
+        "endLoc": {
+          "line": 207,
+          "column": 2,
+          "position": 1276
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 282,
+        "end": 301,
+        "startLoc": {
+          "line": 282,
+          "column": 9,
+          "position": 1686
+        },
+        "endLoc": {
+          "line": 301,
+          "column": 2,
+          "position": 1822
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 32,
+      "fragment": "<template>\r\n    <el-drawer\r\n        :model-value=\"internalVisible\"\r\n        title=\"Menu\"\r\n        direction=\"ltr\"\r\n        :with-header=\"false\"\r\n        :before-close=\"handleBeforeClose\"\r\n        @update:model-value=\"handleDrawerChange\"\r\n    >\r\n        <el-menu\r\n            text-color=\"#000\"\r\n            active-text-color=\"#409EFF\"\r\n            unique-opened\r\n            router\r\n        >\r\n            <el-menu-item\r\n                v-for=\"module in vuexModule\" \r\n                :key=\"module.name\"\r\n            >\r\n                <span>{{ module.name }}</span>\r\n            </el-menu-item>\r\n        </el-menu>\r\n    </el-drawer>\r\n</template>\r\n\r\n<script lang=\"ts\">\r\nexport default {\r\n  vuexModule: [\r\n    {\r\n        name: 'GeneralSettings',\r\n        extent: 'session'\r\n    }",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\PreferencesView.vue",
+        "start": 7,
+        "end": 38,
+        "startLoc": {
+          "line": 7,
+          "column": 1,
+          "position": 3
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 2,
+          "position": 174
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 7,
+        "end": 38,
+        "startLoc": {
+          "line": 7,
+          "column": 1,
+          "position": 3
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 3,
+          "position": 174
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 20,
+      "fragment": "}\r\n  ]\r\n}\r\n</script>\r\n\r\n<script setup lang=\"ts\">\r\nimport { ref, watch, onMounted } from 'vue'\r\nimport { useStore } from 'vuex'\r\n\r\ninterface GeneralSettings {\r\n    \r\n    settingId: number, \r\n    \r\n    settingName: string, \r\n    \r\n    settingIntroduce: string\r\n    \r\n}\r\n\r\nconst",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\PreferencesView.vue",
+        "start": 38,
+        "end": 57,
+        "startLoc": {
+          "line": 38,
+          "column": 5,
+          "position": 174
+        },
+        "endLoc": {
+          "line": 57,
+          "column": 6,
+          "position": 274
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 53,
+        "end": 72,
+        "startLoc": {
+          "line": 53,
+          "column": 5,
+          "position": 240
+        },
+        "endLoc": {
+          "line": 72,
+          "column": 10,
+          "position": 340
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 9,
+      "fragment": "string\r\n    \r\n}\r\n\r\nconst vuexModule = [\r\n  {\r\n    name: 'GeneralSettings',\r\n    extent: 'session'\r\n  }",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\PreferencesView.vue",
+        "start": 53,
+        "end": 61,
+        "startLoc": {
+          "line": 53,
+          "column": 2,
+          "position": 264
+        },
+        "endLoc": {
+          "line": 61,
+          "column": 2,
+          "position": 300
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 98,
+        "end": 106,
+        "startLoc": {
+          "line": 98,
+          "column": 2,
+          "position": 444
+        },
+        "endLoc": {
+          "line": 106,
+          "column": 3,
+          "position": 480
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 79,
+      "fragment": "}\r\n]\r\n\r\nconst emit = defineEmits(['update:visible', 'refresh'])\r\nconst store = useStore()\r\nconst props = defineProps({\r\n    visible: {\r\n        type: Boolean,\r\n        required: true\r\n    }\r\n})\r\n\r\nconst internalVisible = ref(props.visible)\r\nwatch(() => props.visible, (newVal) => {\r\n    internalVisible.value = newVal\r\n})\r\n\r\n// wait for module mounted\r\nconst waitForModule = (moduleName: string, timeout = 2000) => {\r\n  return new Promise<void>((resolve, reject) => {\r\n    const checkInterval = 50 // check ever 50ms\r\n    let elapsed = 0\r\n    \r\n    const interval = setInterval(() => {\r\n      if (store.hasModule(moduleName)) {\r\n        console.log('already have: ', moduleName)\r\n        clearInterval(interval)\r\n        resolve()\r\n      } else {\r\n        elapsed += checkInterval\r\n        if (elapsed >= timeout) {\r\n          clearInterval(interval)\r\n          reject(new Error(`等待模块超时: ${moduleName}`))\r\n        }\r\n      }\r\n    }, checkInterval)\r\n  })\r\n}\r\n\r\n// 修改后的 fetchGeneralSetting 函数\r\nconst fetchGeneralSetting = async (skipIfExists = true) => {\r\n  const moduleName = \"GeneralSettings\"\r\n  console.log(`准备加载模块: ${moduleName}`)\r\n  // 检查模块是否已存在\r\n  if (store.hasModule(moduleName)) {\r\n    console.log(`模块 ${moduleName} 已存在`)\r\n    if (skipIfExists) {\r\n      return { success: true, skipped: true, reason: '模块已存在' }\r\n    }\r\n  }\r\n  try {\r\n    // 等待模块加载完成\r\n    await waitForModule(moduleName)\r\n    console.log(`模块 ${moduleName} 已加载，开始分发 action`)\r\n    \r\n    // 现在模块已加载，可以安全调用 dispatch\r\n    await store.dispatch(`${moduleName}/fetchGeneralSetting`)\r\n    console.log(`action 分发成功: ${moduleName}/fetchGeneralSetting`)\r\n    \r\n  } catch (error) {\r\n    console.error(`等待或加载失败: ${error.message}`)\r\n    throw error\r\n  }\r\n}\r\n\r\n// Load all module data on mount\r\nonMounted(() => {\r\n  if (internalVisible.value) {\r\n        console.log('组件挂载时可见，开始加载数据')\r\n        fetchAllModules()\r\n    }\r\n})\r\n\r\n// Get all module data in parallel\r\nconst fetchAllModules = async () => {\r\n    try {\r\n        await Promise.all([\r\n            \r\n            fetchGeneralSetting()",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\PreferencesView.vue",
+        "start": 61,
+        "end": 139,
+        "startLoc": {
+          "line": 61,
+          "column": 3,
+          "position": 300
+        },
+        "endLoc": {
+          "line": 139,
+          "column": 22,
+          "position": 861
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 118,
+        "end": 274,
+        "startLoc": {
+          "line": 118,
+          "column": 3,
+          "position": 540
+        },
+        "endLoc": {
+          "line": 274,
+          "column": 23,
+          "position": 1662
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 20,
+      "fragment": "])\r\n        console.log('All modules data loaded successfully')\r\n    } catch (error) {\r\n        console.error('Error loading one or more modules:', error)\r\n    }\r\n}\r\n\r\n// 处理抽屉状态变化\r\nconst handleDrawerChange = (newValue: boolean) => {\r\n    internalVisible.value = newValue\r\n    emit('update:visible', newValue)\r\n}\r\n\r\n// 关闭前的回调\r\nconst handleBeforeClose = (done: () => void) => {\r\n    done()\r\n    internalVisible.value = false\r\n    emit('update:visible', false)\r\n}\r\n</script>",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\PreferencesView.vue",
+        "start": 141,
+        "end": 160,
+        "startLoc": {
+          "line": 141,
+          "column": 9,
+          "position": 867
+        },
+        "endLoc": {
+          "line": 160,
+          "column": 2,
+          "position": 1003
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 282,
+        "end": 301,
+        "startLoc": {
+          "line": 282,
+          "column": 9,
+          "position": 1686
+        },
+        "endLoc": {
+          "line": 301,
+          "column": 2,
+          "position": 1822
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 5,
+      "fragment": "</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</el-col>\r\n\t\t\t\t\t<el-col :span=\"6\">\r\n\t\t\t\t\t\t<div class=\"vuecomponent grid-content ep-bg-purple\" @click=\"openDrawer3",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 25,
+        "end": 29,
+        "startLoc": {
+          "line": 25,
+          "column": 6,
+          "position": 178
+        },
+        "endLoc": {
+          "line": 29,
+          "column": 12,
+          "position": 220
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 20,
+        "end": 19,
+        "startLoc": {
+          "line": 20,
+          "column": 5,
+          "position": 120
+        },
+        "endLoc": {
+          "line": 19,
+          "column": 12,
+          "position": 108
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 5,
+      "fragment": "</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</el-col>\r\n\t\t\t\t\t<el-col :span=\"6\">\r\n\t\t\t\t\t\t<div class=\"vuecomponent grid-content ep-bg-purple\" @click=\"openDrawer4",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 30,
+        "end": 34,
+        "startLoc": {
+          "line": 30,
+          "column": 7,
+          "position": 236
+        },
+        "endLoc": {
+          "line": 34,
+          "column": 12,
+          "position": 278
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 20,
+        "end": 19,
+        "startLoc": {
+          "line": 20,
+          "column": 5,
+          "position": 120
+        },
+        "endLoc": {
+          "line": 19,
+          "column": 12,
+          "position": 108
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 4,
+      "fragment": ">\r\n\r\n<script setup lang=\"ts\">\r\nimport { ref, defineAsyncComponent",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 68,
+        "end": 71,
+        "startLoc": {
+          "line": 68,
+          "column": 9,
+          "position": 475
+        },
+        "endLoc": {
+          "line": 71,
+          "column": 21,
+          "position": 499
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 56,
+        "end": 59,
+        "startLoc": {
+          "line": 56,
+          "column": 7,
+          "position": 252
+        },
+        "endLoc": {
+          "line": 59,
+          "column": 7,
+          "position": 276
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 42,
+      "fragment": "<template>\r\n    <el-drawer\r\n        :model-value=\"internalVisible\"\r\n        title=\"Menu\"\r\n        direction=\"ltr\"\r\n        :with-header=\"false\"\r\n        :before-close=\"handleBeforeClose\"\r\n        @update:model-value=\"handleDrawerChange\"\r\n    >\r\n        <el-menu\r\n            text-color=\"#000\"\r\n            active-text-color=\"#409EFF\"\r\n            unique-opened\r\n            router\r\n        >\r\n            <el-menu-item\r\n                v-for=\"module in vuexModule\" \r\n                :key=\"module.name\"\r\n            >\r\n                <span>{{ module.name }}</span>\r\n            </el-menu-item>\r\n        </el-menu>\r\n    </el-drawer>\r\n</template>\r\n\r\n<script lang=\"ts\">\r\nexport default {\r\n  vuexModule: [\r\n    {\r\n      name: 'GeneralSettings',\r\n      extent: 'session'\r\n    },\r\n\r\n    {\r\n      name: 'ShopList',\r\n      extent: 'component'\r\n    },\r\n\r\n    {\r\n      name: 'GenreList',\r\n      extent: 'component'\r\n    }",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Genres.vue",
+        "start": 7,
+        "end": 48,
+        "startLoc": {
+          "line": 7,
+          "column": 1,
+          "position": 3
+        },
+        "endLoc": {
+          "line": 48,
+          "column": 2,
+          "position": 218
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 7,
+        "end": 48,
+        "startLoc": {
+          "line": 7,
+          "column": 1,
+          "position": 3
+        },
+        "endLoc": {
+          "line": 48,
+          "column": 3,
+          "position": 218
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 41,
+      "fragment": "extent: 'component'\r\n    }\r\n  ]\r\n}\r\n</script>\r\n\r\n<script setup lang=\"ts\">\r\nimport { ref, watch, onMounted } from 'vue'\r\nimport { useStore } from 'vuex'\r\n\r\ninterface GeneralSettings {\r\n    \r\n    settingId: number, \r\n    \r\n    settingName: string, \r\n    \r\n    settingIntroduce: string\r\n    \r\n}\r\n\r\ninterface ShopList {\r\n    \r\n    shopId: number, \r\n    \r\n    shopName: string, \r\n    \r\n    shopIntroduce: string\r\n    \r\n}\r\n\r\ninterface GenreList {\r\n    \r\n    genreId: number, \r\n    \r\n    genreName: string, \r\n    \r\n    genreIntroduce: string\r\n    \r\n}\r\n\r\nconst",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Genres.vue",
+        "start": 47,
+        "end": 87,
+        "startLoc": {
+          "line": 47,
+          "column": 7,
+          "position": 212
+        },
+        "endLoc": {
+          "line": 87,
+          "column": 6,
+          "position": 394
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 52,
+        "end": 92,
+        "startLoc": {
+          "line": 52,
+          "column": 7,
+          "position": 234
+        },
+        "endLoc": {
+          "line": 92,
+          "column": 10,
+          "position": 416
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 22,
+      "fragment": "string\r\n    \r\n}\r\n\r\nconst vuexModule = [\r\n  {\r\n    name: 'GeneralSettings',\r\n    extent: 'session'\r\n  },\r\n\r\n  {\r\n      name: 'ShopList',\r\n      extent: 'component'\r\n  },\r\n\r\n  {\r\n    name: 'GenreList',\r\n    extent: 'component'\r\n  }\r\n]\r\n\r\nconst",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Genres.vue",
+        "start": 83,
+        "end": 104,
+        "startLoc": {
+          "line": 83,
+          "column": 2,
+          "position": 384
+        },
+        "endLoc": {
+          "line": 104,
+          "column": 6,
+          "position": 472
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 98,
+        "end": 50,
+        "startLoc": {
+          "line": 98,
+          "column": 2,
+          "position": 444
+        },
+        "endLoc": {
+          "line": 50,
+          "column": 2,
+          "position": 225
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 41,
+      "fragment": "extent: 'component'\r\n  }\r\n]\r\n\r\nconst emit = defineEmits(['update:visible', 'refresh'])\r\nconst store = useStore()\r\nconst props = defineProps({\r\n    visible: {\r\n        type: Boolean,\r\n        required: true\r\n    }\r\n})\r\n\r\nconst internalVisible = ref(props.visible)\r\nwatch(() => props.visible, (newVal) => {\r\n    internalVisible.value = newVal\r\n})\r\n\r\n// wait for module mounted\r\nconst waitForModule = (moduleName: string, timeout = 2000) => {\r\n  return new Promise<void>((resolve, reject) => {\r\n    const checkInterval = 50 // check ever 50ms\r\n    let elapsed = 0\r\n    \r\n    const interval = setInterval(() => {\r\n      if (store.hasModule(moduleName)) {\r\n        console.log('already have: ', moduleName)\r\n        clearInterval(interval)\r\n        resolve()\r\n      } else {\r\n        elapsed += checkInterval\r\n        if (elapsed >= timeout) {\r\n          clearInterval(interval)\r\n          reject(new Error(`等待模块超时: ${moduleName}`))\r\n        }\r\n      }\r\n    }, checkInterval)\r\n  })\r\n}\r\n\r\n///",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Genres.vue",
+        "start": 100,
+        "end": 140,
+        "startLoc": {
+          "line": 100,
+          "column": 5,
+          "position": 458
+        },
+        "endLoc": {
+          "line": 140,
+          "column": 4,
+          "position": 746
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 117,
+        "end": 157,
+        "startLoc": {
+          "line": 117,
+          "column": 5,
+          "position": 534
+        },
+        "endLoc": {
+          "line": 157,
+          "column": 3,
+          "position": 822
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 96,
+      "fragment": "修改后的 fetchGeneralSetting 函数\r\nconst fetchGeneralSetting = async (skipIfExists = true) => {\r\n  const moduleName = \"GeneralSettings\"\r\n  console.log(`准备加载模块: ${moduleName}`)\r\n  // 检查模块是否已存在\r\n  if (store.hasModule(moduleName)) {\r\n    console.log(`模块 ${moduleName} 已存在`)\r\n    if (skipIfExists) {\r\n      return { success: true, skipped: true, reason: '模块已存在' }\r\n    }\r\n  }\r\n  try {\r\n    // 等待模块加载完成\r\n    await waitForModule(moduleName)\r\n    console.log(`模块 ${moduleName} 已加载，开始分发 action`)\r\n    \r\n    // 现在模块已加载，可以安全调用 dispatch\r\n    await store.dispatch(`${moduleName}/fetchGeneralSetting`)\r\n    console.log(`action 分发成功: ${moduleName}/fetchGeneralSetting`)\r\n    \r\n  } catch (error) {\r\n    console.error(`等待或加载失败: ${error.message}`)\r\n    throw error\r\n  }\r\n}\r\n\r\n// 修改后的 fetchShopList 函数\r\nconst fetchShopList = async (skipIfExists = false) => {\r\n  const moduleName = \"ShopList\"\r\n  console.log(`准备加载模块: ${moduleName}`)\r\n  // 检查模块是否已存在\r\n  if (store.hasModule(moduleName)) {\r\n    console.log(`模块 ${moduleName} 已存在`)\r\n    if (skipIfExists) {\r\n      return { success: true, skipped: true, reason: '模块已存在' }\r\n    }\r\n  }\r\n  try {\r\n    // 等待模块加载完成\r\n    await waitForModule(moduleName)\r\n    console.log(`模块 ${moduleName} 已加载，开始分发 action`)\r\n    \r\n    // 现在模块已加载，可以安全调用 dispatch\r\n    await store.dispatch(`${moduleName}/fetchShopList`)\r\n    console.log(`action 分发成功: ${moduleName}/fetchShopList`)\r\n    \r\n  } catch (error) {\r\n    console.error(`等待或加载失败: ${error.message}`)\r\n    throw error\r\n  }\r\n}\r\n\r\n// 修改后的 fetchGenreList 函数\r\nconst fetchGenreList = async (skipIfExists = false) => {\r\n  const moduleName = \"GenreList\"\r\n  console.log(`准备加载模块: ${moduleName}`)\r\n  // 检查模块是否已存在\r\n  if (store.hasModule(moduleName)) {\r\n    console.log(`模块 ${moduleName} 已存在`)\r\n    if (skipIfExists) {\r\n      return { success: true, skipped: true, reason: '模块已存在' }\r\n    }\r\n  }\r\n  try {\r\n    // 等待模块加载完成\r\n    await waitForModule(moduleName)\r\n    console.log(`模块 ${moduleName} 已加载，开始分发 action`)\r\n    \r\n    // 现在模块已加载，可以安全调用 dispatch\r\n    await store.dispatch(`${moduleName}/fetchGenreList`)\r\n    console.log(`action 分发成功: ${moduleName}/fetchGenreList`)\r\n    \r\n  } catch (error) {\r\n    console.error(`等待或加载失败: ${error.message}`)\r\n    throw error\r\n  }\r\n}\r\n\r\n// Load all module data on mount\r\nonMounted(() => {\r\n  if (internalVisible.value) {\r\n        console.log('组件挂载时可见，开始加载数据')\r\n        fetchAllModules()\r\n    }\r\n})\r\n\r\n// Get all module data in parallel\r\nconst fetchAllModules = async () => {\r\n    try {\r\n        await Promise.all([\r\n            \r\n            fetchGeneralSetting(),\r\n\r\n            fetchShopList(),\r\n\r\n            fetchGenreList()",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Genres.vue",
+        "start": 140,
+        "end": 235,
+        "startLoc": {
+          "line": 140,
+          "column": 2,
+          "position": 748
+        },
+        "endLoc": {
+          "line": 235,
+          "column": 17,
+          "position": 1411
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 157,
+        "end": 278,
+        "startLoc": {
+          "line": 157,
+          "column": 2,
+          "position": 824
+        },
+        "endLoc": {
+          "line": 278,
+          "column": 18,
+          "position": 1674
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 20,
+      "fragment": "])\r\n        console.log('All modules data loaded successfully')\r\n    } catch (error) {\r\n        console.error('Error loading one or more modules:', error)\r\n    }\r\n}\r\n\r\n// 处理抽屉状态变化\r\nconst handleDrawerChange = (newValue: boolean) => {\r\n    internalVisible.value = newValue\r\n    emit('update:visible', newValue)\r\n}\r\n\r\n// 关闭前的回调\r\nconst handleBeforeClose = (done: () => void) => {\r\n    done()\r\n    internalVisible.value = false\r\n    emit('update:visible', false)\r\n}\r\n</script>",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Genres.vue",
+        "start": 237,
+        "end": 256,
+        "startLoc": {
+          "line": 237,
+          "column": 9,
+          "position": 1417
+        },
+        "endLoc": {
+          "line": 256,
+          "column": 2,
+          "position": 1553
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 282,
+        "end": 301,
+        "startLoc": {
+          "line": 282,
+          "column": 9,
+          "position": 1686
+        },
+        "endLoc": {
+          "line": 301,
+          "column": 2,
+          "position": 1822
+        }
+      }
+    }
+  ],
+  "filename": "D:\\node.js\\node_global\\node_modules\\jscpd\\node_modules\\@jscpd\\html-reporter\\dist\\templates\\main.pug"
+}

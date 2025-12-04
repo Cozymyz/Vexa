@@ -1,0 +1,685 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Copy/Paste Detector Report</title><link href="styles/tailwind.css" rel="stylesheet"><link href="styles/prism.css" rel="stylesheet"></head><body class="bg-gray-100"><header class="bg-white shadow py-4"><div class="container mx-auto px-4"><h1 class="text-3xl font-semibold text-gray-800">jscpd - copy/paste report</h1></div></header><main class="container mx-auto my-8 p-4 bg-white shadow rounded"><section class="mb-8" id="dashboard"><h2 class="text-2xl font-semibold text-gray-700 mb-4">Dashboard</h2><div class="grid grid-cols-4 gap-4"><div class="bg-blue-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-blue-800 mb-2">Total Files</h3><span class="text-4xl font-bold text-blue-800">5</span></div><div class="bg-green-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-green-800 mb-2">Total Lines of Code</h3><span class="text-4xl font-bold text-green-800">1068</span></div><div class="bg-yellow-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-yellow-800 mb-2">Number of Clones</h3><span class="text-4xl font-bold text-yellow-800">18</span></div><div class="bg-red-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-red-800 mb-2">Duplicated Lines</h3><span class="text-4xl font-bold text-red-800">676 (63.30%)</span></div></div></section><section class="mb-8" id="formats"><h2 class="text-2xl font-semibold text-gray-700 mb-4">Formats with Duplications</h2><table class="w-full table-auto"><thead><tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"><th class="py-3 px-6 text-left">Format</th><th class="py-3 px-6 text-left">Files</th><th class="py-3 px-6 text-left">Lines</th><th class="py-3 px-6 text-left">Clones</th><th class="py-3 px-6 text-left">Duplicated Lines</th><th class="py-3 px-6 text-left">Duplicated Tokens</th></tr></thead><tbody><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#markup-clones">markup</a></td><td class="py-3 px-6">5</td><td class="py-3 px-6">1068</td><td class="py-3 px-6">18</td><td class="py-3 px-6">676</td><td class="py-3 px-6">4384</td></tr></tbody></table></section><section class="mb-8" id="txt-clones"><a name="markup-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">markup</h2><div class="divide-y divide-gray-200 border-b-2"><div class="py-4"><p class="text-gray-600">src\components\ShopsNearBy.vue (Line 214:5 - Line 220:15), src\components\ShopsNearBy.vue (Line 203:5 - Line 209:14)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn0" onclick="toggleCodeBlock('cloneGroup0', 'expandBtn0', 'collapseBtn0')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn0" onclick="toggleCodeBlock('cloneGroup0', 'expandBtn0', 'collapseBtn0')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup0"><code class="language-markup text-sm text-gray-800">} catch (error) {
+        console.error(`等待或加载失败: ${error.message}`)
+        throw error
+    }
+}
+
+const fetchGenreList</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\ShopsNearBy.vue (Line 225:5 - Line 231:18), src\components\ShopsNearBy.vue (Line 203:5 - Line 209:14)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn1" onclick="toggleCodeBlock('cloneGroup1', 'expandBtn1', 'collapseBtn1')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn1" onclick="toggleCodeBlock('cloneGroup1', 'expandBtn1', 'collapseBtn1')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup1"><code class="language-markup text-sm text-gray-800">} catch (error) {
+        console.error(`等待或加载失败: ${error.message}`)
+        throw error
+    }
+}
+
+const fetchUserLocation</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\ShopsNearBy.vue (Line 236:5 - Line 242:3), src\components\ShopsNearBy.vue (Line 203:5 - Line 209:6)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn2" onclick="toggleCodeBlock('cloneGroup2', 'expandBtn2', 'collapseBtn2')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn2" onclick="toggleCodeBlock('cloneGroup2', 'expandBtn2', 'collapseBtn2')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup2"><code class="language-markup text-sm text-gray-800">} catch (error) {
+        console.error(`等待或加载失败: ${error.message}`)
+        throw error
+    }
+}
+
+//</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Shops.vue (Line 7:1 - Line 56:6), src\components\ShopsNearBy.vue (Line 7:1 - Line 56:10)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn3" onclick="toggleCodeBlock('cloneGroup3', 'expandBtn3', 'collapseBtn3')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn3" onclick="toggleCodeBlock('cloneGroup3', 'expandBtn3', 'collapseBtn3')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup3"><code class="language-markup text-sm text-gray-800">&lt;template&gt;
+    &lt;el-drawer
+        :model-value=&quot;internalVisible&quot;
+        title=&quot;Menu&quot;
+        direction=&quot;ltr&quot;
+        :with-header=&quot;false&quot;
+        :before-close=&quot;handleBeforeClose&quot;
+        @update:model-value=&quot;handleDrawerChange&quot;
+    &gt;
+        &lt;el-menu
+            text-color=&quot;#000&quot;
+            active-text-color=&quot;#409EFF&quot;
+            unique-opened
+            router
+        &gt;
+            &lt;el-menu-item
+                v-for=&quot;module in vuexModule&quot; 
+                :key=&quot;module.name&quot;
+            &gt;
+                &lt;span&gt;{{ module.name }}&lt;/span&gt;
+            &lt;/el-menu-item&gt;
+        &lt;/el-menu&gt;
+    &lt;/el-drawer&gt;
+&lt;/template&gt;
+
+&lt;script setup lang=&quot;ts&quot;&gt;
+import { ref, watch, onMounted } from 'vue'
+import { useStore } from 'vuex'
+
+interface GeneralSettings {
+    
+    settingId: number, 
+    
+    settingName: string, 
+    
+    settingIntroduce: string
+    
+}
+
+interface ShopList {
+    
+    shopId: number, 
+    
+    shopName: string, 
+    
+    shopIntroduce: string
+    
+}
+
+const</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Shops.vue (Line 52:2 - Line 64:2), src\components\ShopsNearBy.vue (Line 72:2 - Line 84:3)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn4" onclick="toggleCodeBlock('cloneGroup4', 'expandBtn4', 'collapseBtn4')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn4" onclick="toggleCodeBlock('cloneGroup4', 'expandBtn4', 'collapseBtn4')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup4"><code class="language-markup text-sm text-gray-800">string
+    
+}
+
+const vuexModule = [
+  {
+    name: 'GeneralSettings',
+    extent: 'session'
+  },
+  {
+    name: 'ShopList',
+    extent: 'component'
+  }</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Shops.vue (Line 63:5 - Line 198:16), src\components\ShopsNearBy.vue (Line 91:5 - Line 248:17)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn5" onclick="toggleCodeBlock('cloneGroup5', 'expandBtn5', 'collapseBtn5')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn5" onclick="toggleCodeBlock('cloneGroup5', 'expandBtn5', 'collapseBtn5')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup5"><code class="language-markup text-sm text-gray-800">extent: 'component'
+  }
+]
+
+const emit = defineEmits(['update:visible', 'refresh'])
+const store = useStore()
+const props = defineProps({
+    visible: {
+        type: Boolean,
+        required: true
+    }
+})
+
+const internalVisible = ref(props.visible)
+watch(() =&gt; props.visible, (newVal) =&gt; {
+    internalVisible.value = newVal
+})
+
+// Load all module data on mount
+onMounted(async () =&gt; {
+    try {
+        for (const module of vuexModule) await registerModule(module.name)
+        if (internalVisible.value) {
+            console.log('组件挂载时可见，开始加载数据')
+            fetchAllModules()
+        }
+    } catch (error) {
+        console.error('模块注册或数据加载失败:', error)
+    }
+})
+
+onUnmounted(() =&gt; {
+    // 根据模块的作用域卸载模块
+    vuexModule.forEach(module =&gt; {
+        unregisterModule(module.name, module.extent)
+    })
+})
+
+const loadModule = async (moduleName: string) =&gt; {
+    try {
+        const module = await import(/* @vite-ignore */`../store/modules/${moduleName}.js`)
+        console.log('模块是否加载确认',store.hasModule(moduleName))
+        return module.default
+    } catch (error) {
+        console.error(`加载模块 ${moduleName} 失败:`, error)
+        throw error
+    }
+}
+
+// wait for module mounted
+const waitForModule = (moduleName: string, timeout = 2000) =&gt; {
+  return new Promise&lt;void&gt;((resolve, reject) =&gt; {
+    const checkInterval = 50 // check ever 50ms
+    let elapsed = 0
+    
+    const interval = setInterval(() =&gt; {
+      if (store.hasModule(moduleName)) {
+        console.log('already have: ', moduleName)
+        clearInterval(interval)
+        resolve()
+      } else {
+        elapsed += checkInterval
+        if (elapsed &gt;= timeout) {
+          clearInterval(interval)
+          reject(new Error(`等待模块超时: ${moduleName}`))
+        }
+      }
+    }, checkInterval)
+  })
+}
+
+//registerModule
+const registerModule = async (moduleName: string) =&gt; {
+    if(!store.hasModule(moduleName)){
+        try {
+            const vuexModule = await loadModule(moduleName)
+            if(vuexModule) {
+                store.registerModule(moduleName, vuexModule)
+                await waitForModule(moduleName)
+                console.log(`Module ${moduleName} registered successfully`)
+                return true
+            } else {
+                console.error(`Module ${moduleName} does not exsist`)
+                return false
+            }
+        } catch (error) {
+            console.error(`注册模块 ${moduleName} 失败:`, error)
+            return false
+        }    
+    }
+    await waitForModule(moduleName)
+    console.log(`Module ${moduleName} already exsist`)
+    return true
+}
+
+// unregisterModule
+const unregisterModule = (moduleName: string, extent: string) =&gt; {
+    if (store.hasModule(moduleName)) {
+        if (extent === 'session') {
+            console.log(`模块 ${moduleName} 作用域为 ${extent}，跳过卸载`)
+            return
+        }
+        store.unregisterModule(moduleName)
+        console.log(`模块 ${moduleName} 卸载成功`)
+    }
+}
+
+const fetchGeneralSetting = async () =&gt; {
+    const moduleName = &quot;GeneralSettings&quot;
+    try {
+        await store.dispatch(`${moduleName}/fetchGeneralSetting`)
+        console.log(`action 分发成功: ${moduleName}/fetchGeneralSetting`)
+    } catch (error) {
+        console.error(`等待或加载失败: ${error.message}`)
+        throw error
+    }
+}
+
+const fetchShopList = async () =&gt; {
+    const moduleName = &quot;ShopList&quot;
+    try {
+        await store.dispatch(`${moduleName}/fetchShopList`)
+        console.log(`action 分发成功: ${moduleName}/fetchShopList`)
+    } catch (error) {
+        console.error(`等待或加载失败: ${error.message}`)
+        throw error
+    }
+}
+
+// Get all module data in parallel
+const fetchAllModules = async () =&gt; {
+    try {
+        await Promise.all([
+            
+            fetchGeneralSetting(),
+            fetchShopList()</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Shops.vue (Line 200:9 - Line 220:2), src\components\ShopsNearBy.vue (Line 252:9 - Line 272:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn6" onclick="toggleCodeBlock('cloneGroup6', 'expandBtn6', 'collapseBtn6')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn6" onclick="toggleCodeBlock('cloneGroup6', 'expandBtn6', 'collapseBtn6')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup6"><code class="language-markup text-sm text-gray-800">])
+        console.log('All modules data loaded successfully')
+    } catch (error) {
+        console.error('Error loading one or more modules:', error)
+    }
+}
+
+// 处理抽屉状态变化
+const handleDrawerChange = (newValue: boolean) =&gt; {
+    internalVisible.value = newValue
+    emit('update:visible', newValue)
+}
+
+// 关闭前的回调
+const handleBeforeClose = (done: () =&gt; void) =&gt; {
+    done()
+    internalVisible.value = false
+    emit('update:visible', false)
+}
+
+&lt;/script&gt;</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\PreferencesView.vue (Line 7:1 - Line 46:6), src\components\ShopsNearBy.vue (Line 7:1 - Line 46:10)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn7" onclick="toggleCodeBlock('cloneGroup7', 'expandBtn7', 'collapseBtn7')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn7" onclick="toggleCodeBlock('cloneGroup7', 'expandBtn7', 'collapseBtn7')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup7"><code class="language-markup text-sm text-gray-800">&lt;template&gt;
+    &lt;el-drawer
+        :model-value=&quot;internalVisible&quot;
+        title=&quot;Menu&quot;
+        direction=&quot;ltr&quot;
+        :with-header=&quot;false&quot;
+        :before-close=&quot;handleBeforeClose&quot;
+        @update:model-value=&quot;handleDrawerChange&quot;
+    &gt;
+        &lt;el-menu
+            text-color=&quot;#000&quot;
+            active-text-color=&quot;#409EFF&quot;
+            unique-opened
+            router
+        &gt;
+            &lt;el-menu-item
+                v-for=&quot;module in vuexModule&quot; 
+                :key=&quot;module.name&quot;
+            &gt;
+                &lt;span&gt;{{ module.name }}&lt;/span&gt;
+            &lt;/el-menu-item&gt;
+        &lt;/el-menu&gt;
+    &lt;/el-drawer&gt;
+&lt;/template&gt;
+
+&lt;script setup lang=&quot;ts&quot;&gt;
+import { ref, watch, onMounted } from 'vue'
+import { useStore } from 'vuex'
+
+interface GeneralSettings {
+    
+    settingId: number, 
+    
+    settingName: string, 
+    
+    settingIntroduce: string
+    
+}
+
+const</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\PreferencesView.vue (Line 42:2 - Line 50:2), src\components\ShopsNearBy.vue (Line 72:2 - Line 80:3)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn8" onclick="toggleCodeBlock('cloneGroup8', 'expandBtn8', 'collapseBtn8')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn8" onclick="toggleCodeBlock('cloneGroup8', 'expandBtn8', 'collapseBtn8')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup8"><code class="language-markup text-sm text-gray-800">string
+    
+}
+
+const vuexModule = [
+  {
+    name: 'GeneralSettings',
+    extent: 'session'
+  }</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\PreferencesView.vue (Line 50:3 - Line 172:22), src\components\ShopsNearBy.vue (Line 92:3 - Line 247:23)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn9" onclick="toggleCodeBlock('cloneGroup9', 'expandBtn9', 'collapseBtn9')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn9" onclick="toggleCodeBlock('cloneGroup9', 'expandBtn9', 'collapseBtn9')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup9"><code class="language-markup text-sm text-gray-800">}
+]
+
+const emit = defineEmits(['update:visible', 'refresh'])
+const store = useStore()
+const props = defineProps({
+    visible: {
+        type: Boolean,
+        required: true
+    }
+})
+
+const internalVisible = ref(props.visible)
+watch(() =&gt; props.visible, (newVal) =&gt; {
+    internalVisible.value = newVal
+})
+
+// Load all module data on mount
+onMounted(async () =&gt; {
+    try {
+        for (const module of vuexModule) await registerModule(module.name)
+        if (internalVisible.value) {
+            console.log('组件挂载时可见，开始加载数据')
+            fetchAllModules()
+        }
+    } catch (error) {
+        console.error('模块注册或数据加载失败:', error)
+    }
+})
+
+onUnmounted(() =&gt; {
+    // 根据模块的作用域卸载模块
+    vuexModule.forEach(module =&gt; {
+        unregisterModule(module.name, module.extent)
+    })
+})
+
+const loadModule = async (moduleName: string) =&gt; {
+    try {
+        const module = await import(/* @vite-ignore */`../store/modules/${moduleName}.js`)
+        console.log('模块是否加载确认',store.hasModule(moduleName))
+        return module.default
+    } catch (error) {
+        console.error(`加载模块 ${moduleName} 失败:`, error)
+        throw error
+    }
+}
+
+// wait for module mounted
+const waitForModule = (moduleName: string, timeout = 2000) =&gt; {
+  return new Promise&lt;void&gt;((resolve, reject) =&gt; {
+    const checkInterval = 50 // check ever 50ms
+    let elapsed = 0
+    
+    const interval = setInterval(() =&gt; {
+      if (store.hasModule(moduleName)) {
+        console.log('already have: ', moduleName)
+        clearInterval(interval)
+        resolve()
+      } else {
+        elapsed += checkInterval
+        if (elapsed &gt;= timeout) {
+          clearInterval(interval)
+          reject(new Error(`等待模块超时: ${moduleName}`))
+        }
+      }
+    }, checkInterval)
+  })
+}
+
+//registerModule
+const registerModule = async (moduleName: string) =&gt; {
+    if(!store.hasModule(moduleName)){
+        try {
+            const vuexModule = await loadModule(moduleName)
+            if(vuexModule) {
+                store.registerModule(moduleName, vuexModule)
+                await waitForModule(moduleName)
+                console.log(`Module ${moduleName} registered successfully`)
+                return true
+            } else {
+                console.error(`Module ${moduleName} does not exsist`)
+                return false
+            }
+        } catch (error) {
+            console.error(`注册模块 ${moduleName} 失败:`, error)
+            return false
+        }    
+    }
+    await waitForModule(moduleName)
+    console.log(`Module ${moduleName} already exsist`)
+    return true
+}
+
+// unregisterModule
+const unregisterModule = (moduleName: string, extent: string) =&gt; {
+    if (store.hasModule(moduleName)) {
+        if (extent === 'session') {
+            console.log(`模块 ${moduleName} 作用域为 ${extent}，跳过卸载`)
+            return
+        }
+        store.unregisterModule(moduleName)
+        console.log(`模块 ${moduleName} 卸载成功`)
+    }
+}
+
+const fetchGeneralSetting = async () =&gt; {
+    const moduleName = &quot;GeneralSettings&quot;
+    try {
+        await store.dispatch(`${moduleName}/fetchGeneralSetting`)
+        console.log(`action 分发成功: ${moduleName}/fetchGeneralSetting`)
+    } catch (error) {
+        console.error(`等待或加载失败: ${error.message}`)
+        throw error
+    }
+}
+
+// Get all module data in parallel
+const fetchAllModules = async () =&gt; {
+    try {
+        await Promise.all([
+            
+            fetchGeneralSetting()</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\PreferencesView.vue (Line 174:9 - Line 193:2), src\components\ShopsNearBy.vue (Line 252:9 - Line 272:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn10" onclick="toggleCodeBlock('cloneGroup10', 'expandBtn10', 'collapseBtn10')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn10" onclick="toggleCodeBlock('cloneGroup10', 'expandBtn10', 'collapseBtn10')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup10"><code class="language-markup text-sm text-gray-800">])
+        console.log('All modules data loaded successfully')
+    } catch (error) {
+        console.error('Error loading one or more modules:', error)
+    }
+}
+
+// 处理抽屉状态变化
+const handleDrawerChange = (newValue: boolean) =&gt; {
+    internalVisible.value = newValue
+    emit('update:visible', newValue)
+}
+
+// 关闭前的回调
+const handleBeforeClose = (done: () =&gt; void) =&gt; {
+    done()
+    internalVisible.value = false
+    emit('update:visible', false)
+}
+&lt;/script&gt;</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Index.vue (Line 25:6 - Line 29:12), src\components\Index.vue (Line 20:5 - Line 19:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn11" onclick="toggleCodeBlock('cloneGroup11', 'expandBtn11', 'collapseBtn11')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn11" onclick="toggleCodeBlock('cloneGroup11', 'expandBtn11', 'collapseBtn11')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup11"><code class="language-markup text-sm text-gray-800">&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/el-col&gt;
+					&lt;el-col :span=&quot;6&quot;&gt;
+						&lt;div class=&quot;vuecomponent grid-content ep-bg-purple&quot; @click=&quot;openDrawer3</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Index.vue (Line 30:7 - Line 34:12), src\components\Index.vue (Line 20:5 - Line 19:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn12" onclick="toggleCodeBlock('cloneGroup12', 'expandBtn12', 'collapseBtn12')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn12" onclick="toggleCodeBlock('cloneGroup12', 'expandBtn12', 'collapseBtn12')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup12"><code class="language-markup text-sm text-gray-800">&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/el-col&gt;
+					&lt;el-col :span=&quot;6&quot;&gt;
+						&lt;div class=&quot;vuecomponent grid-content ep-bg-purple&quot; @click=&quot;openDrawer4</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Index.vue (Line 67:4 - Line 71:21), src\components\ShopsNearBy.vue (Line 29:10 - Line 33:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn13" onclick="toggleCodeBlock('cloneGroup13', 'expandBtn13', 'collapseBtn13')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn13" onclick="toggleCodeBlock('cloneGroup13', 'expandBtn13', 'collapseBtn13')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup13"><code class="language-markup text-sm text-gray-800">&gt;
+&lt;/template&gt;
+
+&lt;script setup lang=&quot;ts&quot;&gt;
+import { ref, defineAsyncComponent</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Genres.vue (Line 7:1 - Line 66:6), src\components\ShopsNearBy.vue (Line 7:1 - Line 66:10)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn14" onclick="toggleCodeBlock('cloneGroup14', 'expandBtn14', 'collapseBtn14')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn14" onclick="toggleCodeBlock('cloneGroup14', 'expandBtn14', 'collapseBtn14')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup14"><code class="language-markup text-sm text-gray-800">&lt;template&gt;
+    &lt;el-drawer
+        :model-value=&quot;internalVisible&quot;
+        title=&quot;Menu&quot;
+        direction=&quot;ltr&quot;
+        :with-header=&quot;false&quot;
+        :before-close=&quot;handleBeforeClose&quot;
+        @update:model-value=&quot;handleDrawerChange&quot;
+    &gt;
+        &lt;el-menu
+            text-color=&quot;#000&quot;
+            active-text-color=&quot;#409EFF&quot;
+            unique-opened
+            router
+        &gt;
+            &lt;el-menu-item
+                v-for=&quot;module in vuexModule&quot; 
+                :key=&quot;module.name&quot;
+            &gt;
+                &lt;span&gt;{{ module.name }}&lt;/span&gt;
+            &lt;/el-menu-item&gt;
+        &lt;/el-menu&gt;
+    &lt;/el-drawer&gt;
+&lt;/template&gt;
+
+&lt;script setup lang=&quot;ts&quot;&gt;
+import { ref, watch, onMounted } from 'vue'
+import { useStore } from 'vuex'
+
+interface GeneralSettings {
+    
+    settingId: number, 
+    
+    settingName: string, 
+    
+    settingIntroduce: string
+    
+}
+
+interface ShopList {
+    
+    shopId: number, 
+    
+    shopName: string, 
+    
+    shopIntroduce: string
+    
+}
+
+interface GenreList {
+    
+    genreId: number, 
+    
+    genreName: string, 
+    
+    genreIntroduce: string
+    
+}
+
+const</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Genres.vue (Line 62:2 - Line 78:2), src\components\ShopsNearBy.vue (Line 72:2 - Line 88:3)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn15" onclick="toggleCodeBlock('cloneGroup15', 'expandBtn15', 'collapseBtn15')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn15" onclick="toggleCodeBlock('cloneGroup15', 'expandBtn15', 'collapseBtn15')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup15"><code class="language-markup text-sm text-gray-800">string
+    
+}
+
+const vuexModule = [
+  {
+    name: 'GeneralSettings',
+    extent: 'session'
+  },
+  {
+    name: 'ShopList',
+    extent: 'component'
+  },
+  {
+    name: 'GenreList',
+    extent: 'component'
+  }</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Genres.vue (Line 77:5 - Line 224:17), src\components\ShopsNearBy.vue (Line 91:5 - Line 249:18)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn16" onclick="toggleCodeBlock('cloneGroup16', 'expandBtn16', 'collapseBtn16')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn16" onclick="toggleCodeBlock('cloneGroup16', 'expandBtn16', 'collapseBtn16')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup16"><code class="language-markup text-sm text-gray-800">extent: 'component'
+  }
+]
+
+const emit = defineEmits(['update:visible', 'refresh'])
+const store = useStore()
+const props = defineProps({
+    visible: {
+        type: Boolean,
+        required: true
+    }
+})
+
+const internalVisible = ref(props.visible)
+watch(() =&gt; props.visible, (newVal) =&gt; {
+    internalVisible.value = newVal
+})
+
+// Load all module data on mount
+onMounted(async () =&gt; {
+    try {
+        for (const module of vuexModule) await registerModule(module.name)
+        if (internalVisible.value) {
+            console.log('组件挂载时可见，开始加载数据')
+            fetchAllModules()
+        }
+    } catch (error) {
+        console.error('模块注册或数据加载失败:', error)
+    }
+})
+
+onUnmounted(() =&gt; {
+    // 根据模块的作用域卸载模块
+    vuexModule.forEach(module =&gt; {
+        unregisterModule(module.name, module.extent)
+    })
+})
+
+const loadModule = async (moduleName: string) =&gt; {
+    try {
+        const module = await import(/* @vite-ignore */`../store/modules/${moduleName}.js`)
+        console.log('模块是否加载确认',store.hasModule(moduleName))
+        return module.default
+    } catch (error) {
+        console.error(`加载模块 ${moduleName} 失败:`, error)
+        throw error
+    }
+}
+
+// wait for module mounted
+const waitForModule = (moduleName: string, timeout = 2000) =&gt; {
+  return new Promise&lt;void&gt;((resolve, reject) =&gt; {
+    const checkInterval = 50 // check ever 50ms
+    let elapsed = 0
+    
+    const interval = setInterval(() =&gt; {
+      if (store.hasModule(moduleName)) {
+        console.log('already have: ', moduleName)
+        clearInterval(interval)
+        resolve()
+      } else {
+        elapsed += checkInterval
+        if (elapsed &gt;= timeout) {
+          clearInterval(interval)
+          reject(new Error(`等待模块超时: ${moduleName}`))
+        }
+      }
+    }, checkInterval)
+  })
+}
+
+//registerModule
+const registerModule = async (moduleName: string) =&gt; {
+    if(!store.hasModule(moduleName)){
+        try {
+            const vuexModule = await loadModule(moduleName)
+            if(vuexModule) {
+                store.registerModule(moduleName, vuexModule)
+                await waitForModule(moduleName)
+                console.log(`Module ${moduleName} registered successfully`)
+                return true
+            } else {
+                console.error(`Module ${moduleName} does not exsist`)
+                return false
+            }
+        } catch (error) {
+            console.error(`注册模块 ${moduleName} 失败:`, error)
+            return false
+        }    
+    }
+    await waitForModule(moduleName)
+    console.log(`Module ${moduleName} already exsist`)
+    return true
+}
+
+// unregisterModule
+const unregisterModule = (moduleName: string, extent: string) =&gt; {
+    if (store.hasModule(moduleName)) {
+        if (extent === 'session') {
+            console.log(`模块 ${moduleName} 作用域为 ${extent}，跳过卸载`)
+            return
+        }
+        store.unregisterModule(moduleName)
+        console.log(`模块 ${moduleName} 卸载成功`)
+    }
+}
+
+const fetchGeneralSetting = async () =&gt; {
+    const moduleName = &quot;GeneralSettings&quot;
+    try {
+        await store.dispatch(`${moduleName}/fetchGeneralSetting`)
+        console.log(`action 分发成功: ${moduleName}/fetchGeneralSetting`)
+    } catch (error) {
+        console.error(`等待或加载失败: ${error.message}`)
+        throw error
+    }
+}
+
+const fetchShopList = async () =&gt; {
+    const moduleName = &quot;ShopList&quot;
+    try {
+        await store.dispatch(`${moduleName}/fetchShopList`)
+        console.log(`action 分发成功: ${moduleName}/fetchShopList`)
+    } catch (error) {
+        console.error(`等待或加载失败: ${error.message}`)
+        throw error
+    }
+}
+
+const fetchGenreList = async () =&gt; {
+    const moduleName = &quot;GenreList&quot;
+    try {
+        await store.dispatch(`${moduleName}/fetchGenreList`)
+        console.log(`action 分发成功: ${moduleName}/fetchGenreList`)
+    } catch (error) {
+        console.error(`等待或加载失败: ${error.message}`)
+        throw error
+    }
+}
+
+// Get all module data in parallel
+const fetchAllModules = async () =&gt; {
+    try {
+        await Promise.all([
+            
+            fetchGeneralSetting(),
+            fetchShopList(),
+            fetchGenreList()</code></pre></div><div class="py-4"><p class="text-gray-600">src\components\Genres.vue (Line 226:9 - Line 246:2), src\components\ShopsNearBy.vue (Line 252:9 - Line 272:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn17" onclick="toggleCodeBlock('cloneGroup17', 'expandBtn17', 'collapseBtn17')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn17" onclick="toggleCodeBlock('cloneGroup17', 'expandBtn17', 'collapseBtn17')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup17"><code class="language-markup text-sm text-gray-800">])
+        console.log('All modules data loaded successfully')
+    } catch (error) {
+        console.error('Error loading one or more modules:', error)
+    }
+}
+
+// 处理抽屉状态变化
+const handleDrawerChange = (newValue: boolean) =&gt; {
+    internalVisible.value = newValue
+    emit('update:visible', newValue)
+}
+
+// 关闭前的回调
+const handleBeforeClose = (done: () =&gt; void) =&gt; {
+    done()
+    internalVisible.value = false
+    emit('update:visible', false)
+}
+
+&lt;/script&gt;</code></pre></div><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div></section><!-- Add more sections for other formats and clone groups as needed--></main><footer class="bg-white shadow mt-8 py-4"><div class="container mx-auto px-4 text-center"><p class="text-sm text-gray-600">This report is generated by jscpd, an open-source copy/paste detector.</p><p class="text-sm text-gray-600">jscpd is licensed under the MIT License.</p><a class="text-blue-500 text-sm" href="https://github.com/kucherenko/jscpd" target="_blank" rel="noopener noreferrer">View jscpd on GitHub</a></div></footer><script src="js/prism.js"></script><script>function toggleCodeBlock(codeBlockId, expandBtnId, collapseBtnId) {
+  const codeBlock = document.getElementById(codeBlockId);
+  const expandBtn = document.getElementById(expandBtnId);
+  const collapseBtn = document.getElementById(collapseBtnId);
+
+  codeBlock.classList.toggle('hidden');
+  expandBtn.classList.toggle('hidden');
+  collapseBtn.classList.toggle('hidden');
+}</script></body></html>

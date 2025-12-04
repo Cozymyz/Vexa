@@ -1,11 +1,10 @@
 /*
  * @Author: Meiyizhi
  * @Date: 2025-11-28 15:59:06
- * @LastEditTime: 2025-11-29 22:58:08
+ * @LastEditTime: 2025-12-04 11:11:39
  * @Description: 
  */
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
