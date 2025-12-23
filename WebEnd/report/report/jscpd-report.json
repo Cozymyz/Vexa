@@ -1,0 +1,867 @@
+jscpd ./src -r html -m weak --min-tokens 5 --min-lines 3
+{
+  "statistics": {
+    "detectionDate": "2025-12-21T06:56:24.557Z",
+    "formats": {
+      "javascript": {
+        "sources": {
+          "./src/store/index.js": {
+            "lines": 15,
+            "tokens": 76,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/router/router.js": {
+            "lines": 21,
+            "tokens": 117,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/plugins/vuexLazyLoad.js": {
+            "lines": 161,
+            "tokens": 1233,
+            "sources": 1,
+            "clones": 10,
+            "duplicatedLines": 40,
+            "duplicatedTokens": 302,
+            "percentage": 24.84,
+            "percentageTokens": 24.49,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/plugins/request.js": {
+            "lines": 41,
+            "tokens": 324,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 64,
+            "percentage": 39.02,
+            "percentageTokens": 19.75,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/api/axios.js": {
+            "lines": 40,
+            "tokens": 280,
+            "sources": 1,
+            "clones": 8,
+            "duplicatedLines": 44,
+            "duplicatedTokens": 214,
+            "percentage": 110,
+            "percentageTokens": 76.43,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/main.js": {
+            "lines": 18,
+            "tokens": 175,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 296,
+          "tokens": 2205,
+          "sources": 6,
+          "clones": 11,
+          "duplicatedLines": 50,
+          "duplicatedTokens": 290,
+          "percentage": 16.89,
+          "percentageTokens": 13.15,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "markup": {
+        "sources": {
+          "./src/components/Index.vue": {
+            "lines": 165,
+            "tokens": 1087,
+            "sources": 1,
+            "clones": 11,
+            "duplicatedLines": 37,
+            "duplicatedTokens": 262,
+            "percentage": 22.42,
+            "percentageTokens": 24.1,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/App.vue": {
+            "lines": 55,
+            "tokens": 291,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 3,
+            "duplicatedTokens": 10,
+            "percentage": 5.45,
+            "percentageTokens": 3.44,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 220,
+          "tokens": 1378,
+          "sources": 2,
+          "clones": 6,
+          "duplicatedLines": 20,
+          "duplicatedTokens": 136,
+          "percentage": 9.09,
+          "percentageTokens": 9.87,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "css": {
+        "sources": {
+          "./src/style.css": {
+            "lines": 73,
+            "tokens": 388,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 28,
+            "percentage": 8.22,
+            "percentageTokens": 7.22,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 73,
+          "tokens": 388,
+          "sources": 1,
+          "clones": 1,
+          "duplicatedLines": 3,
+          "duplicatedTokens": 14,
+          "percentage": 4.11,
+          "percentageTokens": 3.61,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "typescript": {
+        "sources": {
+          "./src/components.d.ts": {
+            "lines": 32,
+            "tokens": 392,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/auto-imports.d.ts": {
+            "lines": 69,
+            "tokens": 1066,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 101,
+          "tokens": 1458,
+          "sources": 2,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 690,
+      "tokens": 5429,
+      "sources": 11,
+      "clones": 18,
+      "duplicatedLines": 73,
+      "duplicatedTokens": 440,
+      "percentage": 10.58,
+      "percentageTokens": 8.1,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "javascript",
+      "lines": 9,
+      "fragment": "() {\r\n      // Get the Vuex module in the component configuration\r\n      const vuexModules = this.$_getVuexModules()\r\n      \r\n      // 没f there is no module configuration, it will be returned directly.\r\n      if (!vuexModules || vuexModules.length === 0) return\r\n      \r\n      // Uninstall all eligible modules\r\n      this",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\plugins\\vuexLazyLoad.js",
+        "start": 20,
+        "end": 28,
+        "startLoc": {
+          "line": 20,
+          "column": 14,
+          "position": 102
+        },
+        "endLoc": {
+          "line": 28,
+          "column": 5,
+          "position": 160
+        }
+      },
+      "secondFile": {
+        "name": "src\\plugins\\vuexLazyLoad.js",
+        "start": 9,
+        "end": 17,
+        "startLoc": {
+          "line": 9,
+          "column": 8,
+          "position": 25
+        },
+        "endLoc": {
+          "line": 17,
+          "column": 6,
+          "position": 83
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": "(vuexModules)\r\n    },\r\n\r\n    methods",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\plugins\\vuexLazyLoad.js",
+        "start": 28,
+        "end": 31,
+        "startLoc": {
+          "line": 28,
+          "column": 23,
+          "position": 163
+        },
+        "endLoc": {
+          "line": 31,
+          "column": 8,
+          "position": 176
+        }
+      },
+      "secondFile": {
+        "name": "src\\plugins\\vuexLazyLoad.js",
+        "start": 17,
+        "end": 20,
+        "startLoc": {
+          "line": 17,
+          "column": 21,
+          "position": 88
+        },
+        "endLoc": {
+          "line": 20,
+          "column": 14,
+          "position": 101
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": "(() => {\r\n              if (this.$store.hasModule(moduleName)) {\r\n                this.$store.unregisterModule(moduleName)\r\n                console.log(`Time limited: ",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\plugins\\vuexLazyLoad.js",
+        "start": 101,
+        "end": 104,
+        "startLoc": {
+          "line": 101,
+          "column": 11,
+          "position": 767
+        },
+        "endLoc": {
+          "line": 104,
+          "column": 16,
+          "position": 809
+        }
+      },
+      "secondFile": {
+        "name": "src\\plugins\\vuexLazyLoad.js",
+        "start": 93,
+        "end": 65,
+        "startLoc": {
+          "line": 93,
+          "column": 5,
+          "position": 703
+        },
+        "endLoc": {
+          "line": 65,
+          "column": 28,
+          "position": 468
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": "${moduleName}`)\r\n            })\r\n            \r\n            break",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\plugins\\vuexLazyLoad.js",
+        "start": 110,
+        "end": 113,
+        "startLoc": {
+          "line": 110,
+          "column": 20,
+          "position": 860
+        },
+        "endLoc": {
+          "line": 113,
+          "column": 6,
+          "position": 875
+        }
+      },
+      "secondFile": {
+        "name": "src\\plugins\\vuexLazyLoad.js",
+        "start": 68,
+        "end": 96,
+        "startLoc": {
+          "line": 68,
+          "column": 53,
+          "position": 500
+        },
+        "endLoc": {
+          "line": 96,
+          "column": 2,
+          "position": 740
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": ":\r\n            // Unregister default modules\r\n            this.$store.unregisterModule(moduleName)\r\n            console.log(`Default-level: ",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\plugins\\vuexLazyLoad.js",
+        "start": 157,
+        "end": 160,
+        "startLoc": {
+          "line": 157,
+          "column": 8,
+          "position": 1175
+        },
+        "endLoc": {
+          "line": 160,
+          "column": 17,
+          "position": 1198
+        }
+      },
+      "secondFile": {
+        "name": "src\\plugins\\vuexLazyLoad.js",
+        "start": 151,
+        "end": 65,
+        "startLoc": {
+          "line": 151,
+          "column": 12,
+          "position": 1136
+        },
+        "endLoc": {
+          "line": 65,
+          "column": 28,
+          "position": 468
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": "}\r\n)\r\n\r\n// response 拦截器\r\nservice.interceptors.response",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\plugins\\request.js",
+        "start": 28,
+        "end": 32,
+        "startLoc": {
+          "line": 28,
+          "column": 3,
+          "position": 176
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 9,
+          "position": 191
+        }
+      },
+      "secondFile": {
+        "name": "src\\plugins\\request.js",
+        "start": 17,
+        "end": 19,
+        "startLoc": {
+          "line": 17,
+          "column": 1,
+          "position": 80
+        },
+        "endLoc": {
+          "line": 19,
+          "column": 8,
+          "position": 90
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": "Promise.reject(error)\r\n  }\r\n)\r\n\r\nexport",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\plugins\\request.js",
+        "start": 44,
+        "end": 48,
+        "startLoc": {
+          "line": 44,
+          "column": 2,
+          "position": 306
+        },
+        "endLoc": {
+          "line": 48,
+          "column": 7,
+          "position": 323
+        }
+      },
+      "secondFile": {
+        "name": "src\\plugins\\request.js",
+        "start": 27,
+        "end": 32,
+        "startLoc": {
+          "line": 27,
+          "column": 5,
+          "position": 167
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 8,
+          "position": 187
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 5,
+      "fragment": "</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</el-col>\r\n\t\t\t\t\t<el-col :span=\"6\">\r\n\t\t\t\t\t\t<div class=\"vuecomponent grid-content ep-bg-purple\" @click=\"openDrawer3",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 25,
+        "end": 29,
+        "startLoc": {
+          "line": 25,
+          "column": 6,
+          "position": 178
+        },
+        "endLoc": {
+          "line": 29,
+          "column": 12,
+          "position": 220
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 20,
+        "end": 19,
+        "startLoc": {
+          "line": 20,
+          "column": 5,
+          "position": 120
+        },
+        "endLoc": {
+          "line": 19,
+          "column": 12,
+          "position": 108
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 5,
+      "fragment": "</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</el-col>\r\n\t\t\t\t\t<el-col :span=\"6\">\r\n\t\t\t\t\t\t<div class=\"vuecomponent grid-content ep-bg-purple\" @click=\"openDrawer4",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 30,
+        "end": 34,
+        "startLoc": {
+          "line": 30,
+          "column": 7,
+          "position": 236
+        },
+        "endLoc": {
+          "line": 34,
+          "column": 12,
+          "position": 278
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 20,
+        "end": 19,
+        "startLoc": {
+          "line": 20,
+          "column": 5,
+          "position": 120
+        },
+        "endLoc": {
+          "line": 19,
+          "column": 12,
+          "position": 108
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 4,
+      "fragment": "</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</el-col>\r\n\t\t\t\t</",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 35,
+        "end": 38,
+        "startLoc": {
+          "line": 35,
+          "column": 3,
+          "position": 298
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 3,
+          "position": 316
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 20,
+        "end": 23,
+        "startLoc": {
+          "line": 20,
+          "column": 5,
+          "position": 120
+        },
+        "endLoc": {
+          "line": 23,
+          "column": 2,
+          "position": 138
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 4,
+      "fragment": "\"\r\n\t\t\t\t/>\r\n\t\t\t\t<component\r\n\t\t\t\t\t:is=\"Genres",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 51,
+        "end": 54,
+        "startLoc": {
+          "line": 51,
+          "column": 6,
+          "position": 386
+        },
+        "endLoc": {
+          "line": 54,
+          "column": 7,
+          "position": 398
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 45,
+        "end": 42,
+        "startLoc": {
+          "line": 45,
+          "column": 16,
+          "position": 354
+        },
+        "endLoc": {
+          "line": 42,
+          "column": 16,
+          "position": 334
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 4,
+      "fragment": "\"\r\n\t\t\t\t/>\r\n\t\t\t\t<component\r\n\t\t\t\t\t:is=\"ShopsNearBy",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 57,
+        "end": 60,
+        "startLoc": {
+          "line": 57,
+          "column": 7,
+          "position": 418
+        },
+        "endLoc": {
+          "line": 60,
+          "column": 12,
+          "position": 430
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 45,
+        "end": 42,
+        "startLoc": {
+          "line": 45,
+          "column": 16,
+          "position": 354
+        },
+        "endLoc": {
+          "line": 42,
+          "column": 16,
+          "position": 334
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 7,
+      "fragment": ",\r\n        method: 'post',\r\n        data\r\n    })\r\n}\r\n\r\nexport const ShopList",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\api\\axios.js",
+        "start": 19,
+        "end": 25,
+        "startLoc": {
+          "line": 19,
+          "column": 16,
+          "position": 98
+        },
+        "endLoc": {
+          "line": 25,
+          "column": 9,
+          "position": 127
+        }
+      },
+      "secondFile": {
+        "name": "src\\api\\axios.js",
+        "start": 11,
+        "end": 17,
+        "startLoc": {
+          "line": 11,
+          "column": 21,
+          "position": 43
+        },
+        "endLoc": {
+          "line": 17,
+          "column": 16,
+          "position": 72
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 7,
+      "fragment": ",\r\n        method: 'post',\r\n        data\r\n    })\r\n}\r\n\r\nexport const GenreList",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\api\\axios.js",
+        "start": 27,
+        "end": 33,
+        "startLoc": {
+          "line": 27,
+          "column": 16,
+          "position": 153
+        },
+        "endLoc": {
+          "line": 33,
+          "column": 10,
+          "position": 182
+        }
+      },
+      "secondFile": {
+        "name": "src\\api\\axios.js",
+        "start": 11,
+        "end": 17,
+        "startLoc": {
+          "line": 11,
+          "column": 21,
+          "position": 43
+        },
+        "endLoc": {
+          "line": 17,
+          "column": 16,
+          "position": 72
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 7,
+      "fragment": ",\r\n        method: 'post',\r\n        data\r\n    })\r\n}\r\n\r\nexport const UserLocation",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\api\\axios.js",
+        "start": 35,
+        "end": 41,
+        "startLoc": {
+          "line": 35,
+          "column": 16,
+          "position": 208
+        },
+        "endLoc": {
+          "line": 41,
+          "column": 13,
+          "position": 237
+        }
+      },
+      "secondFile": {
+        "name": "src\\api\\axios.js",
+        "start": 11,
+        "end": 17,
+        "startLoc": {
+          "line": 11,
+          "column": 21,
+          "position": 43
+        },
+        "endLoc": {
+          "line": 17,
+          "column": 16,
+          "position": 72
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": ",\r\n        method: 'post',\r\n        data\r\n    })\r\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\api\\axios.js",
+        "start": 43,
+        "end": 47,
+        "startLoc": {
+          "line": 43,
+          "column": 16,
+          "position": 263
+        },
+        "endLoc": {
+          "line": 47,
+          "column": 2,
+          "position": 283
+        }
+      },
+      "secondFile": {
+        "name": "src\\api\\axios.js",
+        "start": 11,
+        "end": 15,
+        "startLoc": {
+          "line": 11,
+          "column": 21,
+          "position": 43
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 2,
+          "position": 63
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 4,
+      "fragment": ";\n  }\n  a:hover {\n    color: #747bff",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\style.css",
+        "start": 66,
+        "end": 69,
+        "startLoc": {
+          "line": 66,
+          "column": 8,
+          "position": 353
+        },
+        "endLoc": {
+          "line": 69,
+          "column": 8,
+          "position": 367
+        }
+      },
+      "secondFile": {
+        "name": "src\\style.css",
+        "start": 19,
+        "end": 22,
+        "startLoc": {
+          "line": 19,
+          "column": 8,
+          "position": 121
+        },
+        "endLoc": {
+          "line": 22,
+          "column": 8,
+          "position": 133
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 4,
+      "fragment": "</script>\n\n<style>\n\thtml,",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\App.vue",
+        "start": 45,
+        "end": 48,
+        "startLoc": {
+          "line": 45,
+          "column": 1,
+          "position": 206
+        },
+        "endLoc": {
+          "line": 48,
+          "column": 6,
+          "position": 216
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 121,
+        "end": 124,
+        "startLoc": {
+          "line": 121,
+          "column": 1,
+          "position": 822
+        },
+        "endLoc": {
+          "line": 124,
+          "column": 10,
+          "position": 835
+        }
+      }
+    }
+  ],
+  "filename": "D:\\node.js\\node_global\\node_modules\\jscpd\\node_modules\\@jscpd\\html-reporter\\dist\\templates\\main.pug"
+}

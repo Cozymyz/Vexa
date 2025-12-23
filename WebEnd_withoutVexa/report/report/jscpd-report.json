@@ -1,18 +1,131 @@
-{jscpd ./src/components -m weak --min-tokens 10 --min-lines 3 -r html
+jscpd ./src -r html -m weak --min-tokens 5 --min-lines 3
+{
   "statistics": {
-    "detectionDate": "2025-12-04T02:31:44.349Z",
+    "detectionDate": "2025-12-21T06:48:03.113Z",
     "formats": {
+      "javascript": {
+        "sources": {
+          "./src/store/modules/UserLocation.js": {
+            "lines": 25,
+            "tokens": 213,
+            "sources": 1,
+            "clones": 13,
+            "duplicatedLines": 54,
+            "duplicatedTokens": 367,
+            "percentage": 216,
+            "percentageTokens": 172.3,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/modules/ShopList.js": {
+            "lines": 25,
+            "tokens": 213,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 17,
+            "duplicatedTokens": 118,
+            "percentage": 68,
+            "percentageTokens": 55.4,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/modules/GenreList.js": {
+            "lines": 25,
+            "tokens": 213,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 17,
+            "duplicatedTokens": 118,
+            "percentage": 68,
+            "percentageTokens": 55.4,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/modules/GeneralSettings.js": {
+            "lines": 25,
+            "tokens": 213,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 17,
+            "duplicatedTokens": 118,
+            "percentage": 68,
+            "percentageTokens": 55.4,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/index.js": {
+            "lines": 15,
+            "tokens": 76,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 3,
+            "duplicatedTokens": 13,
+            "percentage": 20,
+            "percentageTokens": 17.11,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/router/router.js": {
+            "lines": 21,
+            "tokens": 117,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/plugins/request.js": {
+            "lines": 41,
+            "tokens": 324,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 64,
+            "percentage": 39.02,
+            "percentageTokens": 19.75,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/api/axios.js": {
+            "lines": 40,
+            "tokens": 280,
+            "sources": 1,
+            "clones": 8,
+            "duplicatedLines": 44,
+            "duplicatedTokens": 214,
+            "percentage": 110,
+            "percentageTokens": 76.43,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 217,
+          "tokens": 1649,
+          "sources": 8,
+          "clones": 19,
+          "duplicatedLines": 84,
+          "duplicatedTokens": 506,
+          "percentage": 38.71,
+          "percentageTokens": 30.69,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
       "markup": {
         "sources": {
           "./src/components/ShopsNearBy.vue": {
             "lines": 265,
             "tokens": 1661,
             "sources": 1,
-            "clones": 19,
-            "duplicatedLines": 686,
-            "duplicatedTokens": 4394,
-            "percentage": 258.87,
-            "percentageTokens": 264.54,
+            "clones": 21,
+            "duplicatedLines": 692,
+            "duplicatedTokens": 4430,
+            "percentage": 261.13,
+            "percentageTokens": 266.71,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -44,11 +157,11 @@
             "lines": 165,
             "tokens": 1087,
             "sources": 1,
-            "clones": 5,
-            "duplicatedLines": 20,
-            "duplicatedTokens": 197,
-            "percentage": 12.12,
-            "percentageTokens": 18.12,
+            "clones": 12,
+            "duplicatedLines": 41,
+            "duplicatedTokens": 291,
+            "percentage": 24.85,
+            "percentageTokens": 26.77,
             "newDuplicatedLines": 0,
             "newClones": 0
           },
@@ -63,36 +176,704 @@
             "percentageTokens": 100.66,
             "newDuplicatedLines": 0,
             "newClones": 0
+          },
+          "./src/App.vue": {
+            "lines": 55,
+            "tokens": 291,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 3,
+            "duplicatedTokens": 10,
+            "percentage": 5.45,
+            "percentageTokens": 3.44,
+            "newDuplicatedLines": 0,
+            "newClones": 0
           }
         },
         "total": {
-          "lines": 1068,
-          "tokens": 6901,
-          "sources": 5,
-          "clones": 18,
-          "duplicatedLines": 676,
-          "duplicatedTokens": 4384,
-          "percentage": 63.3,
-          "percentageTokens": 63.53,
+          "lines": 1123,
+          "tokens": 7192,
+          "sources": 6,
+          "clones": 23,
+          "duplicatedLines": 691,
+          "duplicatedTokens": 4454,
+          "percentage": 61.53,
+          "percentageTokens": 61.93,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "css": {
+        "sources": {
+          "./src/style.css": {
+            "lines": 78,
+            "tokens": 423,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 28,
+            "percentage": 7.69,
+            "percentageTokens": 6.62,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 78,
+          "tokens": 423,
+          "sources": 1,
+          "clones": 1,
+          "duplicatedLines": 3,
+          "duplicatedTokens": 14,
+          "percentage": 3.85,
+          "percentageTokens": 3.31,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "typescript": {
+        "sources": {
+          "./src/main.ts": {
+            "lines": 16,
+            "tokens": 160,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/components.d.ts": {
+            "lines": 23,
+            "tokens": 266,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/auto-imports.d.ts": {
+            "lines": 69,
+            "tokens": 1066,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 108,
+          "tokens": 1492,
+          "sources": 3,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
       }
     },
     "total": {
-      "lines": 1068,
-      "tokens": 6901,
-      "sources": 5,
-      "clones": 18,
-      "duplicatedLines": 676,
-      "duplicatedTokens": 4384,
-      "percentage": 63.3,
-      "percentageTokens": 63.53,
+      "lines": 1526,
+      "tokens": 10756,
+      "sources": 18,
+      "clones": 43,
+      "duplicatedLines": 778,
+      "duplicatedTokens": 4974,
+      "percentage": 50.98,
+      "percentageTokens": 46.24,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
   },
   "duplicates": [
+    {
+      "format": "javascript",
+      "lines": 6,
+      "fragment": "} from '@/api/axios'\r\n\r\nexport default {\r\n  namespaced: true,\r\n  state: () => ({\r\n    shopLists",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\ShopList.js",
+        "start": 7,
+        "end": 12,
+        "startLoc": {
+          "line": 7,
+          "column": 2,
+          "position": 9
+        },
+        "endLoc": {
+          "line": 12,
+          "column": 10,
+          "position": 47
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 7,
+        "end": 12,
+        "startLoc": {
+          "line": 7,
+          "column": 2,
+          "position": 9
+        },
+        "endLoc": {
+          "line": 12,
+          "column": 14,
+          "position": 47
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": ": [],\r\n  }),\r\n  mutations: {\r\n    SET_SHOP_LIST",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\ShopList.js",
+        "start": 12,
+        "end": 15,
+        "startLoc": {
+          "line": 12,
+          "column": 10,
+          "position": 48
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 14,
+          "position": 69
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 12,
+        "end": 15,
+        "startLoc": {
+          "line": 12,
+          "column": 14,
+          "position": 48
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 18,
+          "position": 69
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": "= payload\r\n    }\r\n  },\r\n  actions: {\r\n    async fetchShopList",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\ShopList.js",
+        "start": 16,
+        "end": 20,
+        "startLoc": {
+          "line": 16,
+          "column": 2,
+          "position": 85
+        },
+        "endLoc": {
+          "line": 20,
+          "column": 14,
+          "position": 109
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 16,
+        "end": 20,
+        "startLoc": {
+          "line": 16,
+          "column": 2,
+          "position": 85
+        },
+        "endLoc": {
+          "line": 20,
+          "column": 18,
+          "position": 109
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 6,
+      "fragment": "} catch (error) {\r\n        console.error('load menudata failed:', error)\r\n      }\r\n    }\r\n  }\r\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\ShopList.js",
+        "start": 27,
+        "end": 32,
+        "startLoc": {
+          "line": 27,
+          "column": 7,
+          "position": 181
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 2,
+          "position": 216
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 27,
+        "end": 32,
+        "startLoc": {
+          "line": 27,
+          "column": 7,
+          "position": 181
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 2,
+          "position": 216
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 6,
+      "fragment": "} from '@/api/axios'\r\n\r\nexport default {\r\n  namespaced: true,\r\n  state: () => ({\r\n    genreLists",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\GenreList.js",
+        "start": 7,
+        "end": 12,
+        "startLoc": {
+          "line": 7,
+          "column": 2,
+          "position": 9
+        },
+        "endLoc": {
+          "line": 12,
+          "column": 11,
+          "position": 47
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 7,
+        "end": 12,
+        "startLoc": {
+          "line": 7,
+          "column": 2,
+          "position": 9
+        },
+        "endLoc": {
+          "line": 12,
+          "column": 14,
+          "position": 47
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": ": [],\r\n  }),\r\n  mutations: {\r\n    SET_GENRE_LIST",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\GenreList.js",
+        "start": 12,
+        "end": 15,
+        "startLoc": {
+          "line": 12,
+          "column": 11,
+          "position": 48
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 15,
+          "position": 69
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 12,
+        "end": 15,
+        "startLoc": {
+          "line": 12,
+          "column": 14,
+          "position": 48
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 18,
+          "position": 69
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": "= payload\r\n    }\r\n  },\r\n  actions: {\r\n    async fetchGenreList",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\GenreList.js",
+        "start": 16,
+        "end": 20,
+        "startLoc": {
+          "line": 16,
+          "column": 2,
+          "position": 85
+        },
+        "endLoc": {
+          "line": 20,
+          "column": 15,
+          "position": 109
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 16,
+        "end": 20,
+        "startLoc": {
+          "line": 16,
+          "column": 2,
+          "position": 85
+        },
+        "endLoc": {
+          "line": 20,
+          "column": 18,
+          "position": 109
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 6,
+      "fragment": "} catch (error) {\r\n        console.error('load menudata failed:', error)\r\n      }\r\n    }\r\n  }\r\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\GenreList.js",
+        "start": 27,
+        "end": 32,
+        "startLoc": {
+          "line": 27,
+          "column": 7,
+          "position": 181
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 2,
+          "position": 216
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 27,
+        "end": 32,
+        "startLoc": {
+          "line": 27,
+          "column": 7,
+          "position": 181
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 2,
+          "position": 216
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 6,
+      "fragment": "} from '@/api/axios'\r\n\r\nexport default {\r\n  namespaced: true,\r\n  state: () => ({\r\n    generalSettings",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\GeneralSettings.js",
+        "start": 1,
+        "end": 6,
+        "startLoc": {
+          "line": 1,
+          "column": 2,
+          "position": 6
+        },
+        "endLoc": {
+          "line": 6,
+          "column": 16,
+          "position": 44
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 7,
+        "end": 12,
+        "startLoc": {
+          "line": 7,
+          "column": 2,
+          "position": 9
+        },
+        "endLoc": {
+          "line": 12,
+          "column": 14,
+          "position": 47
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": ": [],\r\n  }),\r\n  mutations: {\r\n    SET_GENERAL_SETTINGS",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\GeneralSettings.js",
+        "start": 6,
+        "end": 9,
+        "startLoc": {
+          "line": 6,
+          "column": 16,
+          "position": 45
+        },
+        "endLoc": {
+          "line": 9,
+          "column": 21,
+          "position": 66
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 12,
+        "end": 15,
+        "startLoc": {
+          "line": 12,
+          "column": 14,
+          "position": 48
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 18,
+          "position": 69
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": "= payload\r\n    }\r\n  },\r\n  actions: {\r\n    async fetchGeneralSetting",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\GeneralSettings.js",
+        "start": 10,
+        "end": 14,
+        "startLoc": {
+          "line": 10,
+          "column": 2,
+          "position": 82
+        },
+        "endLoc": {
+          "line": 14,
+          "column": 20,
+          "position": 106
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 16,
+        "end": 20,
+        "startLoc": {
+          "line": 16,
+          "column": 2,
+          "position": 85
+        },
+        "endLoc": {
+          "line": 20,
+          "column": 18,
+          "position": 109
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 6,
+      "fragment": "} catch (error) {\r\n        console.error('load menudata failed:', error)\r\n      }\r\n    }\r\n  }\r\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\modules\\GeneralSettings.js",
+        "start": 21,
+        "end": 26,
+        "startLoc": {
+          "line": 21,
+          "column": 7,
+          "position": 178
+        },
+        "endLoc": {
+          "line": 26,
+          "column": 2,
+          "position": 213
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 27,
+        "end": 32,
+        "startLoc": {
+          "line": 27,
+          "column": 7,
+          "position": 181
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 2,
+          "position": 216
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": "},\r\n    actions:{\r\n\r\n    }",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\index.js",
+        "start": 9,
+        "end": 12,
+        "startLoc": {
+          "line": 9,
+          "column": 5,
+          "position": 46
+        },
+        "endLoc": {
+          "line": 12,
+          "column": 2,
+          "position": 59
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\modules\\UserLocation.js",
+        "start": 18,
+        "end": 20,
+        "startLoc": {
+          "line": 18,
+          "column": 3,
+          "position": 95
+        },
+        "endLoc": {
+          "line": 20,
+          "column": 6,
+          "position": 107
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": "}\r\n)\r\n\r\n// response 拦截器\r\nservice.interceptors.response",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\plugins\\request.js",
+        "start": 28,
+        "end": 32,
+        "startLoc": {
+          "line": 28,
+          "column": 3,
+          "position": 176
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 9,
+          "position": 191
+        }
+      },
+      "secondFile": {
+        "name": "src\\plugins\\request.js",
+        "start": 17,
+        "end": 19,
+        "startLoc": {
+          "line": 17,
+          "column": 1,
+          "position": 80
+        },
+        "endLoc": {
+          "line": 19,
+          "column": 8,
+          "position": 90
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": "Promise.reject(error)\r\n  }\r\n)\r\n\r\nexport",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\plugins\\request.js",
+        "start": 44,
+        "end": 48,
+        "startLoc": {
+          "line": 44,
+          "column": 2,
+          "position": 306
+        },
+        "endLoc": {
+          "line": 48,
+          "column": 7,
+          "position": 323
+        }
+      },
+      "secondFile": {
+        "name": "src\\plugins\\request.js",
+        "start": 27,
+        "end": 32,
+        "startLoc": {
+          "line": 27,
+          "column": 5,
+          "position": 167
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 8,
+          "position": 187
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 4,
+      "fragment": "extent: 'component'\r\n  },\r\n  {\r\n    name: 'UserLocation',",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 87,
+        "end": 90,
+        "startLoc": {
+          "line": 87,
+          "column": 5,
+          "position": 390
+        },
+        "endLoc": {
+          "line": 90,
+          "column": 16,
+          "position": 406
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\ShopsNearBy.vue",
+        "start": 83,
+        "end": 86,
+        "startLoc": {
+          "line": 83,
+          "column": 5,
+          "position": 370
+        },
+        "endLoc": {
+          "line": 86,
+          "column": 13,
+          "position": 386
+        }
+      }
+    },
     {
       "format": "markup",
       "lines": 7,
@@ -168,7 +949,7 @@
     {
       "format": "markup",
       "lines": 7,
-      "fragment": "} catch (error) {\r\n        console.error(`等待或加载失败: ${error.message}`)\r\n        throw error\r\n    }\r\n}\r\n\r\n//",
+      "fragment": "} catch (error) {\r\n        console.error(`等待或加载失败: ${error.message}`)\r\n        throw error\r\n    }\r\n}\r\n\r\n// Get",
       "tokens": 0,
       "firstFile": {
         "name": "src\\components\\ShopsNearBy.vue",
@@ -181,23 +962,23 @@
         },
         "endLoc": {
           "line": 242,
-          "column": 3,
-          "position": 1463
+          "column": 4,
+          "position": 1465
         }
       },
       "secondFile": {
         "name": "src\\components\\ShopsNearBy.vue",
         "start": 203,
-        "end": 209,
+        "end": 140,
         "startLoc": {
           "line": 203,
           "column": 5,
           "position": 1205
         },
         "endLoc": {
-          "line": 209,
-          "column": 6,
-          "position": 1235
+          "line": 140,
+          "column": 5,
+          "position": 728
         }
       }
     },
@@ -563,6 +1344,114 @@
     },
     {
       "format": "markup",
+      "lines": 4,
+      "fragment": "</span>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</el-col>\r\n\t\t\t\t</",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 35,
+        "end": 38,
+        "startLoc": {
+          "line": 35,
+          "column": 3,
+          "position": 298
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 3,
+          "position": 316
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 20,
+        "end": 23,
+        "startLoc": {
+          "line": 20,
+          "column": 5,
+          "position": 120
+        },
+        "endLoc": {
+          "line": 23,
+          "column": 2,
+          "position": 138
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 4,
+      "fragment": "\"\r\n\t\t\t\t/>\r\n\t\t\t\t<component\r\n\t\t\t\t\t:is=\"Genres",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 51,
+        "end": 54,
+        "startLoc": {
+          "line": 51,
+          "column": 6,
+          "position": 386
+        },
+        "endLoc": {
+          "line": 54,
+          "column": 7,
+          "position": 398
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 45,
+        "end": 42,
+        "startLoc": {
+          "line": 45,
+          "column": 16,
+          "position": 354
+        },
+        "endLoc": {
+          "line": 42,
+          "column": 16,
+          "position": 334
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 4,
+      "fragment": "\"\r\n\t\t\t\t/>\r\n\t\t\t\t<component\r\n\t\t\t\t\t:is=\"ShopsNearBy",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 57,
+        "end": 60,
+        "startLoc": {
+          "line": 57,
+          "column": 7,
+          "position": 418
+        },
+        "endLoc": {
+          "line": 60,
+          "column": 12,
+          "position": 430
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 45,
+        "end": 42,
+        "startLoc": {
+          "line": 45,
+          "column": 16,
+          "position": 354
+        },
+        "endLoc": {
+          "line": 42,
+          "column": 16,
+          "position": 334
+        }
+      }
+    },
+    {
+      "format": "markup",
       "lines": 5,
       "fragment": ">\r\n</template>\r\n\r\n<script setup lang=\"ts\">\r\nimport { ref, defineAsyncComponent",
       "tokens": 0,
@@ -738,6 +1627,222 @@
           "line": 272,
           "column": 2,
           "position": 1664
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 7,
+      "fragment": ",\r\n        method: 'post',\r\n        data\r\n    })\r\n}\r\n\r\nexport const ShopList",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\api\\axios.js",
+        "start": 19,
+        "end": 25,
+        "startLoc": {
+          "line": 19,
+          "column": 16,
+          "position": 98
+        },
+        "endLoc": {
+          "line": 25,
+          "column": 9,
+          "position": 127
+        }
+      },
+      "secondFile": {
+        "name": "src\\api\\axios.js",
+        "start": 11,
+        "end": 17,
+        "startLoc": {
+          "line": 11,
+          "column": 21,
+          "position": 43
+        },
+        "endLoc": {
+          "line": 17,
+          "column": 16,
+          "position": 72
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 7,
+      "fragment": ",\r\n        method: 'post',\r\n        data\r\n    })\r\n}\r\n\r\nexport const GenreList",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\api\\axios.js",
+        "start": 27,
+        "end": 33,
+        "startLoc": {
+          "line": 27,
+          "column": 16,
+          "position": 153
+        },
+        "endLoc": {
+          "line": 33,
+          "column": 10,
+          "position": 182
+        }
+      },
+      "secondFile": {
+        "name": "src\\api\\axios.js",
+        "start": 11,
+        "end": 17,
+        "startLoc": {
+          "line": 11,
+          "column": 21,
+          "position": 43
+        },
+        "endLoc": {
+          "line": 17,
+          "column": 16,
+          "position": 72
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 7,
+      "fragment": ",\r\n        method: 'post',\r\n        data\r\n    })\r\n}\r\n\r\nexport const UserLocation",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\api\\axios.js",
+        "start": 35,
+        "end": 41,
+        "startLoc": {
+          "line": 35,
+          "column": 16,
+          "position": 208
+        },
+        "endLoc": {
+          "line": 41,
+          "column": 13,
+          "position": 237
+        }
+      },
+      "secondFile": {
+        "name": "src\\api\\axios.js",
+        "start": 11,
+        "end": 17,
+        "startLoc": {
+          "line": 11,
+          "column": 21,
+          "position": 43
+        },
+        "endLoc": {
+          "line": 17,
+          "column": 16,
+          "position": 72
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": ",\r\n        method: 'post',\r\n        data\r\n    })\r\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\api\\axios.js",
+        "start": 43,
+        "end": 47,
+        "startLoc": {
+          "line": 43,
+          "column": 16,
+          "position": 263
+        },
+        "endLoc": {
+          "line": 47,
+          "column": 2,
+          "position": 283
+        }
+      },
+      "secondFile": {
+        "name": "src\\api\\axios.js",
+        "start": 11,
+        "end": 15,
+        "startLoc": {
+          "line": 11,
+          "column": 21,
+          "position": 43
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 2,
+          "position": 63
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 4,
+      "fragment": ";\n  }\n  a:hover {\n    color: #747bff",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\style.css",
+        "start": 71,
+        "end": 74,
+        "startLoc": {
+          "line": 71,
+          "column": 8,
+          "position": 388
+        },
+        "endLoc": {
+          "line": 74,
+          "column": 8,
+          "position": 402
+        }
+      },
+      "secondFile": {
+        "name": "src\\style.css",
+        "start": 19,
+        "end": 22,
+        "startLoc": {
+          "line": 19,
+          "column": 8,
+          "position": 121
+        },
+        "endLoc": {
+          "line": 22,
+          "column": 8,
+          "position": 133
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 4,
+      "fragment": "</script>\n\n<style>\n\thtml,",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\App.vue",
+        "start": 45,
+        "end": 48,
+        "startLoc": {
+          "line": 45,
+          "column": 1,
+          "position": 206
+        },
+        "endLoc": {
+          "line": 48,
+          "column": 6,
+          "position": 216
+        }
+      },
+      "secondFile": {
+        "name": "src\\components\\Index.vue",
+        "start": 121,
+        "end": 124,
+        "startLoc": {
+          "line": 121,
+          "column": 1,
+          "position": 822
+        },
+        "endLoc": {
+          "line": 124,
+          "column": 10,
+          "position": 835
         }
       }
     }
