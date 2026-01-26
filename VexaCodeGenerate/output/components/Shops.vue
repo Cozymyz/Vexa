@@ -2,9 +2,7 @@
 // Generation time: 2025-11-19 15:24:52
 // modules: [{'extent': 'session', 'fields': {'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting', 'skip_if_exists': True}, {'extent': 'component', 'fields': {'shopId': 'number', 'shopName': 'string', 'shopIntroduce': 'string'}, 'name': 'ShopList', 'singular': 'ShopList', 'fetch_action': 'fetchShopList', 'skip_if_exists': False}]
 
-<template>
 <!-- Add component UI code here -->
-</template>
 
 <script lang="ts">
 // Module configuration (exposed to vuexLazyLoad plugin)
