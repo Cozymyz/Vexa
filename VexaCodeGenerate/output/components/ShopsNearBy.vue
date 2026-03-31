@@ -1,11 +1,15 @@
+// GENERATED_CONTENT_START:component_header
 // Automatically generated Vue component - ShopsNearBy.vue
-// Generation time: 2025-11-19 15:24:52
+// Generation time: 2026-03-31 11:30:04
+// WARNING: Do not modify the content inside GENERATED_CONTENT blocks.
 // modules: [{'extent': 'session', 'fields': {'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting', 'skip_if_exists': True}, {'extent': 'component', 'fields': {'shopId': 'number', 'shopName': 'string', 'shopIntroduce': 'string'}, 'name': 'ShopList', 'singular': 'ShopList', 'fetch_action': 'fetchShopList', 'skip_if_exists': False}, {'extent': 'component', 'fields': {'genreId': 'number', 'genreName': 'string', 'genreIntroduce': 'string'}, 'name': 'GenreList', 'singular': 'GenreList', 'fetch_action': 'fetchGenreList', 'skip_if_exists': False}, {'extent': 'component', 'fields': {'userlocationId': 'number', 'userlocationName': 'string', 'userlocationIntroduce': 'string'}, 'name': 'UserLocation', 'singular': 'UserLocation', 'fetch_action': 'fetchUserLocation', 'skip_if_exists': False}]
+// GENERATED_CONTENT_END:component_header
 
 <template>
 <!-- Add component UI code here -->
 </template>
 
+// GENERATED_CONTENT_START:module_config_export
 <script lang="ts">
 // Module configuration (exposed to vuexLazyLoad plugin)
 export default {
@@ -34,11 +38,13 @@ export default {
   ]
 }
 </script>
+// GENERATED_CONTENT_END:module_config_export
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { useStore } from 'vuex'
 
+// GENERATED_CONTENT_START:typescript_interfaces
 // Defining Interface
 
 interface GeneralSettings {
@@ -81,7 +87,9 @@ interface UserLocation {
     
 }
 
+// GENERATED_CONTENT_END:typescript_interfaces
 
+// GENERATED_CONTENT_START:vuex_modules_config
 // Module configuration (defined in setup)
 const vuexModules = [
     
@@ -106,9 +114,11 @@ const vuexModules = [
     }
     
 ]
+// GENERATED_CONTENT_END:vuex_modules_config
 
 const store = useStore()
 
+// GENERATED_CONTENT_START:wait_for_module_function
 // Generic function to wait for a module to load
 const waitForModule = (moduleName: string, timeout = 2000) => {
     return new Promise<void>((resolve, reject) => {
@@ -129,7 +139,9 @@ const waitForModule = (moduleName: string, timeout = 2000) => {
         }, checkInterval)
     })
 }
+// GENERATED_CONTENT_END:wait_for_module_function
 
+// GENERATED_CONTENT_START:module_fetch_functions
 // Create fetch functions for each module
 
 const fetchGeneralSetting = async (skipIfExists = true) => {
@@ -200,12 +212,16 @@ const fetchUserLocation = async (skipIfExists = false) => {
     }
 }
 
+// GENERATED_CONTENT_END:module_fetch_functions
 
+// GENERATED_CONTENT_START:onmounted_hook
 // Load all module data on mount
 onMounted(() => {
     fetchAllModules()
 })
+// GENERATED_CONTENT_END:onmounted_hook
 
+// GENERATED_CONTENT_START:fetch_all_function
 // Get all module data in parallel
 const fetchAllModules = async () => {
     try {
@@ -225,4 +241,6 @@ const fetchAllModules = async () => {
         console.error('Error loading one or more modules:', error)
     }
 }
+// GENERATED_CONTENT_END:fetch_all_function
+
 </script>

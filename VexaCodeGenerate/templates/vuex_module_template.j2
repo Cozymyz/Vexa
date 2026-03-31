@@ -1,6 +1,9 @@
+// GENERATED_CONTENT_START:module_header
 // Automatically generated Vuex module - {{ module.name }}
 // Generation time: {{ now }}
+// WARNING: Do not modify the content inside GENERATED_CONTENT blocks.
 // {{ module.name | state_attribute_name }}:{{ module.fields }}
+// GENERATED_CONTENT_END:module_header
 
 import api from '@/api'
 
@@ -8,16 +11,21 @@ export default {
   namespaced: true,
 
   state: () => ({
+    // GENERATED_CONTENT_START:state_generated_field
     {{ module.name | state_attribute_name }}: [],
+    // GENERATED_CONTENT_END:state_generated_field
   }),
 
   mutations: {
+    // GENERATED_CONTENT_START:mutation_set_data
     SET_{{ module.name | upper_underscore }}(state, payload) {
       state.{{ module.name | state_attribute_name }} = payload
     },
+    // GENERATED_CONTENT_END:mutation_set_data
   },
 
   actions: {
+    // GENERATED_CONTENT_START:action_fetch_data
     async fetch{{ module.name | singular }}({ commit }) {
       try {
         const response = await api.()
@@ -27,6 +35,7 @@ export default {
         console.error('load {{ module.name }} failed:', error)
         throw error
       }
-    }
+    },
+    // GENERATED_CONTENT_END:action_fetch_data
   }
 }
