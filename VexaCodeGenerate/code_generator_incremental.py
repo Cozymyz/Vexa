@@ -470,7 +470,7 @@ def generate_incremental(old_yaml_path, new_yaml_path, output_dir_modules, outpu
 
 if __name__ == "__main__":
     
-    OLD_CONFIG = "config/Vexa_old.yaml"  # old config
+    OLD_CONFIG = "config/Vexa_v1.yaml"  # old config
     NEW_CONFIG = "config/Vexa.yaml"  # new config
     OUTPUT_DIR_MODULES = "output/modules"
     OUTPUT_DIR_COMPONENTS = "output/components"

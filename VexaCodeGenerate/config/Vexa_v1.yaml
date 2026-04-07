@@ -6,6 +6,7 @@ components:
     modules:
       - name: 'GeneralSettings'
       - name: 'ShopList'
+      - name: 'GenreList'
   Genres.vue:
     modules:
       - name: 'GeneralSettings'
