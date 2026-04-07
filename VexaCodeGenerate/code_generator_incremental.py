@@ -468,15 +468,10 @@ def generate_incremental(old_yaml_path, new_yaml_path, output_dir_modules, outpu
         generate_vue_components(new_yaml_path, output_dir_components)
 
 
-
-
-# 原 `generate_vuex_modules` 和 `generate_vue_components` 函数保持不变，此处省略以节省篇幅。
-# 您可以从原脚本中复制过来，或通过条件判断选择调用全量或增量函数。
-
 if __name__ == "__main__":
-    # 示例用法：
-    OLD_CONFIG = "config/Vexa_old.yaml"  # 旧的配置文件（可选，用于比较）
-    NEW_CONFIG = "config/Vexa.yaml"  # 新的配置文件
+    
+    OLD_CONFIG = "config/Vexa_old.yaml"  # old config
+    NEW_CONFIG = "config/Vexa.yaml"  # new config
     OUTPUT_DIR_MODULES = "output/modules"
     OUTPUT_DIR_COMPONENTS = "output/components"
 

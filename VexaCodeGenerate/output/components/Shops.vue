@@ -1,6 +1,6 @@
 // GENERATED_CONTENT_START:component_header
 // Automatically generated Vue component - Shops.vue
-// Generation time: 2026-03-31 11:30:04
+// Generation time: 2026-04-07 09:37:55
 // WARNING: Do not modify the content inside GENERATED_CONTENT blocks.
 // modules: [{'extent': 'session', 'fields': {'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting', 'skip_if_exists': True}, {'extent': 'component', 'fields': {'shopId': 'number', 'shopName': 'string', 'shopIntroduce': 'string'}, 'name': 'ShopList', 'singular': 'ShopList', 'fetch_action': 'fetchShopList', 'skip_if_exists': False}]
 // GENERATED_CONTENT_END:component_header

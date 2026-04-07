@@ -1,6 +1,6 @@
 // GENERATED_CONTENT_START:module_header
 // Automatically generated Vuex module - GenreList
-// Generation time: 2026-03-31 11:30:04
+// Generation time: 2026-04-07 09:37:55
 // WARNING: Do not modify the content inside GENERATED_CONTENT blocks.
 // genreLists:{'genreId': 'number', 'genreName': 'string', 'genreIntroduce': 'string'}
 // GENERATED_CONTENT_END:module_header

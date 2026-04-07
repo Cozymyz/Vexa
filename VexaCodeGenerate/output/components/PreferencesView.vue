@@ -1,6 +1,6 @@
 // GENERATED_CONTENT_START:component_header
 // Automatically generated Vue component - PreferencesView.vue
-// Generation time: 2026-03-31 11:30:04
+// Generation time: 2026-04-07 09:37:55
 // WARNING: Do not modify the content inside GENERATED_CONTENT blocks.
 // modules: [{'extent': 'session', 'fields': {'settingId': 'number', 'settingName': 'string', 'settingIntroduce': 'string'}, 'name': 'GeneralSettings', 'singular': 'GeneralSetting', 'fetch_action': 'fetchGeneralSetting', 'skip_if_exists': True}]
 // GENERATED_CONTENT_END:component_header
