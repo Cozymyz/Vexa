@@ -26,6 +26,7 @@ modules:
       settingId: number
       settingName: string
       settingIntroduce: string
+      settingOrd: numer
   ShopList:
     extent: 'component'
     fields:

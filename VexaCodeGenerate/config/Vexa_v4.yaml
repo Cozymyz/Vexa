@@ -6,17 +6,10 @@ components:
     modules:
       - name: 'GeneralSettings'
       - name: 'ShopList'
-      - name: 'GenreList'
-  Genres.vue:
-    modules:
-      - name: 'GeneralSettings'
-      - name: 'ShopList'
-      - name: 'GenreList'
   ShopsNearBy.vue:
     modules:
       - name: 'GeneralSettings'
       - name: 'ShopList'
-      - name: 'GenreList'
       - name: 'UserLocation'
 
 modules:
@@ -32,12 +25,6 @@ modules:
       shopId: number
       shopName: string
       shopIntroduce: string
-  GenreList:
-    extent: 'component'
-    fields:
-      genreId: number
-      genreName: string
-      genreIntroduce: string
   UserLocation:
     extent: 'component'
     fields:

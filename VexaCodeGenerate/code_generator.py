@@ -165,10 +165,10 @@ def generate_vue_components(yaml_file, output_dir):
 
 if __name__ == "__main__":
 
-    yaml_file = "config/Vexa_v1.yaml"
+    yaml_file = "config/Vexa_v4.yaml"
 
-    output_dir_modules = "output/modules"
-    output_dir_components = "output/components"
+    output_dir_modules = "output/modules/fullv4"
+    output_dir_components = "output/components/fullv4"
 
     generate_vuex_modules(yaml_file, output_dir_modules)
     generate_vue_components(yaml_file, output_dir_components)

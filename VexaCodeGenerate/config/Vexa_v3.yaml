@@ -36,7 +36,7 @@ modules:
     extent: 'component'
     fields:
       genreId: number
-      genreName: string
+      genreType: string
       genreIntroduce: string
   UserLocation:
     extent: 'component'

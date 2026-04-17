@@ -243,7 +243,7 @@ def generate_vue_components(yaml_file, output_dir):
 
 
 if __name__ == "__main__":
-    yaml_file = "config/Vexa.yaml"
+    yaml_file = "config/Vexa_v2.yaml"
     output_dir_modules = "output/modules"
     output_dir_components = "output/components"
 

@@ -7,11 +7,17 @@ components:
       - name: 'GeneralSettings'
       - name: 'ShopList'
       - name: 'GenreList'
+      - name: 'ReviewList'
   Genres.vue:
     modules:
       - name: 'GeneralSettings'
       - name: 'ShopList'
       - name: 'GenreList'
+  Review.vue:
+    modules:
+      - name: 'GeneralSettings'
+      - name: 'ShopList'
+      - name: 'ReviewList'
   ShopsNearBy.vue:
     modules:
       - name: 'GeneralSettings'
@@ -44,3 +50,9 @@ modules:
       userlocationId: number
       userlocationName: string
       userlocationIntroduce: string
+  ReviewList:
+    extent: 'component'
+    fields:
+      reviewId: number
+      reviewName: string
+      reviewContent: string
