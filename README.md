@@ -9,7 +9,7 @@ Configuration-Driven Frontend Architecture Framework for Large-scale Vue.js Appl
 
 VEXA is a research-oriented frontend architecture framework designed to improve the analyzability, maintainability, and scalability of large-scale Vue.js applications through explicit dependency modeling and configuration-driven engineering approaches.
 
-![Uploading Vexa architecture overview.png…]()
+<img width="1402" height="1122" alt="Vexa architecture overview" src="https://github.com/user-attachments/assets/2d82124e-b0ef-4a6f-b2f7-c0685df72eff" />
 
 ---
 
