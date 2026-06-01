@@ -7,7 +7,7 @@ a -- Architecture
 
 Configuration-Driven Frontend Architecture Framework for Large-scale Vue.js Applications
 
-VEXA is a research-oriented frontend architecture framework designed to improve the analyzability, maintainability, and scalability of large-scale Vue.js applications through explicit dependency modeling and configuration-driven engineering approaches.
+Vexa is a research-oriented frontend architecture framework designed to improve the analyzability, maintainability, and scalability of large-scale Vue.js applications through explicit dependency modeling and configuration-driven engineering approaches.
 
 <img width="1402" height="1122" alt="Vexa architecture overview" src="https://github.com/user-attachments/assets/2d82124e-b0ef-4a6f-b2f7-c0685df72eff" />
 
@@ -23,7 +23,7 @@ Modern Vue.js applications often suffer from:
 * Difficulties in dependency tracking and maintainability
 * Inefficient store loading strategies in large-scale systems
 
-VEXA explores a configuration-driven approach to frontend architecture engineering by making architectural relationships explicit and analyzable.
+Vexa explores a configuration-driven approach to frontend architecture engineering by making architectural relationships explicit and analyzable.
 
 ---
 
@@ -31,7 +31,7 @@ VEXA explores a configuration-driven approach to frontend architecture engineeri
 
 ### Explicit Dependency Modeling
 
-VEXA models relationships between:
+Vexa models relationships between:
 
 * Vue Components
 * Vuex / Pinia Modules
@@ -57,7 +57,7 @@ The framework introduces declarative configuration mechanisms for:
 
 ### AST-Based Architecture Analysis
 
-VEXA uses AST-based static analysis pipelines to:
+Vexa uses AST-based static analysis pipelines to:
 
 * Extract frontend dependencies
 * Analyze architectural structures
@@ -91,7 +91,7 @@ Demand-driven Module Loading
 
 ## Research Objectives
 
-VEXA aims to explore:
+Vexa aims to explore:
 
 * Architecture-aware frontend engineering
 * Dependency analyzability in Vue ecosystems
