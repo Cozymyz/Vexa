@@ -1,0 +1,1142 @@
+{
+  "statistics": {
+    "detectionDate": "2026-04-28T04:41:33.553Z",
+    "formats": {
+      "javascript": {
+        "sources": {
+          "./src/store/settings.module.js": {
+            "lines": 44,
+            "tokens": 352,
+            "sources": 1,
+            "clones": 17,
+            "duplicatedLines": 85,
+            "duplicatedTokens": 576,
+            "percentage": 193.18,
+            "percentageTokens": 163.64,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/profile.module.js": {
+            "lines": 73,
+            "tokens": 514,
+            "sources": 1,
+            "clones": 11,
+            "duplicatedLines": 55,
+            "duplicatedTokens": 420,
+            "percentage": 75.34,
+            "percentageTokens": 81.71,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/mutations.type.js": {
+            "lines": 12,
+            "tokens": 141,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/index.js": {
+            "lines": 17,
+            "tokens": 103,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/home.module.js": {
+            "lines": 86,
+            "tokens": 634,
+            "sources": 1,
+            "clones": 5,
+            "duplicatedLines": 28,
+            "duplicatedTokens": 153,
+            "percentage": 32.56,
+            "percentageTokens": 24.13,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/auth.module.js": {
+            "lines": 111,
+            "tokens": 920,
+            "sources": 1,
+            "clones": 14,
+            "duplicatedLines": 60,
+            "duplicatedTokens": 495,
+            "percentage": 54.05,
+            "percentageTokens": 53.8,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/article.module.js": {
+            "lines": 131,
+            "tokens": 1095,
+            "sources": 1,
+            "clones": 9,
+            "duplicatedLines": 40,
+            "duplicatedTokens": 296,
+            "percentage": 30.53,
+            "percentageTokens": 27.03,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "./src/store/actions.type.js": {
+            "lines": 21,
+            "tokens": 240,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 495,
+          "tokens": 3999,
+          "sources": 8,
+          "clones": 28,
+          "duplicatedLines": 134,
+          "duplicatedTokens": 970,
+          "percentage": 27.07,
+          "percentageTokens": 24.26,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 495,
+      "tokens": 3999,
+      "sources": 8,
+      "clones": 28,
+      "duplicatedLines": 134,
+      "duplicatedTokens": 970,
+      "percentage": 27.07,
+      "percentageTokens": 24.26,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "javascript",
+      "lines": 3,
+      "fragment": ".get(articleSlug)\n      .then(({ data }) => {\n        context.commit(SET_COMMENTS",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 21,
+        "end": 23,
+        "startLoc": {
+          "line": 21,
+          "column": 16,
+          "position": 192
+        },
+        "endLoc": {
+          "line": 23,
+          "column": 13,
+          "position": 219
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 12,
+        "end": 14,
+        "startLoc": {
+          "line": 12,
+          "column": 16,
+          "position": 105
+        },
+        "endLoc": {
+          "line": 14,
+          "column": 12,
+          "position": 132
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 7,
+      "fragment": ");\n      })\n      .catch(error => {\n        throw new Error(error);\n      });\n  }\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 23,
+        "end": 29,
+        "startLoc": {
+          "line": 23,
+          "column": 9,
+          "position": 225
+        },
+        "endLoc": {
+          "line": 29,
+          "column": 2,
+          "position": 261
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 14,
+        "end": 19,
+        "startLoc": {
+          "line": 14,
+          "column": 8,
+          "position": 138
+        },
+        "endLoc": {
+          "line": 19,
+          "column": 2,
+          "position": 173
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 3,
+      "fragment": ")\n      .then(({ data }) => {\n        context.commit(SET_PROFILE",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 23,
+        "end": 25,
+        "startLoc": {
+          "line": 23,
+          "column": 9,
+          "position": 149
+        },
+        "endLoc": {
+          "line": 25,
+          "column": 12,
+          "position": 172
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 12,
+        "end": 14,
+        "startLoc": {
+          "line": 12,
+          "column": 12,
+          "position": 109
+        },
+        "endLoc": {
+          "line": 14,
+          "column": 12,
+          "position": 132
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 3,
+      "fragment": "](context, payload) {\n    const { username } = payload;\n    return ApiService.post",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 33,
+        "end": 35,
+        "startLoc": {
+          "line": 33,
+          "column": 21,
+          "position": 220
+        },
+        "endLoc": {
+          "line": 35,
+          "column": 5,
+          "position": 249
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 21,
+        "end": 23,
+        "startLoc": {
+          "line": 21,
+          "column": 14,
+          "position": 114
+        },
+        "endLoc": {
+          "line": 23,
+          "column": 4,
+          "position": 143
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 11,
+      "fragment": ")\n      .then(({ data }) => {\n        context.commit(SET_PROFILE, data.profile);\n        return data;\n      })\n      .catch(() => {\n        // #todo SET_ERROR cannot work in multiple states\n        // context.commit(SET_ERROR, response.data.errors)\n      });\n  },\n  [FETCH_PROFILE_UNFOLLOW",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 35,
+        "end": 45,
+        "startLoc": {
+          "line": 35,
+          "column": 9,
+          "position": 256
+        },
+        "endLoc": {
+          "line": 45,
+          "column": 23,
+          "position": 326
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 12,
+        "end": 33,
+        "startLoc": {
+          "line": 12,
+          "column": 12,
+          "position": 109
+        },
+        "endLoc": {
+          "line": 33,
+          "column": 21,
+          "position": 219
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 3,
+      "fragment": "](context, payload) {\n    const { username } = payload;\n    return ApiService.delete",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 45,
+        "end": 47,
+        "startLoc": {
+          "line": 45,
+          "column": 23,
+          "position": 327
+        },
+        "endLoc": {
+          "line": 47,
+          "column": 7,
+          "position": 356
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 21,
+        "end": 23,
+        "startLoc": {
+          "line": 21,
+          "column": 14,
+          "position": 114
+        },
+        "endLoc": {
+          "line": 23,
+          "column": 4,
+          "position": 143
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 11,
+      "fragment": "(`profiles/${username}/follow`)\n      .then(({ data }) => {\n        context.commit(SET_PROFILE, data.profile);\n        return data;\n      })\n      .catch(() => {\n        // #todo SET_ERROR cannot work in multiple states\n        // context.commit(SET_ERROR, response.data.errors)\n      });\n  }\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 47,
+        "end": 57,
+        "startLoc": {
+          "line": 47,
+          "column": 7,
+          "position": 357
+        },
+        "endLoc": {
+          "line": 57,
+          "column": 2,
+          "position": 430
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 35,
+        "end": 32,
+        "startLoc": {
+          "line": 35,
+          "column": 5,
+          "position": 250
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 2,
+          "position": 215
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 8,
+      "fragment": ";\n  }\n};\n\nexport default {\n  state,\n  actions,\n  mutations,",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 65,
+        "end": 72,
+        "startLoc": {
+          "line": 65,
+          "column": 2,
+          "position": 483
+        },
+        "endLoc": {
+          "line": 72,
+          "column": 2,
+          "position": 508
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 37,
+        "end": 45,
+        "startLoc": {
+          "line": 37,
+          "column": 9,
+          "position": 325
+        },
+        "endLoc": {
+          "line": 45,
+          "column": 2,
+          "position": 351
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 3,
+      "fragment": ")\n      .then(({ data }) => {\n        commit",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\home.module.js",
+        "start": 35,
+        "end": 37,
+        "startLoc": {
+          "line": 35,
+          "column": 8,
+          "position": 238
+        },
+        "endLoc": {
+          "line": 37,
+          "column": 7,
+          "position": 257
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 12,
+        "end": 14,
+        "startLoc": {
+          "line": 12,
+          "column": 12,
+          "position": 109
+        },
+        "endLoc": {
+          "line": 14,
+          "column": 8,
+          "position": 128
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 7,
+      "fragment": ");\n      })\n      .catch(error => {\n        throw new Error(error);\n      });\n  },\n  [FETCH_TAGS",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\home.module.js",
+        "start": 37,
+        "end": 43,
+        "startLoc": {
+          "line": 37,
+          "column": 5,
+          "position": 263
+        },
+        "endLoc": {
+          "line": 43,
+          "column": 11,
+          "position": 302
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 14,
+        "end": 20,
+        "startLoc": {
+          "line": 14,
+          "column": 8,
+          "position": 138
+        },
+        "endLoc": {
+          "line": 20,
+          "column": 15,
+          "position": 177
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 3,
+      "fragment": ")\n      .then(({ data }) => {\n        commit(SET_TAGS",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\home.module.js",
+        "start": 44,
+        "end": 46,
+        "startLoc": {
+          "line": 44,
+          "column": 2,
+          "position": 321
+        },
+        "endLoc": {
+          "line": 46,
+          "column": 9,
+          "position": 342
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 12,
+        "end": 37,
+        "startLoc": {
+          "line": 12,
+          "column": 12,
+          "position": 109
+        },
+        "endLoc": {
+          "line": 37,
+          "column": 10,
+          "position": 259
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 10,
+      "fragment": ");\n      })\n      .catch(error => {\n        throw new Error(error);\n      });\n  }\n};\n\n/* eslint no-param-reassign: [\"error\", { \"props\": false }] */\nconst",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\home.module.js",
+        "start": 46,
+        "end": 55,
+        "startLoc": {
+          "line": 46,
+          "column": 5,
+          "position": 348
+        },
+        "endLoc": {
+          "line": 55,
+          "column": 6,
+          "position": 390
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 14,
+        "end": 32,
+        "startLoc": {
+          "line": 14,
+          "column": 8,
+          "position": 138
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 7,
+          "position": 267
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": "} from \"./mutations.type\";\n\nconst state = {\n  errors: null",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 10,
+        "end": 13,
+        "startLoc": {
+          "line": 10,
+          "column": 2,
+          "position": 60
+        },
+        "endLoc": {
+          "line": 13,
+          "column": 5,
+          "position": 80
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 7,
+        "end": 10,
+        "startLoc": {
+          "line": 7,
+          "column": 2,
+          "position": 37
+        },
+        "endLoc": {
+          "line": 10,
+          "column": 2,
+          "position": 57
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 3,
+      "fragment": ")\n        .then(({ data }) => {\n          context.commit(SET_AUTH",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 30,
+        "end": 32,
+        "startLoc": {
+          "line": 30,
+          "column": 2,
+          "position": 208
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 9,
+          "position": 231
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 12,
+        "end": 14,
+        "startLoc": {
+          "line": 12,
+          "column": 12,
+          "position": 109
+        },
+        "endLoc": {
+          "line": 14,
+          "column": 12,
+          "position": 132
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 8,
+      "fragment": ", { user: credentials })\n        .then(({ data }) => {\n          context.commit(SET_AUTH, data.user);\n          resolve(data);\n        })\n        .catch(({ response }) => {\n          context.commit(SET_ERROR, response.data.errors);\n          reject",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 45,
+        "end": 52,
+        "startLoc": {
+          "line": 45,
+          "column": 8,
+          "position": 357
+        },
+        "endLoc": {
+          "line": 52,
+          "column": 7,
+          "position": 443
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 30,
+        "end": 37,
+        "startLoc": {
+          "line": 30,
+          "column": 14,
+          "position": 198
+        },
+        "endLoc": {
+          "line": 37,
+          "column": 2,
+          "position": 284
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": ");\n        });\n    });\n  },\n  [CHECK_AUTH",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 52,
+        "end": 56,
+        "startLoc": {
+          "line": 52,
+          "column": 9,
+          "position": 446
+        },
+        "endLoc": {
+          "line": 56,
+          "column": 11,
+          "position": 465
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 36,
+        "end": 40,
+        "startLoc": {
+          "line": 36,
+          "column": 7,
+          "position": 280
+        },
+        "endLoc": {
+          "line": 40,
+          "column": 7,
+          "position": 299
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": ")\n        .then(({ data }) => {\n          context.commit(SET_AUTH, data.user);\n        }",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 59,
+        "end": 62,
+        "startLoc": {
+          "line": 59,
+          "column": 7,
+          "position": 500
+        },
+        "endLoc": {
+          "line": 62,
+          "column": 2,
+          "position": 533
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 12,
+        "end": 33,
+        "startLoc": {
+          "line": 12,
+          "column": 12,
+          "position": 109
+        },
+        "endLoc": {
+          "line": 33,
+          "column": 8,
+          "position": 241
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 6,
+      "fragment": ");\n        })\n        .catch(({ response }) => {\n          context.commit(SET_ERROR, response.data.errors);\n        });\n    } else",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 61,
+        "end": 66,
+        "startLoc": {
+          "line": 61,
+          "column": 5,
+          "position": 529
+        },
+        "endLoc": {
+          "line": 66,
+          "column": 5,
+          "position": 576
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 33,
+        "end": 38,
+        "startLoc": {
+          "line": 33,
+          "column": 5,
+          "position": 244
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 2,
+          "position": 290
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 3,
+      "fragment": ").then(({ data }) => {\n      context.commit(SET_AUTH, data.user);\n      return",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 82,
+        "end": 84,
+        "startLoc": {
+          "line": 82,
+          "column": 5,
+          "position": 697
+        },
+        "endLoc": {
+          "line": 84,
+          "column": 7,
+          "position": 728
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 12,
+        "end": 33,
+        "startLoc": {
+          "line": 12,
+          "column": 12,
+          "position": 109
+        },
+        "endLoc": {
+          "line": 33,
+          "column": 8,
+          "position": 241
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 6,
+      "fragment": "});\n  }\n};\n\nconst mutations = {\n  [",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 85,
+        "end": 90,
+        "startLoc": {
+          "line": 85,
+          "column": 5,
+          "position": 734
+        },
+        "endLoc": {
+          "line": 90,
+          "column": 2,
+          "position": 754
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\profile.module.js",
+        "start": 55,
+        "end": 60,
+        "startLoc": {
+          "line": 55,
+          "column": 7,
+          "position": 423
+        },
+        "endLoc": {
+          "line": 60,
+          "column": 32,
+          "position": 443
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 3,
+      "fragment": ";\n    state.errors = {};\n    JwtService.destroyToken",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 101,
+        "end": 103,
+        "startLoc": {
+          "line": 101,
+          "column": 2,
+          "position": 870
+        },
+        "endLoc": {
+          "line": 103,
+          "column": 13,
+          "position": 886
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 95,
+        "end": 97,
+        "startLoc": {
+          "line": 95,
+          "column": 5,
+          "position": 811
+        },
+        "endLoc": {
+          "line": 97,
+          "column": 10,
+          "position": 827
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 10,
+      "fragment": ");\n  }\n};\n\nexport default {\n  state,\n  actions,\n  mutations,\n  getters\n};",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\auth.module.js",
+        "start": 103,
+        "end": 112,
+        "startLoc": {
+          "line": 103,
+          "column": 2,
+          "position": 888
+        },
+        "endLoc": {
+          "line": 112,
+          "column": 2,
+          "position": 920
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\home.module.js",
+        "start": 78,
+        "end": 74,
+        "startLoc": {
+          "line": 78,
+          "column": 2,
+          "position": 602
+        },
+        "endLoc": {
+          "line": 74,
+          "column": 2,
+          "position": 514
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 5,
+      "fragment": "},\n  comments: []\n};\n\nexport const state",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\article.module.js",
+        "start": 37,
+        "end": 41,
+        "startLoc": {
+          "line": 37,
+          "column": 3,
+          "position": 175
+        },
+        "endLoc": {
+          "line": 41,
+          "column": 6,
+          "position": 193
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 6,
+        "end": 10,
+        "startLoc": {
+          "line": 6,
+          "column": 2,
+          "position": 64
+        },
+        "endLoc": {
+          "line": 10,
+          "column": 8,
+          "position": 82
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": ");\n    context.dispatch(FETCH_COMMENTS, payload.slug);\n  },\n  async [FAVORITE_ADD",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\article.module.js",
+        "start": 63,
+        "end": 66,
+        "startLoc": {
+          "line": 63,
+          "column": 10,
+          "position": 455
+        },
+        "endLoc": {
+          "line": 66,
+          "column": 13,
+          "position": 480
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\article.module.js",
+        "start": 59,
+        "end": 62,
+        "startLoc": {
+          "line": 59,
+          "column": 8,
+          "position": 404
+        },
+        "endLoc": {
+          "line": 62,
+          "column": 16,
+          "position": 429
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 3,
+      "fragment": ");\n    context.commit(SET_ARTICLE, data.article);\n  },",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\article.module.js",
+        "start": 68,
+        "end": 70,
+        "startLoc": {
+          "line": 68,
+          "column": 2,
+          "position": 533
+        },
+        "endLoc": {
+          "line": 70,
+          "column": 2,
+          "position": 552
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\article.module.js",
+        "start": 49,
+        "end": 15,
+        "startLoc": {
+          "line": 49,
+          "column": 12,
+          "position": 285
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 2,
+          "position": 143
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 4,
+      "fragment": "context.commit(UPDATE_ARTICLE_IN_LIST, data.article, { root: true });\n    context.commit(SET_ARTICLE, data.article);\n  },\n  [",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\article.module.js",
+        "start": 74,
+        "end": 77,
+        "startLoc": {
+          "line": 74,
+          "column": 5,
+          "position": 594
+        },
+        "endLoc": {
+          "line": 77,
+          "column": 2,
+          "position": 636
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\article.module.js",
+        "start": 68,
+        "end": 71,
+        "startLoc": {
+          "line": 68,
+          "column": 5,
+          "position": 513
+        },
+        "endLoc": {
+          "line": 71,
+          "column": 6,
+          "position": 555
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 12,
+      "fragment": ");\n  }\n};\n\n/* eslint no-param-reassign: [\"error\", { \"props\": false }] */\nexport const mutations = {\n  [SET_ARTICLE](state, article) {\n    state.article = article;\n  },\n  [SET_COMMENTS](state, comments) {\n    state.comments = comments;\n  },",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\article.module.js",
+        "start": 93,
+        "end": 104,
+        "startLoc": {
+          "line": 93,
+          "column": 12,
+          "position": 808
+        },
+        "endLoc": {
+          "line": 104,
+          "column": 2,
+          "position": 882
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 27,
+        "end": 39,
+        "startLoc": {
+          "line": 27,
+          "column": 2,
+          "position": 255
+        },
+        "endLoc": {
+          "line": 39,
+          "column": 2,
+          "position": 330
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 10,
+      "fragment": "comments;\n  }\n};\n\nexport default {\n  state,\n  actions,\n  mutations,\n  getters\n};",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src\\store\\article.module.js",
+        "start": 123,
+        "end": 132,
+        "startLoc": {
+          "line": 123,
+          "column": 2,
+          "position": 1063
+        },
+        "endLoc": {
+          "line": 132,
+          "column": 2,
+          "position": 1095
+        }
+      },
+      "secondFile": {
+        "name": "src\\store\\settings.module.js",
+        "start": 37,
+        "end": 74,
+        "startLoc": {
+          "line": 37,
+          "column": 2,
+          "position": 324
+        },
+        "endLoc": {
+          "line": 74,
+          "column": 2,
+          "position": 514
+        }
+      }
+    }
+  ],
+  "filename": "D:\\node.js\\node_global\\node_modules\\jscpd\\node_modules\\@jscpd\\html-reporter\\dist\\templates\\main.pug"
+}

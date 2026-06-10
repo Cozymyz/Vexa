@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "project": "vue-realworld-example-app",
+    "analyzedAt": "2026-04-23T05:31:36.245Z",
+    "analysisMethod": "精确模式匹配",
+    "totalComponents": 24
+  },
+  "mappings": {
+    "actionToModule": {
+      "ARTICLE_PUBLISH": [
+        "article"
+      ],
+      "ARTICLE_DELETE": [
+        "article"
+      ],
+      "ARTICLE_EDIT": [
+        "article"
+      ],
+      "ARTICLE_EDIT_ADD_TAG": [
+        "article"
+      ],
+      "ARTICLE_EDIT_REMOVE_TAG": [
+        "article"
+      ],
+      "ARTICLE_RESET_STATE": [
+        "article"
+      ],
+      "COMMENT_CREATE": [
+        "article"
+      ],
+      "COMMENT_DESTROY": [
+        "article"
+      ],
+      "FAVORITE_ADD": [
+        "article"
+      ],
+      "FAVORITE_REMOVE": [
+        "article"
+      ],
+      "FETCH_ARTICLE": [
+        "article",
+        "settings"
+      ],
+      "FETCH_COMMENTS": [
+        "article",
+        "settings"
+      ],
+      "CHECK_AUTH": [
+        "auth"
+      ],
+      "LOGIN": [
+        "auth"
+      ],
+      "LOGOUT": [
+        "auth"
+      ],
+      "REGISTER": [
+        "auth"
+      ],
+      "UPDATE_USER": [
+        "auth"
+      ],
+      "FETCH_ARTICLES": [
+        "home"
+      ],
+      "FETCH_TAGS": [
+        "home"
+      ],
+      "FETCH_PROFILE": [
+        "profile"
+      ],
+      "FETCH_PROFILE_FOLLOW": [
+        "profile"
+      ],
+      "FETCH_PROFILE_UNFOLLOW": [
+        "profile"
+      ]
+    },
+    "getterToModule": {}
+  },
+  "components": [
+    {
+      "file": "src\\views\\Login.vue",
+      "mapGetters": [],
+      "mapState": true,
+      "dispatches": [],
+      "dependentModules": [
+        "auth"
+      ]
+    },
+    {
+      "file": "src\\views\\Register.vue",
+      "mapGetters": [],
+      "mapState": true,
+      "dispatches": [],
+      "dependentModules": [
+        "auth"
+      ]
+    }
+  ],
+  "statistics": {
+    "componentsWithExplicitDeps": 12,
+    "componentsWithImplicitDeps": 0,
+    "componentsWithAnyDeps": 12,
+    "moduleUsage": {
+      "auth": 2
+    },
+    "avgModulesPerComponent": 1,
+    "maxModulesPerComponent": 1
+  }
+}

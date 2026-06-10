@@ -1,0 +1,35 @@
+// Sanitize
+@import "~sanitize.css";
+@import "~sanitize.css/forms";
+@import "~sanitize.css/typography";
+
+// Functions
+@import "functions/color";
+
+// Variables - Has to be early
+@import "components/variables";
+
+// bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// bootstrap-vue
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+
+// vue-navigation-bar
+@import "~vue-navigation-bar/dist/vue-navigation-bar.css";
+
+// Components
+@import "components/bootstrap_addition";
+@import "components/pattern_backgrounds";
+@import "components/modal";
+@import "components/fonts";
+@import "components/form";
+@import "components/buttons";
+@import "components/hr";
+@import "components/animations";
+@import "components/blockquote";
+@import "components/scrollbox";
+@import "components/user";
+@import "components/main";
+@import "components/vendor";
+@import "components/program";

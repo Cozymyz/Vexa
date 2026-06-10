@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "project": "vue-realworld-example-app",
+    "analyzedAt": "2026-04-23T05:38:01.590Z",
+    "analysisMethod": "静态代码分析（正则匹配）",
+    "totalComponents": 24,
+    "storeModules": [
+      "article",
+      "auth",
+      "home",
+      "profile",
+      "settings"
+    ]
+  },
+  "mappings": {
+    "getterToModule": {
+      "article": "article",
+      "currentUser": "auth",
+      "articlesCount": "home",
+      "profile": "profile"
+    },
+    "actionToModule": {
+      "ARTICLE_PUBLISH": [
+        "article"
+      ],
+      "ARTICLE_DELETE": [
+        "article"
+      ],
+      "ARTICLE_EDIT": [
+        "article"
+      ],
+      "ARTICLE_EDIT_ADD_TAG": [
+        "article"
+      ],
+      "ARTICLE_EDIT_REMOVE_TAG": [
+        "article"
+      ],
+      "ARTICLE_RESET_STATE": [
+        "article"
+      ],
+      "COMMENT_CREATE": [
+        "article"
+      ],
+      "COMMENT_DESTROY": [
+        "article"
+      ],
+      "FAVORITE_ADD": [
+        "article"
+      ],
+      "FAVORITE_REMOVE": [
+        "article"
+      ],
+      "FETCH_ARTICLE": [
+        "article",
+        "settings"
+      ],
+      "FETCH_COMMENTS": [
+        "article",
+        "settings"
+      ],
+      "CHECK_AUTH": [
+        "auth"
+      ],
+      "LOGIN": [
+        "auth"
+      ],
+      "LOGOUT": [
+        "auth"
+      ],
+      "REGISTER": [
+        "auth"
+      ],
+      "UPDATE_USER": [
+        "auth"
+      ],
+      "FETCH_ARTICLES": [
+        "home"
+      ],
+      "FETCH_TAGS": [
+        "home"
+      ],
+      "FETCH_PROFILE": [
+        "profile"
+      ],
+      "FETCH_PROFILE_FOLLOW": [
+        "profile"
+      ],
+      "FETCH_PROFILE_UNFOLLOW": [
+        "profile"
+      ]
+    }
+  },
+  "components": [
+    {
+      "file": "src\\components\\ArticleActions.vue",
+      "mapGetters": [
+        "profile",
+        "isAuthenticated"
+      ],
+      "mapState": false,
+      "dispatches": [],
+      "dependentModules": [
+        "profile"
+      ]
+    },
+    {
+      "file": "src\\components\\ArticleList.vue",
+      "mapGetters": [
+        "articlesCount",
+        "isLoading",
+        "articles"
+      ],
+      "mapState": false,
+      "dispatches": [],
+      "dependentModules": [
+        "home"
+      ]
+    },
+    {
+      "file": "src\\components\\ArticleMeta.vue",
+      "mapGetters": [
+        "currentUser",
+        "isAuthenticated"
+      ],
+      "mapState": false,
+      "dispatches": [],
+      "dependentModules": [
+        "auth"
+      ]
+    },
+    {
+      "file": "src\\components\\Comment.vue",
+      "mapGetters": [
+        "currentUser"
+      ],
+      "mapState": false,
+      "dispatches": [],
+      "dependentModules": [
+        "auth"
+      ]
+    },
+    {
+      "file": "src\\components\\TheHeader.vue",
+      "mapGetters": [
+        "currentUser",
+        "isAuthenticated"
+      ],
+      "mapState": false,
+      "dispatches": [],
+      "dependentModules": [
+        "auth"
+      ]
+    },
+    {
+      "file": "src\\views\\Article.vue",
+      "mapGetters": [
+        "article",
+        "currentUser",
+        "comments",
+        "isAuthenticated"
+      ],
+      "mapState": false,
+      "dispatches": [],
+      "dependentModules": [
+        "article",
+        "auth"
+      ]
+    },
+    {
+      "file": "src\\views\\ArticleEdit.vue",
+      "mapGetters": [
+        "article"
+      ],
+      "mapState": false,
+      "dispatches": [],
+      "dependentModules": [
+        "article"
+      ]
+    },
+    {
+      "file": "src\\views\\Login.vue",
+      "mapGetters": [],
+      "mapState": true,
+      "dispatches": [],
+      "dependentModules": [
+        "auth"
+      ]
+    },
+    {
+      "file": "src\\views\\Profile.vue",
+      "mapGetters": [
+        "currentUser",
+        "profile",
+        "isAuthenticated"
+      ],
+      "mapState": false,
+      "dispatches": [],
+      "dependentModules": [
+        "auth",
+        "profile"
+      ]
+    },
+    {
+      "file": "src\\views\\Register.vue",
+      "mapGetters": [],
+      "mapState": true,
+      "dispatches": [],
+      "dependentModules": [
+        "auth"
+      ]
+    },
+    {
+      "file": "src\\views\\Settings.vue",
+      "mapGetters": [
+        "currentUser"
+      ],
+      "mapState": false,
+      "dispatches": [],
+      "dependentModules": [
+        "auth"
+      ]
+    }
+  ],
+  "statistics": {
+    "totalComponents": 24,
+    "componentsWithExplicitDeps": 0,
+    "componentsWithImplicitDeps": 0,
+    "componentsWithAnyDeps": 0,
+    "moduleUsage": {},
+    "avgModulesPerComponent": 1.18,
+    "maxModulesPerComponent": 2,
+    "mappingExtractability": "高"
+  }
+}

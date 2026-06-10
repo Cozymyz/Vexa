@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Copy/Paste Detector Report</title><link href="styles/tailwind.css" rel="stylesheet"><link href="styles/prism.css" rel="stylesheet"></head><body class="bg-gray-100"><header class="bg-white shadow py-4"><div class="container mx-auto px-4"><h1 class="text-3xl font-semibold text-gray-800">jscpd - copy/paste report</h1></div></header><main class="container mx-auto my-8 p-4 bg-white shadow rounded"><section class="mb-8" id="dashboard"><h2 class="text-2xl font-semibold text-gray-700 mb-4">Dashboard</h2><div class="grid grid-cols-4 gap-4"><div class="bg-blue-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-blue-800 mb-2">Total Files</h3><span class="text-4xl font-bold text-blue-800">8</span></div><div class="bg-green-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-green-800 mb-2">Total Lines of Code</h3><span class="text-4xl font-bold text-green-800">495</span></div><div class="bg-yellow-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-yellow-800 mb-2">Number of Clones</h3><span class="text-4xl font-bold text-yellow-800">28</span></div><div class="bg-red-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-red-800 mb-2">Duplicated Lines</h3><span class="text-4xl font-bold text-red-800">134 (27.07%)</span></div></div></section><section class="mb-8" id="formats"><h2 class="text-2xl font-semibold text-gray-700 mb-4">Formats with Duplications</h2><table class="w-full table-auto"><thead><tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"><th class="py-3 px-6 text-left">Format</th><th class="py-3 px-6 text-left">Files</th><th class="py-3 px-6 text-left">Lines</th><th class="py-3 px-6 text-left">Clones</th><th class="py-3 px-6 text-left">Duplicated Lines</th><th class="py-3 px-6 text-left">Duplicated Tokens</th></tr></thead><tbody><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#javascript-clones">javascript</a></td><td class="py-3 px-6">8</td><td class="py-3 px-6">495</td><td class="py-3 px-6">28</td><td class="py-3 px-6">134</td><td class="py-3 px-6">970</td></tr></tbody></table></section><section class="mb-8" id="txt-clones"><a name="javascript-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">javascript</h2><div class="divide-y divide-gray-200 border-b-2"><div class="py-4"><p class="text-gray-600">src\store\settings.module.js (Line 21:16 - Line 23:13), src\store\settings.module.js (Line 12:16 - Line 14:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn0" onclick="toggleCodeBlock('cloneGroup0', 'expandBtn0', 'collapseBtn0')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn0" onclick="toggleCodeBlock('cloneGroup0', 'expandBtn0', 'collapseBtn0')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup0"><code class="language-javascript text-sm text-gray-800">.get(articleSlug)
+      .then(({ data }) =&gt; {
+        context.commit(SET_COMMENTS</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\settings.module.js (Line 23:9 - Line 29:2), src\store\settings.module.js (Line 14:8 - Line 19:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn1" onclick="toggleCodeBlock('cloneGroup1', 'expandBtn1', 'collapseBtn1')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn1" onclick="toggleCodeBlock('cloneGroup1', 'expandBtn1', 'collapseBtn1')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup1"><code class="language-javascript text-sm text-gray-800">);
+      })
+      .catch(error =&gt; {
+        throw new Error(error);
+      });
+  }
+}</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\profile.module.js (Line 23:9 - Line 25:12), src\store\settings.module.js (Line 12:12 - Line 14:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn2" onclick="toggleCodeBlock('cloneGroup2', 'expandBtn2', 'collapseBtn2')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn2" onclick="toggleCodeBlock('cloneGroup2', 'expandBtn2', 'collapseBtn2')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup2"><code class="language-javascript text-sm text-gray-800">)
+      .then(({ data }) =&gt; {
+        context.commit(SET_PROFILE</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\profile.module.js (Line 33:21 - Line 35:5), src\store\profile.module.js (Line 21:14 - Line 23:4)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn3" onclick="toggleCodeBlock('cloneGroup3', 'expandBtn3', 'collapseBtn3')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn3" onclick="toggleCodeBlock('cloneGroup3', 'expandBtn3', 'collapseBtn3')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup3"><code class="language-javascript text-sm text-gray-800">](context, payload) {
+    const { username } = payload;
+    return ApiService.post</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\profile.module.js (Line 35:9 - Line 45:23), src\store\settings.module.js (Line 12:12 - Line 33:21)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn4" onclick="toggleCodeBlock('cloneGroup4', 'expandBtn4', 'collapseBtn4')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn4" onclick="toggleCodeBlock('cloneGroup4', 'expandBtn4', 'collapseBtn4')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup4"><code class="language-javascript text-sm text-gray-800">)
+      .then(({ data }) =&gt; {
+        context.commit(SET_PROFILE, data.profile);
+        return data;
+      })
+      .catch(() =&gt; {
+        // #todo SET_ERROR cannot work in multiple states
+        // context.commit(SET_ERROR, response.data.errors)
+      });
+  },
+  [FETCH_PROFILE_UNFOLLOW</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\profile.module.js (Line 45:23 - Line 47:7), src\store\profile.module.js (Line 21:14 - Line 23:4)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn5" onclick="toggleCodeBlock('cloneGroup5', 'expandBtn5', 'collapseBtn5')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn5" onclick="toggleCodeBlock('cloneGroup5', 'expandBtn5', 'collapseBtn5')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup5"><code class="language-javascript text-sm text-gray-800">](context, payload) {
+    const { username } = payload;
+    return ApiService.delete</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\profile.module.js (Line 47:7 - Line 57:2), src\store\profile.module.js (Line 35:5 - Line 32:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn6" onclick="toggleCodeBlock('cloneGroup6', 'expandBtn6', 'collapseBtn6')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn6" onclick="toggleCodeBlock('cloneGroup6', 'expandBtn6', 'collapseBtn6')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup6"><code class="language-javascript text-sm text-gray-800">(`profiles/${username}/follow`)
+      .then(({ data }) =&gt; {
+        context.commit(SET_PROFILE, data.profile);
+        return data;
+      })
+      .catch(() =&gt; {
+        // #todo SET_ERROR cannot work in multiple states
+        // context.commit(SET_ERROR, response.data.errors)
+      });
+  }
+}</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\profile.module.js (Line 65:2 - Line 72:2), src\store\settings.module.js (Line 37:9 - Line 45:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn7" onclick="toggleCodeBlock('cloneGroup7', 'expandBtn7', 'collapseBtn7')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn7" onclick="toggleCodeBlock('cloneGroup7', 'expandBtn7', 'collapseBtn7')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup7"><code class="language-javascript text-sm text-gray-800">;
+  }
+};
+
+export default {
+  state,
+  actions,
+  mutations,</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\home.module.js (Line 35:8 - Line 37:7), src\store\settings.module.js (Line 12:12 - Line 14:8)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn8" onclick="toggleCodeBlock('cloneGroup8', 'expandBtn8', 'collapseBtn8')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn8" onclick="toggleCodeBlock('cloneGroup8', 'expandBtn8', 'collapseBtn8')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup8"><code class="language-javascript text-sm text-gray-800">)
+      .then(({ data }) =&gt; {
+        commit</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\home.module.js (Line 37:5 - Line 43:11), src\store\settings.module.js (Line 14:8 - Line 20:15)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn9" onclick="toggleCodeBlock('cloneGroup9', 'expandBtn9', 'collapseBtn9')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn9" onclick="toggleCodeBlock('cloneGroup9', 'expandBtn9', 'collapseBtn9')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup9"><code class="language-javascript text-sm text-gray-800">);
+      })
+      .catch(error =&gt; {
+        throw new Error(error);
+      });
+  },
+  [FETCH_TAGS</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\home.module.js (Line 44:2 - Line 46:9), src\store\settings.module.js (Line 12:12 - Line 37:10)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn10" onclick="toggleCodeBlock('cloneGroup10', 'expandBtn10', 'collapseBtn10')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn10" onclick="toggleCodeBlock('cloneGroup10', 'expandBtn10', 'collapseBtn10')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup10"><code class="language-javascript text-sm text-gray-800">)
+      .then(({ data }) =&gt; {
+        commit(SET_TAGS</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\home.module.js (Line 46:5 - Line 55:6), src\store\settings.module.js (Line 14:8 - Line 32:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn11" onclick="toggleCodeBlock('cloneGroup11', 'expandBtn11', 'collapseBtn11')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn11" onclick="toggleCodeBlock('cloneGroup11', 'expandBtn11', 'collapseBtn11')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup11"><code class="language-javascript text-sm text-gray-800">);
+      })
+      .catch(error =&gt; {
+        throw new Error(error);
+      });
+  }
+};
+
+/* eslint no-param-reassign: [&quot;error&quot;, { &quot;props&quot;: false }] */
+const</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\auth.module.js (Line 10:2 - Line 13:5), src\store\profile.module.js (Line 7:2 - Line 10:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn12" onclick="toggleCodeBlock('cloneGroup12', 'expandBtn12', 'collapseBtn12')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn12" onclick="toggleCodeBlock('cloneGroup12', 'expandBtn12', 'collapseBtn12')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup12"><code class="language-javascript text-sm text-gray-800">} from &quot;./mutations.type&quot;;
+
+const state = {
+  errors: null</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\auth.module.js (Line 30:2 - Line 32:9), src\store\settings.module.js (Line 12:12 - Line 14:12)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn13" onclick="toggleCodeBlock('cloneGroup13', 'expandBtn13', 'collapseBtn13')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn13" onclick="toggleCodeBlock('cloneGroup13', 'expandBtn13', 'collapseBtn13')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup13"><code class="language-javascript text-sm text-gray-800">)
+        .then(({ data }) =&gt; {
+          context.commit(SET_AUTH</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\auth.module.js (Line 45:8 - Line 52:7), src\store\auth.module.js (Line 30:14 - Line 37:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn14" onclick="toggleCodeBlock('cloneGroup14', 'expandBtn14', 'collapseBtn14')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn14" onclick="toggleCodeBlock('cloneGroup14', 'expandBtn14', 'collapseBtn14')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup14"><code class="language-javascript text-sm text-gray-800">, { user: credentials })
+        .then(({ data }) =&gt; {
+          context.commit(SET_AUTH, data.user);
+          resolve(data);
+        })
+        .catch(({ response }) =&gt; {
+          context.commit(SET_ERROR, response.data.errors);
+          reject</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\auth.module.js (Line 52:9 - Line 56:11), src\store\auth.module.js (Line 36:7 - Line 40:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn15" onclick="toggleCodeBlock('cloneGroup15', 'expandBtn15', 'collapseBtn15')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn15" onclick="toggleCodeBlock('cloneGroup15', 'expandBtn15', 'collapseBtn15')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup15"><code class="language-javascript text-sm text-gray-800">);
+        });
+    });
+  },
+  [CHECK_AUTH</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\auth.module.js (Line 59:7 - Line 62:2), src\store\settings.module.js (Line 12:12 - Line 33:8)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn16" onclick="toggleCodeBlock('cloneGroup16', 'expandBtn16', 'collapseBtn16')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn16" onclick="toggleCodeBlock('cloneGroup16', 'expandBtn16', 'collapseBtn16')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup16"><code class="language-javascript text-sm text-gray-800">)
+        .then(({ data }) =&gt; {
+          context.commit(SET_AUTH, data.user);
+        }</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\auth.module.js (Line 61:5 - Line 66:5), src\store\auth.module.js (Line 33:5 - Line 38:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn17" onclick="toggleCodeBlock('cloneGroup17', 'expandBtn17', 'collapseBtn17')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn17" onclick="toggleCodeBlock('cloneGroup17', 'expandBtn17', 'collapseBtn17')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup17"><code class="language-javascript text-sm text-gray-800">);
+        })
+        .catch(({ response }) =&gt; {
+          context.commit(SET_ERROR, response.data.errors);
+        });
+    } else</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\auth.module.js (Line 82:5 - Line 84:7), src\store\settings.module.js (Line 12:12 - Line 33:8)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn18" onclick="toggleCodeBlock('cloneGroup18', 'expandBtn18', 'collapseBtn18')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn18" onclick="toggleCodeBlock('cloneGroup18', 'expandBtn18', 'collapseBtn18')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup18"><code class="language-javascript text-sm text-gray-800">).then(({ data }) =&gt; {
+      context.commit(SET_AUTH, data.user);
+      return</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\auth.module.js (Line 85:5 - Line 90:2), src\store\profile.module.js (Line 55:7 - Line 60:32)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn19" onclick="toggleCodeBlock('cloneGroup19', 'expandBtn19', 'collapseBtn19')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn19" onclick="toggleCodeBlock('cloneGroup19', 'expandBtn19', 'collapseBtn19')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup19"><code class="language-javascript text-sm text-gray-800">});
+  }
+};
+
+const mutations = {
+  [</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\auth.module.js (Line 101:2 - Line 103:13), src\store\auth.module.js (Line 95:5 - Line 97:10)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn20" onclick="toggleCodeBlock('cloneGroup20', 'expandBtn20', 'collapseBtn20')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn20" onclick="toggleCodeBlock('cloneGroup20', 'expandBtn20', 'collapseBtn20')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup20"><code class="language-javascript text-sm text-gray-800">;
+    state.errors = {};
+    JwtService.destroyToken</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\auth.module.js (Line 103:2 - Line 112:2), src\store\home.module.js (Line 78:2 - Line 74:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn21" onclick="toggleCodeBlock('cloneGroup21', 'expandBtn21', 'collapseBtn21')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn21" onclick="toggleCodeBlock('cloneGroup21', 'expandBtn21', 'collapseBtn21')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup21"><code class="language-javascript text-sm text-gray-800">);
+  }
+};
+
+export default {
+  state,
+  actions,
+  mutations,
+  getters
+};</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\article.module.js (Line 37:3 - Line 41:6), src\store\settings.module.js (Line 6:2 - Line 10:8)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn22" onclick="toggleCodeBlock('cloneGroup22', 'expandBtn22', 'collapseBtn22')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn22" onclick="toggleCodeBlock('cloneGroup22', 'expandBtn22', 'collapseBtn22')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup22"><code class="language-javascript text-sm text-gray-800">},
+  comments: []
+};
+
+export const state</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\article.module.js (Line 63:10 - Line 66:13), src\store\article.module.js (Line 59:8 - Line 62:16)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn23" onclick="toggleCodeBlock('cloneGroup23', 'expandBtn23', 'collapseBtn23')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn23" onclick="toggleCodeBlock('cloneGroup23', 'expandBtn23', 'collapseBtn23')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup23"><code class="language-javascript text-sm text-gray-800">);
+    context.dispatch(FETCH_COMMENTS, payload.slug);
+  },
+  async [FAVORITE_ADD</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\article.module.js (Line 68:2 - Line 70:2), src\store\article.module.js (Line 49:12 - Line 15:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn24" onclick="toggleCodeBlock('cloneGroup24', 'expandBtn24', 'collapseBtn24')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn24" onclick="toggleCodeBlock('cloneGroup24', 'expandBtn24', 'collapseBtn24')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup24"><code class="language-javascript text-sm text-gray-800">);
+    context.commit(SET_ARTICLE, data.article);
+  },</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\article.module.js (Line 74:5 - Line 77:2), src\store\article.module.js (Line 68:5 - Line 71:6)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn25" onclick="toggleCodeBlock('cloneGroup25', 'expandBtn25', 'collapseBtn25')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn25" onclick="toggleCodeBlock('cloneGroup25', 'expandBtn25', 'collapseBtn25')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup25"><code class="language-javascript text-sm text-gray-800">context.commit(UPDATE_ARTICLE_IN_LIST, data.article, { root: true });
+    context.commit(SET_ARTICLE, data.article);
+  },
+  [</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\article.module.js (Line 93:12 - Line 104:2), src\store\settings.module.js (Line 27:2 - Line 39:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn26" onclick="toggleCodeBlock('cloneGroup26', 'expandBtn26', 'collapseBtn26')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn26" onclick="toggleCodeBlock('cloneGroup26', 'expandBtn26', 'collapseBtn26')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup26"><code class="language-javascript text-sm text-gray-800">);
+  }
+};
+
+/* eslint no-param-reassign: [&quot;error&quot;, { &quot;props&quot;: false }] */
+export const mutations = {
+  [SET_ARTICLE](state, article) {
+    state.article = article;
+  },
+  [SET_COMMENTS](state, comments) {
+    state.comments = comments;
+  },</code></pre></div><div class="py-4"><p class="text-gray-600">src\store\article.module.js (Line 123:2 - Line 132:2), src\store\settings.module.js (Line 37:2 - Line 74:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn27" onclick="toggleCodeBlock('cloneGroup27', 'expandBtn27', 'collapseBtn27')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn27" onclick="toggleCodeBlock('cloneGroup27', 'expandBtn27', 'collapseBtn27')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup27"><code class="language-javascript text-sm text-gray-800">comments;
+  }
+};
+
+export default {
+  state,
+  actions,
+  mutations,
+  getters
+};</code></pre></div><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div></section><!-- Add more sections for other formats and clone groups as needed--></main><footer class="bg-white shadow mt-8 py-4"><div class="container mx-auto px-4 text-center"><p class="text-sm text-gray-600">This report is generated by jscpd, an open-source copy/paste detector.</p><p class="text-sm text-gray-600">jscpd is licensed under the MIT License.</p><a class="text-blue-500 text-sm" href="https://github.com/kucherenko/jscpd" target="_blank" rel="noopener noreferrer">View jscpd on GitHub</a></div></footer><script src="js/prism.js"></script><script>function toggleCodeBlock(codeBlockId, expandBtnId, collapseBtnId) {
+  const codeBlock = document.getElementById(codeBlockId);
+  const expandBtn = document.getElementById(expandBtnId);
+  const collapseBtn = document.getElementById(collapseBtnId);
+
+  codeBlock.classList.toggle('hidden');
+  expandBtn.classList.toggle('hidden');
+  collapseBtn.classList.toggle('hidden');
+}</script></body></html>
